@@ -1,0 +1,43 @@
+@import '../../globals/vars.scss';
+
+.scroll-up {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+
+  //border-radius: 50%;
+  //background-color: $dark-grey;
+  //box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+
+  backdrop-filter: blur(20px) saturate(180%);
+  background-color: rgba($black, 0.8);
+  border-radius: 50%;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+
+  bottom: 45px;
+  left: 15px;
+  transition: background-color 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 2100;
+  visibility: hidden;
+  opacity: 0;
+
+  &__icon {
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+    fill: $white;
+  }
+
+  &--show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &:hover {
+    background-color: $green;
+    cursor: pointer;
+  }
+}

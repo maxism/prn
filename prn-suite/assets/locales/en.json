@@ -1,0 +1,14 @@
+{
+   "domain": "messages",
+   "locale_data": {
+      "messages": {
+         "Hello": [
+            "Hello"
+         ],
+        "": {
+          "domain": "messages",
+          "lang": "en"
+        }
+      }
+   }
+}

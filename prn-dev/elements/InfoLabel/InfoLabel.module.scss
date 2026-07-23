@@ -1,0 +1,398 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+@import '../../styles/globals/animations';
+
+.element {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc(50% - var(--grid-offset));
+  width: calc(50% - var(--grid-offset));
+  // background-color: rgba(#ff0000, 0.5);
+
+  .containerName {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--module-xs);
+
+    .title {
+      @include FontTextS();
+      color: $grey;
+    }
+
+    .helpIcon {
+      margin-left: var(--module-xs);
+      flex: 0 0 16px;
+      width: 16px;
+      height: 16px;
+      fill: $orange;
+
+      transition: fill 0.3s ease;
+
+      &:hover {
+        fill: darken($orange, 10%);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .containerMetric {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .containerValue {
+      display: flex;
+      align-items: center;
+      @include FontTitleM();
+
+      .rouble {
+        flex: 0 0 32px;
+        width: 32px;
+        height: 32px;
+        fill: $black;
+        margin-left: var(--module-xxs);
+
+        @media screen and (max-width: $max-width-tablet) {
+          flex: 0 0 28px;
+          width: 28px;
+          height: 28px;
+        }
+
+        @media screen and (max-width: $max-width-mobile-fixed) {
+          flex: 0 0 22px;
+          width: 22px;
+          height: 22px;
+        }
+      }
+
+      .qualityScore {
+        margin-right: 8px;
+      }
+
+      .deltaIcon {
+        flex: 0 0 var(--module-l);
+        width: var(--module-l);
+        height: var(--module-l);
+        margin-right: var(--module-xs);
+
+        &.up {
+          fill: $green;
+        }
+
+        &.down {
+          fill: $red;
+        }
+      }
+    }
+
+    .containerDeltaValue {
+      display: flex;
+      align-items: center;
+      margin-top: var(--module-xxs);
+      @include FontTitleXS();
+
+      .deltaIcon {
+        flex: 0 0 var(--module-m);
+        width: var(--module-m);
+        height: var(--module-m);
+        margin-right: var(--module-xxs);
+
+        &.up {
+          fill: $green;
+          color: $green;
+        }
+
+        &.down {
+          fill: $red;
+          color: $red;
+        }
+      }
+
+      span {
+        color: $light;
+
+        &.up {
+          fill: $green;
+          color: $green;
+        }
+
+        &.down {
+          fill: $red;
+          color: $red;
+        }
+      }
+    }
+  }
+
+  .description {
+    @include FontTextS();
+    color: $grey;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  .link {
+    @include FontTextS();
+    margin-top: var(--module-xxs);
+  }
+
+  .button {
+    align-self: flex-start;
+    margin: auto 0;
+  }
+
+  &.loading {
+    .containerDeltaValue {
+      display: none;
+    }
+  }
+
+  .locked {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    backdrop-filter: blur(4px) saturate(150%);
+
+    .lock {
+      flex: 0 0 32px;
+      width: 32px;
+      height: 32px;
+      fill: $black;
+
+      @media screen and (max-width: $max-width-tablet) {
+        flex: 0 0 28px;
+        width: 28px;
+        height: 28px;
+      }
+
+      @media screen and (max-width: $max-width-mobile-fixed) {
+        flex: 0 0 22px;
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+}
+
+.blocked {
+  cursor: pointer;
+  .containerMetric {
+    .containerValue {
+      opacity: 0.1;
+    }
+    .containerDeltaValue {
+      opacity: 0.3;
+    }
+  }
+}
+
+.error {
+  .containerName {
+    .title {
+      color: $red;
+    }
+
+    .helpIcon {
+      fill: $red;
+
+      &:hover {
+        fill: darken($red, 10%);
+      }
+
+    }
+  }
+
+  .containerMetric {
+    .containerValue {
+      color: $red;
+
+      .rouble {
+        fill: $red;
+      }
+    }
+  }
+
+  .description {
+    color: $red;
+  }
+}
+
+.groupElement {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(var(--module-l) / -2) calc(var(--grid-offset) / -2);
+
+  @media screen and (max-width: $max-width-mobile) {
+    justify-content: center;
+  }
+
+  & .element {
+    margin: calc(var(--module-l) / 2) calc(var(--grid-offset) / 2);
+    justify-content: flex-start;
+  }
+
+  &.oneCol {
+    .element {
+      flex: 0 0 calc(100% - var(--grid-offset));
+      width: calc(100% - var(--grid-offset));
+    }
+  }
+
+  &.twoCol {
+    .element {
+      flex: 0 0 calc(50% - var(--grid-offset));
+      width: calc(50% - var(--grid-offset));
+    }
+  }
+
+  &.center {
+    justify-content: center;
+
+    & * {
+      justify-content: center;
+      text-align: center;
+    }
+
+    .locked {
+      align-items: center;
+    }
+  }
+}
+
+.groupSizeS {
+  .element {
+    flex: 0 0 calc(100% - var(--grid-offset));
+    width: calc(100% - var(--grid-offset));
+  }
+
+  &.fourCols {
+    .element {
+      flex: 0 0 calc(25% - var(--grid-offset));
+      width: calc(25% - var(--grid-offset));
+
+      @media screen and (max-width: $max-width-tablet) {
+        flex: 0 0 calc(50% - var(--grid-offset));
+        width: calc(50% - var(--grid-offset));
+      }
+
+      @media screen and (max-width: $max-width-mobile) {
+        flex: 0 0 calc(100% - var(--grid-offset));
+        width: calc(100% - var(--grid-offset));
+      }
+    }
+  }
+}
+
+.groupSizeM {
+  @media screen and (max-width: $max-width-mobile) {
+    .element {
+      flex: 0 0 calc(50% - var(--grid-offset));
+      width: calc(50% - var(--grid-offset));
+    }
+
+    .containerMetric {
+      .containerValue {
+        @media screen and (max-width: $max-width-mobile) {
+          @include FontTitleS();
+        }
+      }
+    }
+
+    .description {
+      @include FontTextS();
+      margin-top: var(--module-xs);
+
+      @media screen and (max-width: $max-width-mobile) {
+        @include FontTextXS();
+        margin-top: var(--module-xxs);
+      }
+    }
+  }
+}
+
+.groupSizeL {
+  @media screen and (max-width: $max-width-tablet) {
+    .element {
+      flex: 0 0 calc(100% - var(--grid-offset));
+      width: calc(100% - var(--grid-offset));
+    }
+  }
+
+  &.fourCols {
+    .element {
+      flex: 0 0 calc(25% - var(--grid-offset));
+      width: calc(25% - var(--grid-offset));
+
+      @media screen and (max-width: $max-width-tablet) {
+        flex: 0 0 calc(50% - var(--grid-offset));
+        width: calc(50% - var(--grid-offset));
+      }
+
+      //@media screen and (max-width: $max-width-mobile) {
+      //  flex: 0 0 calc(100% - var(--grid-offset));
+      //  width: calc(100% - var(--grid-offset));
+      //}
+    }
+  }
+}
+
+.bigDescription {
+  .containerMetric {
+    .containerValue {
+      @media screen and (max-width: $max-width-mobile) {
+        @include FontTitleS();
+      }
+    }
+  }
+
+  .description {
+    @include FontTextS();
+    margin-top: var(--module-xs);
+
+    @media screen and (max-width: $max-width-mobile) {
+      @include FontTextXS();
+      margin-top: var(--module-xxs);
+    }
+  }
+}
+
+.small {
+  .containerMetric {
+    .containerValue {
+      @include FontTitleS();
+
+      .rouble {
+        margin-left: var(--module-xxs);
+        flex: 0 0 23px;
+        width: 23px;
+        height: 23px;
+        fill: $black;
+
+        @media screen and (max-width: $max-width-tablet) {
+          flex: 0 0 23px;
+          width: 23px;
+          height: 23px;
+        }
+
+        @media screen and (max-width: $max-width-mobile-fixed) {
+          flex: 0 0 16px;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+
+  .description {
+    @include FontTextXS();
+    margin-top: var(--module-xxs);
+  }
+}
+
+.loader {
+  opacity: 0;
+}

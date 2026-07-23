@@ -1,0 +1,54 @@
+@import '../../../globals/vars';
+
+.menu-profile{
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  & > .link{
+    color: #fff;
+    font-size: 15px;
+    &:not(:last-child){
+      margin-right: 17px;
+    }
+  }
+  .dropdown__wrap{
+    max-width: 100%;
+    display: flex;
+  }
+  .dropdown{
+    max-height: 660px;
+  }
+  .dropdown__list {
+    width: 100%;
+  }
+  .notify-menu{
+    margin-right: 10px;
+  }
+  .dropdown__item{
+    white-space: normal;
+
+    @media screen and (max-width:1023px) {
+      .count-label--inverted{
+        background: #fff;
+        color: $blue
+      }
+    }
+
+    &:hover{
+      color: #fff;
+      .count-label--inverted{
+        background: #fff;
+        color: $blue
+      }
+    }
+
+    &-title{
+      padding-left: 5px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

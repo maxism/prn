@@ -1,0 +1,200 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  text-decoration: none !important;
+  white-space: nowrap;
+  background-color: var(--primary-color);
+  color: $super-dark;
+
+  transition: background-color 0.3s ease;
+
+  span {
+    max-width: 320px;
+    white-space: normal;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media screen and (max-width: $max-width-small-fixed) {
+      max-width: 160px;
+    }
+  }
+
+  &:hover:not(.disabled):not(.badge) {
+    background-color: var(--primary-darken-color);
+  }
+}
+
+.badge {
+  background-color: transparent;
+  border: solid 1px $light;
+
+  transition: border 0.3s ease;
+
+  &:hover:not(.disabled) {
+    border: solid 1px $grey;
+  }
+}
+
+.count {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $white;
+  border-radius: 18px;
+
+  padding: 6px 8px;
+  margin: -2px -6px -2px 4px;
+
+  @include FontTextXS();
+  font-weight: 500;
+  color: $blue;
+}
+
+.icon {
+  display: flex;
+  fill: $dark;
+}
+
+.sizeM {
+  border-radius: 18px;
+  padding: 8px 12px;
+  @include FontTextS();
+
+  .icon {
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+    margin: 0 4px 0 -2px;
+  }
+
+  @media screen and (max-width: $max-width-mobile) {
+    border-radius: 14px;
+    padding: 8px;
+    @include FontTextXS();
+
+    .icon {
+      flex: 0 0 12px;
+      width: 12px;
+      height: 12px;
+      margin-right: 4px;
+    }
+
+    .count {
+      border-radius: 10px;
+      padding: 4px 8px;
+      margin: -4px -4px -4px 4px;
+    }
+  }
+}
+
+.sizeS {
+  border-radius: 14px;
+  padding: 8px;
+  @include FontTextXS();
+
+  .icon {
+    flex: 0 0 12px;
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+  }
+
+  .count {
+    border-radius: 10px;
+    padding: 4px 8px;
+    margin: -4px -4px -4px 4px;
+  }
+}
+
+.active {
+  //
+}
+
+.disabled {
+  cursor: not-allowed;
+
+  .icon {
+    opacity: 0.3;
+  }
+
+  span {
+    opacity: 0.3;
+  }
+}
+
+// TAGS COLORS
+
+.colorGrey {
+  --primary-color: #{$bg-dark};
+  --primary-darken-color: #{darken($bg-dark, 5%)};
+}
+
+.colorDark {
+  --primary-color: #{$bg-tag};
+  --primary-darken-color: #{darken($bg-tag, 5%)};
+}
+
+.colorOrange {
+  --primary-color: #FBE299;
+  --primary-darken-color: #{darken(#FBE299, 8%)};
+}
+
+.colorGreen {
+  --primary-color: #E7EFC4;
+  --primary-darken-color: #{darken(#E7EFC4, 8%)};
+}
+
+.colorBlue {
+  --primary-color: #99CDFF;
+  --primary-darken-color: #{darken(#99CDFF, 8%)};
+}
+
+.colorRed {
+  --primary-color: #FEBFBB;
+  --primary-darken-color: #{darken(#FEBFBB, 8%)};
+}
+
+// TAGS GROUP
+
+.groupElement {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: $max-width-mobile) {
+    //justify-content: center;
+  }
+
+  &.full {
+    flex: 1 1 100%;
+  }
+}
+
+.groupSizeM {
+    margin: -4px;
+
+    & > * {
+      margin: 4px;
+    }
+}
+
+.groupSizeS {
+  margin: -2px;
+
+  & > * {
+    margin: 2px;
+  }
+}
+
+.groupCenter {
+  justify-content: center
+}

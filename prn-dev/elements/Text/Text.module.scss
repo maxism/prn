@@ -1,0 +1,71 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  text-align: left;
+  color: $grey;
+
+  padding-left: var(--paddingLeft);
+
+  &:not(.semibold):not(.bold) {
+    letter-spacing: 0;
+  }
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.right {
+  text-align: right;
+}
+
+.middle {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
+.xs {
+  @include FontTextXS();
+  max-width: 548px;
+}
+
+.s {
+  @include FontTextS();
+  max-width: 548px;
+}
+
+.m {
+  @include FontTextM();
+  max-width: 780px;
+}
+
+.l {
+  @include FontTextL();
+  max-width: 896px;
+}
+
+.xl {
+  @include FontTextXL();
+  max-width: 1128px;
+}
+
+.semibold {
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.maxLines {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: var(--maxLines);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

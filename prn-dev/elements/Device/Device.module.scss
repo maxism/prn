@@ -1,0 +1,189 @@
+@import '../../styles/globals/vars';
+
+.element {
+  // Черная рамка
+  position: relative;
+  display: flex;
+  width: 100%;
+  border-radius: 60px;
+  padding: 20px;
+  background-color: #222;
+
+  @media screen and (max-width: $max-width-desktop) {
+    border-radius: 54px;
+    padding: 18px;
+  }
+
+  @media screen and (max-width: $max-width-laptop) {
+    border-radius: 42px;
+    padding: 14px;
+  }
+
+  @media screen and (max-width: $max-width-tablet) {
+    border-radius: 30px;
+    padding: 10px;
+  }
+
+  @media screen and (max-width: $max-width-mobile) {
+    border-radius: 14px;
+    padding: 5px;
+  }
+
+  & .shadow {
+    // Тень
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    bottom: 10px;
+    left: 50px;
+    background-color: rgba(#000000, 0.8);
+    border-radius: 60px;
+    filter: blur(40px);
+    z-index: -1000;
+
+    @media screen and (max-width: $max-width-desktop) {
+      top: 50px;
+      right: 50px;
+      bottom: 10px;
+      left: 50px;
+      border-radius: 50px;
+      filter: blur(35px);
+    }
+
+    @media screen and (max-width: $max-width-laptop) {
+      top: 40px;
+      right: 40px;
+      bottom: 10px;
+      left: 40px;
+      border-radius: 40px;
+      filter: blur(30px);
+    }
+
+    @media screen and (max-width: $max-width-tablet) {
+      top: 30px;
+      right: 30px;
+      bottom: 10px;
+      left: 30px;
+      border-radius: 30px;
+      filter: blur(20px);
+    }
+
+    @media screen and (max-width: $max-width-mobile) {
+      top: 20px;
+      right: 20px;
+      bottom: 10px;
+      left: 20px;
+      border-radius: 20px;
+      filter: blur(20px);
+    }
+  }
+
+  & .label {
+    position: absolute;
+    top: calc(100% + var(--module-m));
+    left: 0;
+    right: 0;
+    max-width: 100%;
+  }
+}
+
+.container {
+  display: flex;
+  position: relative;
+
+  // Белая рамка
+  border-radius: 40px;
+  padding: 4px;
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 100%;
+  flex: 1 1 100%;
+
+  .video {
+    position: absolute;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+  }
+
+  @media screen and (max-width: $max-width-desktop) {
+    border-radius: 36px;
+    padding: 4px;
+
+    .video {
+      width: calc(100% - 8px);
+      height: calc(100% - 8px);
+    }
+  }
+
+  @media screen and (max-width: $max-width-laptop) {
+    border-radius: 28px;
+    padding: 3px;
+
+    .video {
+      width: calc(100% - 6px);
+      height: calc(100% - 6px);
+    }
+  }
+
+  @media screen and (max-width: $max-width-tablet) {
+    border-radius: 20px;
+    padding: 2px;
+
+    .video {
+      width: calc(100% - 4px);
+      height: calc(100% - 4px);
+    }
+  }
+
+  @media screen and (max-width: $max-width-mobile) {
+    border-radius: 9px;
+    padding: 1px;
+
+    .video {
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+    }
+  }
+
+  & > * {
+    // Картинка
+    border-radius: 38px;
+    overflow: hidden;
+
+    @media screen and (max-width: $max-width-desktop) {
+      border-radius: 32px;
+    }
+
+    @media screen and (max-width: $max-width-laptop) {
+      border-radius: 25px;
+    }
+
+    @media screen and (max-width: $max-width-tablet) {
+      border-radius: 18px;
+    }
+
+    @media screen and (max-width: $max-width-mobile) {
+      border-radius: 8px;
+    }
+  }
+}
+
+.image {
+
+}
+
+.noBorder {
+  border-radius: 0;
+  padding: 0;
+  background-color: transparent;
+
+  .container {
+    border-radius: 0;
+    padding: 0;
+    background-color: transparent;
+
+    & > * {
+      border-radius: 0;
+    }
+  }
+}

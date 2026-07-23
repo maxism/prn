@@ -1,0 +1,93 @@
+@import '../../../globals/vars.scss';
+
+.dropdown-trigger {
+  width: 100%;
+  padding: 9px 15px;
+  background: $light;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $light-grey;
+  }
+
+  &--disabled {
+    background: $light;
+    color: $grey1;
+    cursor: default;
+
+    .dropdown-trigger__label {
+      color: $grey1;
+    }
+
+    .icon {
+      fill: $grey1;
+    }
+
+    .dropdown-trigger__icon-close {
+      fill: $grey1;
+    }
+  }
+
+  &--disabled:hover {
+    background: $light;
+  }
+
+
+  &__main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__text {
+    width: calc(100% - 30px);
+    text-align: left;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    fill: $blue;
+  }
+
+  &__label {
+    font-size: 11px;
+    line-height: 14px;
+    color: $grey;
+  }
+
+  &__name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  &__icon-close {
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    fill: $blue;
+  }
+
+  &__caption {
+    font-size: 11px;
+    line-height: 14px;
+    color: $grey;
+  }
+
+  &--no-label {
+    padding: 15px;
+  }
+
+  &--label-bottom {
+    .dropdown-trigger__label {
+      order: 2;
+    }
+  }
+}

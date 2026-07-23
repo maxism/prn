@@ -1,0 +1,66 @@
+@import './vars';
+
+.icon {
+  display: inline-block;
+  svg{
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  /**
+    Цвета
+   */
+  &-color-fb, .ui.button[class*=text--]:not(:hover):not(.active) &-color-fb{
+    fill: $fb;
+  }
+
+  &-color-vk, .ui.button[class*=text--]:not(:hover):not(.active) &-color-vk{
+    fill: $vk;
+  }
+
+  &-color-ok, .ui.button[class*=text--]:not(:hover):not(.active) &-color-ok{
+    fill: $ok;
+  }
+
+  &-color-tw, .ui.button[class*=text--]:not(:hover):not(.active) &-color-tw{
+    fill: $tw;
+  }
+  &-color-inst, .ui.button[class*=text--]:not(:hover):not(.active) &-color-inst{
+    fill: $ig;
+  }
+
+  &-color-gp, .ui.button[class*=text--]:not(:hover):not(.active) &-color-gp{
+    fill: $gp;
+  }
+  &-color-yt, .ui.button[class*=text--]:not(:hover):not(.active) &-color-yt{
+    fill: $yt;
+  }
+  &-color-pi, .ui.button[class*=text--]:not(:hover):not(.active) &-color-pi{
+    fill: $pi;
+  }
+  &-color-mt, .ui.button[class*=text--]:not(:hover):not(.active) &-color-mt{
+    fill: $mt;
+  }
+  &-color-tg, .ui.button[class*=text--]:not(:hover):not(.active) &-color-tg{
+    fill: $tg;
+  }
+  &-color-warning{
+    fill: $warning;
+  }
+  &-color-dark-blue{
+    fill: $blue !important;
+  }
+  &-color-red{
+    fill: $red;
+  }
+
+  &-analyze{
+    svg{
+      backface-visibility: hidden;
+    }
+  }
+}
+
+// Соцсети
+
+

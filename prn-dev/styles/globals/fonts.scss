@@ -1,0 +1,328 @@
+@font-face {
+  font-family: GothamSS;
+  src: url('/fonts/GothamSSm-Light.woff') format('woff'),
+  url('/fonts/GothamSSm-Light.woff2') format('woff2'),
+  url('/fonts/GothamSSm-Light.ttf')  format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: GothamSS;
+  src: url('/fonts/GothamSSm-Book.woff') format('woff'),
+  url('/fonts/GothamSSm-Book.woff2') format('woff2'),
+  url('/fonts/GothamSSm-Book.ttf')  format('truetype');
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: GothamSS;
+  src: url('/fonts/GothamSSm-Medium.woff') format('woff'),
+  url('/fonts/GothamSSm-Medium.woff2') format('woff2'),
+  url('/fonts/GothamSSm-Medium.ttf')  format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: GothamSS;
+  src: url('/fonts/GothamSSm-Bold.woff') format('woff'),
+  url('/fonts/GothamSSm-Bold.woff2') format('woff2'),
+  url('/fonts/GothamSSm-Bold.ttf')  format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+// Заголовки
+@mixin FontTitleHeavy {
+  font-family: GothamSS, Arial, Helvetica, sans-serif;
+  font-size: 100px;
+  line-height: 108px;
+  letter-spacing: normal;
+  font-weight: bold;
+
+  svg {
+    height: 60px;
+  }
+
+  @media screen and (max-width: $max-width-tablet) {
+    font-size: 68px;
+    line-height: 72px;
+    letter-spacing: normal;
+
+    svg {
+      height: 40px;
+    }
+  }
+
+  @media screen and (max-width: $max-width-mobile-fixed) {
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: normal;
+
+    svg {
+      height: 24px;
+    }
+  }
+}
+
+@mixin FontTitleXL {
+  font-family: GothamSS, Arial, Helvetica, sans-serif;
+  font-size: 80px;
+  line-height: 84px;
+  letter-spacing: normal;
+  font-weight: bold;
+
+  svg {
+    height: 64px;
+  }
+
+  @media screen and (max-width: $max-width-tablet) {
+    font-size: 52px;
+    line-height: 60px;
+    letter-spacing: normal;
+
+    svg {
+      height: 40px;
+    }
+  }
+
+  @media screen and (max-width: $max-width-mobile-fixed) {
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: normal;
+
+    svg {
+      height: 26px;
+    }
+  }
+}
+
+@mixin FontTitleL {
+  font-family: GothamSS, Arial, Helvetica, sans-serif;
+  font-size: 60px;
+  line-height: 64px;
+  letter-spacing: normal;
+  font-weight: bold;
+
+  svg {
+    height: 48px;
+  }
+
+  @media screen and (max-width: $max-width-tablet) {
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: normal;
+
+    svg {
+      height: 32px;
+    }
+  }
+
+  @media screen and (max-width: $max-width-mobile-fixed) {
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: normal;
+
+    svg {
+      height: 26px;
+    }
+  }
+}
+
+@mixin FontTitleM {
+  font-family: GothamSS, Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: normal;
+  font-weight: bold;
+
+  svg {
+    height: 32px;
+    margin-bottom: -1px;
+    margin-left: 4px;
+  }
+
+  @media screen and (max-width: $max-width-tablet) {
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: normal;
+
+    svg {
+      height: 29px;
+    }
+  }
+
+  @media screen and (max-width: $max-width-mobile-fixed) {
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: normal;
+
+    svg {
+      height: 23px;
+    }
+  }
+}
+
+@mixin FontTitleS {
+  font-family: GothamSS, Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: normal;
+  font-weight: bold;
+
+  svg {
+    height: 23px;
+  }
+
+  @media screen and (max-width: $max-width-tablet) {
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: normal;
+  }
+
+  @media screen and (max-width: $max-width-mobile-fixed) {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: normal;
+
+    svg {
+      height: 16px;
+    }
+  }
+}
+
+@mixin FontTitleXS {
+  font-family: GothamSS, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: normal;
+  font-weight: bold;
+
+  svg {
+    height: 26px;
+  }
+
+  @media screen and (max-width: $max-width-tablet) {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: normal;
+  }
+
+  @media screen and (max-width: $max-width-mobile-fixed) {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: normal;
+  }
+}
+//
+
+// Текст
+@mixin FontTextXL {
+  font-family: GothamSS, Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: normal;
+  letter-spacing: -0.4px;
+
+  @media screen and (max-width: $max-width-tablet) {
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: -0.4px;
+  }
+
+  @media screen and (max-width: $max-width-mobile-fixed) {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+  }
+}
+
+@mixin FontTextL {
+  font-family: GothamSS, Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: normal;
+  letter-spacing: -0.4px;
+
+  @media screen and (max-width: $max-width-tablet) {
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: -0.4px;
+  }
+
+  @media screen and (max-width: $max-width-mobile-fixed) {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+  }
+}
+
+@mixin FontTextM {
+  font-family: GothamSS, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: normal;
+  letter-spacing: -0.2px;
+
+  @media screen and (max-width: $max-width-tablet) {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+  }
+
+  @media screen and (max-width: $max-width-mobile-fixed) {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.2px;
+  }
+}
+
+@mixin FontTextS {
+  font-family: GothamSS, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: normal;
+  letter-spacing: normal;
+
+  @media screen and (max-width: $max-width-tablet) {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: normal;
+  }
+
+  @media screen and (max-width: $max-width-mobile-fixed) {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: normal;
+  }
+}
+
+@mixin FontTextXS {
+  font-family: GothamSS, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: normal;
+  letter-spacing: normal;
+
+  @media screen and (max-width: $max-width-tablet) {
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: normal;
+  }
+
+  @media screen and (max-width: $max-width-mobile-fixed) {
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: normal;
+  }
+}
+//

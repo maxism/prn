@@ -1,0 +1,75 @@
+@import '../../globals/vars';
+
+.dropdown-button {
+  display: flex;
+
+  color: $white;
+  background-color: $blue;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+
+  &__main {
+    border: none;
+    font-size: 15px;
+    line-height: 20px;
+    color: inherit;
+    background-color: inherit;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    border-radius: 10px 0 0 10px;
+
+    &:hover {
+      background-color: darken($blue, 8%);
+    }
+  }
+
+  &__label {
+    opacity: 100%;
+  }
+
+  &__line {
+    width: 1px;
+    opacity: 0.1;
+    border-radius: 0.5px;
+    background-color: $white;
+    margin: 10px 0;
+  }
+
+  &__more {
+    display: flex;
+    border: none;
+    color: inherit;
+    background-color: inherit;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    border-radius: 0 10px 10px 0;
+
+    &:hover {
+      background-color: darken($blue, 8%);
+    }
+
+    & > .icon {
+      flex: 0 0 20px;
+      width: 20px;
+      height: 20px;
+      fill: $white;
+    }
+  }
+
+  &--disabled {
+
+    & .dropdown-button__label {
+      opacity: 20%;
+    }
+
+    &:hover .dropdown-button__main {
+      background-color: $blue;
+      cursor: default;
+    }
+  }
+}

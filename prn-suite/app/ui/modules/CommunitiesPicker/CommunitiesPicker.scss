@@ -1,0 +1,149 @@
+@import '../../globals/vars';
+
+.communities-picker {
+  display: inline-flex;
+  width: 540px;
+
+  &__body {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    border-radius: 10px;
+    background-color: $light;
+    padding: 15px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      //background-color: darken($light, 3%);
+      box-shadow: 0 0 0 2px $grey1;
+
+      & .communities-picker__image {
+        box-shadow: 0 0 0 2px darken($light, 3%);
+      }
+    }
+  }
+
+  &__images {
+    display: flex;
+    height: 40px;
+
+    :nth-child(2) {
+      margin-left: -25px;
+    }
+    :nth-child(3) {
+      margin-left: -25px;
+    }
+  }
+
+  &__image {
+    box-shadow: 0 0 0 2px $light;
+    width: 40px;
+    height: 40px;
+    transition: box-shadow 0.3s ease;
+  }
+
+  &__main {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    margin: 0 10px;
+    text-align: left;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    max-width: 390px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__description {
+    font-size: 12px;
+    line-height: 16px;
+    color: $grey;
+    margin-top: 2px;
+    max-width: 390px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__down {
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+
+    fill: $blue;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+  }
+
+  &__all {
+    display: flex;
+    flex: 1 1 100%;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 15px;
+    transition: background-color 0.3s ease;
+
+    & > *:not(:first-child) {
+      margin-left: 10px;
+    }
+
+    &:hover {
+      background-color: darken($light, 3%);
+      cursor: pointer;
+    }
+  }
+
+  &__icon-circle {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    background-color: $light;
+    border-radius: 50%;
+    padding: 10px;
+  }
+
+  &__icon {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    fill: $blue;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+  }
+
+  &__c-title {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+  }
+
+  &__c-description {
+    font-size: 12px;
+    line-height: 16px;
+    color: $grey;
+    margin-top: 2px;
+  }
+
+  &--opened {
+    & .communities-picker__body {
+      box-shadow: 0 0 0 2px $green !important;
+    }
+
+    & .communities-picker__down {
+      transform: rotate(180deg);
+    }
+  }
+}
+

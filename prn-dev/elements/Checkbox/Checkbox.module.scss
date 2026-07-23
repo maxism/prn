@@ -1,0 +1,216 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  display: inline-flex;
+  align-items: center;
+
+  min-width: 24px;
+  min-height: 24px;
+
+  .input {
+    display: none;
+  }
+
+  .text {
+    margin-top: 2px;
+    @include FontTextS();
+    font-weight: 500;
+    color: $super-dark;
+  }
+
+  label {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 24px;
+    padding-left: calc(24px + var(--module-xs) + var(--module-xxs));
+
+    cursor: pointer;
+    user-select: none;
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: '';
+
+      background-color: $bg-dark;
+      border-radius: 8px;
+
+      width: 24px;
+      height: 24px;
+      top: 0;
+      left: 0;
+
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: '';
+
+      background: url(./img/check.svg) no-repeat 50% 50%;
+
+      width: 20px;
+      height: 20px;
+      top: 2px;
+      left: 2px;
+
+      opacity: 0;
+      transition: opacity 0.3s ease, background 0.3s ease;
+    }
+  }
+
+  &:hover:not(.disabled) {
+    label {
+      &::before {
+        box-shadow: 0 0 0 2px $green;
+      }
+    }
+  }
+}
+
+.third {
+  &:not(.disabled) {
+    label {
+      &::before {
+        background-color: $green;
+      }
+
+      &::after {
+        background-color: $white;
+        border-radius: 1px;
+
+        width: 12px;
+        height: 2px;
+        top: 11px;
+        left: 6px;
+
+        opacity: 1;
+      }
+    }
+  }
+
+  &.disabled {
+    label {
+      &::after {
+        background-color: $grey;
+        border-radius: 1px;
+
+        width: 12px;
+        height: 2px;
+        top: 11px;
+        left: 6px;
+
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.sizeM {
+  min-width: 36px;
+  min-height: 36px;
+
+  .text {
+    @include FontTextM();
+    font-weight: 500;
+    color: $super-dark;
+  }
+
+  label {
+    min-height: 36px;
+    padding-left: calc(36px + var(--module-s));
+
+    &::before {
+      border-radius: 12px;
+
+      width: 36px;
+      height: 36px;
+    }
+
+    &::after {
+      width: 28px;
+      height: 28px;
+
+      top: 4px;
+      left: 4px;
+    }
+  }
+
+  &.third {
+    label {
+      &::after {
+        width: 16px;
+        height: 2px;
+        top: 17px;
+        left: 10px;
+      }
+    }
+  }
+}
+
+.sizeS {
+
+}
+
+.checked {
+  label {
+    &::before {
+      background-color: $green;
+    }
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.disabled {
+  .text {
+    color: $light;
+  }
+
+  label {
+    cursor: not-allowed;
+
+    &::before {
+      background-color: $bg-light;
+      box-shadow: 0 0 0 1px $bg-tag;
+    }
+
+    &::after {
+      background: url(./img/check_disabled.svg) no-repeat 50% 50%;
+    }
+  }
+}
+
+.white {
+  &:not(.checked):not(.disabled) {
+    label {
+      &::before {
+        background-color: $white;
+        box-shadow: 0 0 0 1px $bg-tag;
+      }
+
+      &:hover {
+        &::before {
+          box-shadow: 0 0 0 2px $green;
+        }
+      }
+    }
+  }
+
+  &.third {
+    &:not(.disabled) {
+      label {
+        &::before {
+          background-color: $green;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}

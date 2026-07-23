@@ -1,0 +1,11 @@
+@import '../../styles/globals/vars';
+
+.element {
+  width: calc(100% - 16px);
+  height: 1px;
+  border-radius: 0.5px;
+  background-color: $black;
+  opacity: 0.1;
+  margin: 8px;
+  padding: 1px 8px 0 8px;
+}

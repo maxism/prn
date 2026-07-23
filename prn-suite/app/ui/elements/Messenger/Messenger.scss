@@ -1,0 +1,54 @@
+@import '../../globals/vars';
+
+.messenger {
+  display: flex;
+  flex: 1 1 auto;
+
+  &__dialogs {
+    display: flex;
+    flex: 0 0 350px;
+    flex-direction: column;
+    padding: 0;
+    margin: -2.5px 0;
+  }
+
+  &__splitter {
+    display: flex;
+    flex: 0 0 1px;
+    width: 1px;
+    padding: 0 15px;
+
+    &-line {
+      flex: 0 0 1px;
+      width: 1px;
+      height: 100%;
+      background-color: $light-grey;
+    }
+  }
+
+  &__messages {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  &__messages-list {
+    display: flex;
+    flex: 1 1 auto;
+  }
+
+  &__answer {
+    display: flex;
+    margin: 15px 0;
+
+    & > .dropdown-button {
+      display: flex;
+      align-self: flex-end;
+      margin-left: 10px;
+    }
+  }
+}
+

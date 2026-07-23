@@ -1,0 +1,752 @@
+@import '../../globals/vars';
+@import '../../globals/mixins';
+
+.ui.button {
+  background-color: $blue;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-flex;
+  font-size: 15px;
+  border: none;
+  line-height: 20px;
+  padding: 10px 15px;
+  text-decoration: none;
+  transition: background-color .3s ease, color .3s ease;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    background-color: darken($blue, 8%);
+
+    .button__caption {
+      color: #fff;
+    }
+  }
+
+  .button__text-block {
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    margin: auto 0;
+
+    & + .icon.post-icon {
+      margin-left: auto;
+    }
+  }
+
+  .button__text {
+    user-select: none;
+    position: relative;
+  }
+
+  .button__caption {
+    color: $grey;
+    font-size: 11px;
+    line-height: 14px;
+    text-align: left;
+    transition: color 0.3s ease;
+  }
+
+  .button__image {
+    width: 20px;
+    height: 20px;
+
+    & + * {
+      margin-left: 5px;
+    }
+  }
+
+  .button__altText {
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+
+    & + .button__text-block {
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+
+  & > .icon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    flex-shrink: 0;
+    transition: .3s all ease-in-out;
+    align-self: center;
+  }
+
+  // Иконки сортировки
+  &.sort--asc {
+
+    .button__text::before {
+      @include triangle(up, 8px, 4px, $grey);
+      @include pseudo();
+      top: calc(50% - 2px);
+      right: 0;
+    }
+
+    &.sort--selected {
+      .button__text::before {
+        @include triangle(up, 8px, 4px, $blue);
+      }
+    }
+  }
+
+  &.sort--desc {
+    .button__text::before {
+      @include triangle(down, 8px, 4px, $blue);
+      @include pseudo();
+      top: calc(50% - 2px);
+      right: 0;
+    }
+
+    &.sort--selected {
+      .button__text::before {
+        @include triangle(down, 8px, 4px, $blue);
+      }
+    }
+  }
+
+  // Выравнивание внутри
+  // По вертикали
+  &.v-center {
+    align-items: center;
+  }
+
+  &.v-top {
+    align-items: flex-start;
+  }
+
+  &.v-bottom {
+    align-items: flex-end;
+  }
+
+  // По горизонтали
+  &.h-center {
+    justify-content: center;
+  }
+
+  &.h-left {
+    justify-content: flex-start;
+  }
+
+  &.h-right {
+    justify-content: flex-end;
+  }
+
+  &.h-between {
+    justify-content: space-between;
+  }
+
+  &.h-around {
+    justify-content: space-around;
+  }
+
+  // Прятать текст на мобильных
+
+  &.mobile {
+    @media screen and (max-width: 1023px) {
+      padding: 10px;
+      .button__text-block {
+        display: none;
+      }
+      .post-icon {
+        margin-left: 0;
+      }
+    }
+    @media screen and (min-width: 1024px) {
+      .button__text-block {
+        display: inline-block;
+      }
+    }
+  }
+
+  // Закладка
+
+  &.bookmark, &.bookmark--add {
+    padding-left: 45px;
+
+    &::before {
+      background-repeat: no-repeat;
+      @include pseudo();
+      width: 18px;
+      height: 29px;
+      top: 0;
+      left: 13px;
+    }
+  }
+
+  &.bookmark::before {
+    background-image: url(img/bookmark.svg);
+  }
+
+  &.bookmark--add::before {
+    background-image: url(img/bookmark-added.svg);
+  }
+
+  .button__count {
+    margin-left: 10px;
+    font-weight: 700;
+  }
+
+  // Стиль заливки
+
+  &.empty {
+    background-color: transparent;
+    border: 2px solid $light-grey;
+  }
+
+  &.white {
+    &:not(:hover):not(.active) {
+      background-color: #fff;
+    }
+
+    &:hover {
+      background-color: $light;
+    }
+  }
+
+  &.white-invert {
+    &:not(:hover):not(.active) {
+      background-color: #fff;
+    }
+
+    &:hover {
+      background-color: $blue;
+    }
+  }
+
+  &.transparent {
+    background-color: transparent;
+  }
+
+  &.default:not(:hover):not(.active) {
+    background-color: $blue;
+  }
+
+  &.grey:not(:hover):not(.active) {
+    background-color: $grey2;
+  }
+
+  &.gray:not(:hover):not(.active) {
+    background-color: $grey2;
+  }
+
+  &.ultra-light-gray {
+    &:not(:hover):not(.active) {
+      background-color: $light;
+    }
+
+    &:hover {
+      background-color: darken($light, 3%);
+    }
+  }
+
+  &.ultra-light-grey {
+    &:not(:hover):not(.active) {
+      background-color: $light;
+    }
+
+    &:hover {
+      background-color: darken($light, 3%);
+    }
+  }
+
+  &.light-gray:not(:hover):not(.active) {
+    background-color: $light-grey;
+  }
+
+  &.light-grey:not(:hover):not(.active) {
+    background-color: $light-grey;
+  }
+
+  &.alt-grey:not(:hover):not(.active) {
+    background-color: $grey1;
+  }
+
+  &.alt-gray:not(:hover):not(.active) {
+    background-color: $grey1;
+  }
+
+  &.hv-red {
+    &:not(:hover):not(.active) {
+      background-color: $red;
+    }
+
+    &:hover {
+      background-color: darken($red, 8%);
+    }
+  }
+
+  &.warning:not(:hover) {
+    background-color: $warning;
+
+    .button__text {
+      font-size: 11px;
+    }
+  }
+
+  &.orange:not(:hover) {
+    background-color: $dark-orange !important;
+  }
+
+  &.light-orange {
+    background-color: $btn-orange;
+  }
+
+  // Стиль бордера
+  &.border--white {
+    border: 1px solid #fff;
+  }
+
+  &.border--black {
+    border: 1px solid $black;
+  }
+
+  &.border--default {
+    border: 1px solid $blue;
+  }
+
+  &.border--gray {
+    border: 1px solid $grey2;
+  }
+
+  &.border--grey {
+    border: 1px solid $grey2;
+  }
+
+  &.border--light-grey {
+    border: 1px solid $grey2;
+  }
+
+  &.border--light-gray {
+    border: 1px solid $grey2;
+  }
+
+  // Размер шрифта текста
+  &.text--size-tooltip {
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  // Цвет текста
+  &.text--black:not(:hover):not(.active) {
+    color: $black;
+
+    .icon {
+      fill: $black;
+    }
+  }
+
+  &.text--dark-blue:not(:hover):not(.active) {
+    color: $blue;
+
+    .icon {
+      fill: $blue;
+    }
+  }
+
+  &.text--dark-blue:hover {
+    color: $blue;
+
+    .icon {
+      fill: $blue;
+    }
+  }
+
+  &.text--light-grey:not(:hover):not(.active) {
+    color: $light-grey;
+
+    .icon {
+      fill: $light-grey;
+    }
+  }
+
+  &.text--light-gray:not(:hover):not(.active) {
+    color: $light-grey;
+
+    .icon {
+      fill: $light-grey;
+    }
+  }
+
+  &.text--grey:not(:hover):not(.active) {
+    color: $grey2;
+
+    .icon {
+      fill: $grey2;
+    }
+  }
+
+  &.text--dark-blue-invert:not(:hover):not(.active) {
+    color: $blue;
+  }
+
+  &.text--dark-blue-invert:hover {
+    color: #fff;
+  }
+
+  &.text--gray:not(:hover):not(.active) {
+    color: $grey2;
+
+    .icon {
+      fill: $grey2;
+    }
+  }
+
+  &.text--dark-gray:not(:hover):not(.active) {
+    color: $grey;
+  }
+
+  &.text--dark-grey:not(:hover):not(.active) {
+    color: $grey;
+  }
+
+  &.text--default {
+    color: $blue;
+
+    .icon {
+      fill: $blue;
+    }
+
+    &:hover {
+      .icon {
+        fill: $blue;
+      }
+    }
+  }
+
+  &.text--red:not(:hover):not(.active) {
+    color: $red;
+
+    .icon {
+      fill: $red;
+    }
+  }
+
+  &.text--white:not(:hover):not(.active) {
+    color: #fff;
+
+    .icon {
+      fill: #fff;
+    }
+  }
+
+
+  //Размеры
+  &.menu {
+    padding: 0;
+    height: auto;
+    background: none;
+
+    & > .icon {
+      width: 30px;
+      height: 30px;
+    }
+
+    &.active, &:hover {
+      background: none;
+    }
+  }
+
+  &.small {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+
+  &.small-square {
+    padding: 5px;
+    font-size: 13px;
+  }
+
+  &.small-tooltip {
+    padding: 7px 10px;
+
+    .icon {
+      width: 11px;
+    }
+  }
+
+  &.social {
+    padding: 6px 10px;
+    color: #fff;
+
+    &.active {
+      color: #fff;
+    }
+  }
+
+  &.large {
+    font-size: 16px;
+    padding: 13px 30px;
+  }
+
+  &.extra-large {
+    font-size: 20px;
+    line-height: 26px;
+    padding: 30px;
+    border-radius: 10px;
+
+    & > .icon {
+      width: 30px;
+      height: 30px;
+      margin: auto 10px auto 0;
+    }
+
+    @media screen and (min-width: $t) {
+      padding: 30px;
+    }
+  }
+
+  &.payment {
+    padding: 30px 20px;
+  }
+
+  &.wide {
+    line-height: 24px;
+    padding: 18px 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  &.fullWidth {
+    width: 100%;
+  }
+
+  &.big {
+    border-radius: 10px;
+    padding: 10px 15px;
+
+    @media screen and (min-width: $d) {
+      padding: 15px;
+    }
+  }
+
+  &.big-square {
+    padding: 15px;
+  }
+
+  &.caption {
+    padding: 3px 15px;
+
+    & > .icon {
+      align-self: center;
+    }
+
+    .button__text-block {
+      align-items: flex-start;
+    }
+  }
+
+  &.medium-square {
+    padding: 10px;
+  }
+
+  &.border-radius--big {
+    border-radius: 10px;
+  }
+
+  /**
+    Жирный текст
+   */
+  &.bold {
+    font-weight: 700;
+  }
+
+  &.fb {
+    background-color: $fb;
+  }
+
+  &.vk {
+    background-color: $vk;
+  }
+
+  &.ok {
+    background-color: $ok;
+  }
+
+  &.tw {
+    background-color: $tw;
+  }
+
+  &.inst {
+    background-color: $ig;
+  }
+
+  &.gp {
+    background-color: $gp;
+  }
+
+  &.yt {
+    background-color: $yt;
+  }
+
+  &.pi {
+    background-color: $pi;
+  }
+
+  &.sky {
+    background-color: $sky;
+  }
+
+  &.pink {
+    background-color: $btn-pink;
+  }
+
+  &.green {
+    background-color: $btn-green;
+  }
+
+  //Состояния
+  &.loading {
+    pointer-events: none;
+    user-select: none;
+
+    .button__text-block {
+      opacity: 0;
+    }
+
+    & > .icon {
+      opacity: 0;
+    }
+
+    &::before {
+      @include pseudo();
+      top: 50%;
+      left: 50%;
+      margin: -15px 0 0 -15px;
+      width: 30px;
+      height: 30px;
+      background: url('./img/loading.svg') no-repeat;
+      //background-size: cover;
+    }
+
+    &:hover {
+      color: transparent;
+      background: $light-grey;
+    }
+  }
+
+  &.active {
+    background-color: $red;
+    border-color: $red;
+
+    .button__caption {
+      color: #fff;
+    }
+  }
+
+  &[disabled]:not(.disabled-white) {
+    .button__text {
+      opacity: 0.2;
+    }
+    // background: $ultra-light-gray !important;
+    user-select: none !important;
+    pointer-events: none !important;
+
+    & > .icon {
+      fill: $grey2 !important;
+    }
+  }
+
+  &[disabled].disabled-white {
+    color: $grey1 !important;
+    background: #fff;
+  }
+
+  &.attention {
+    .button__text-block {
+      padding-right: 5px;
+
+      &::after {
+        @include pseudo();
+        width: 8px;
+        height: 8px;
+        top: 0;
+        right: -5px;
+        border-radius: 50%;
+        background: $red;
+      }
+    }
+
+
+    &:hover {
+      .button__text-block {
+        &::after {
+          background: #fff;
+        }
+      }
+    }
+  }
+
+  &.trancuate {
+    .button__text-block {
+      max-width: calc(100% - 30px);
+    }
+
+    .button__text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &:hover {
+    &--dark-blue {
+      background: $blue;
+
+      .icon {
+        fill: #fff;
+      }
+
+      .button__caption {
+        color: #fff;
+      }
+    }
+
+    &--grey {
+      background: $grey;
+
+      .icon {
+        fill: $blue;
+      }
+
+      .button__caption {
+        color: $blue;
+      }
+    }
+
+    &--red {
+      background-color: $red;
+
+      .icon {
+        fill: #fff;
+      }
+
+      .button__caption {
+        color: #fff;
+      }
+    }
+  }
+
+  &.button--extType-add-label {
+    width: 100%;
+    justify-content: flex-start;
+
+    &:hover {
+      background: $light-grey;
+      color: $blue;
+    }
+  }
+
+  &.button--extType-actionbar-create {
+    margin-left: 15px;
+  }
+
+  &.button--extType-compound-button {
+    border-radius: 10px 0 0 10px !important;
+  }
+}

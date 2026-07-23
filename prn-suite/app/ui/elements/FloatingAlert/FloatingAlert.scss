@@ -1,0 +1,71 @@
+@import '../../globals/vars.scss';
+
+.floating-alert {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  width: 920px;
+
+  //border-radius: 10px;
+  //background-color: $dark-grey;
+  //box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+
+  backdrop-filter: blur(10px) saturate(180%);
+  background-color: rgba($black, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+
+  padding: 15px;
+  bottom: 40px;
+  left: calc(50% - 460px);
+  z-index: 2100;
+
+  &__icon-main {
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+    fill: $white;
+    margin-right: 15px;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    color: $white;
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 16px;
+    color: $grey2;
+    margin-top: 4px;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    & > * {
+      margin-left: 15px;
+    }
+  }
+
+  &__icon-right {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    fill: $white;
+    transition: fill 0.3s ease;
+
+    &:hover {
+      fill: $grey;
+      cursor: pointer;
+    }
+  }
+}

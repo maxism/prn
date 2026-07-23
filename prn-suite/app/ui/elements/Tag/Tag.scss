@@ -1,0 +1,92 @@
+@import '../../globals/vars';
+
+.tag {
+  display: flex;
+  align-items: center;
+  background-color: $grey1;
+  border-radius: 5px;
+  overflow: hidden;
+
+  transition: background-color 0.3s ease;
+
+  &__main {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 7px;
+
+    & *:not(:first-child) {
+      margin-left: 5px;
+    }
+  }
+
+  &__icon {
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+    fill: $grey;
+    transition: fill 0.3s ease;
+  }
+
+  &__image {
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 16px;
+    max-width: 200px;
+    color: $dark-grey;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color 0.3s ease;
+  }
+
+  &__splitter {
+    flex: 0 0 1px;
+    width: 1px;
+    height: 16px;
+    background-color: rgba($white, 0.3);
+    margin: 0 5px 0 10px !important;
+  }
+
+  &__grade_index {
+    font-size: 12px;
+    line-height: 16px;
+    //font-weight: bold;
+    color: $white;
+  }
+
+  &--grade {
+    & .tag__icon {
+      fill: $white;
+    }
+
+    & .tag__text {
+      color: $white;
+    }
+  }
+
+  &--mark {
+    & .tag__text {
+      color: $white;
+    }
+  }
+
+  &--link {
+    cursor: pointer;
+  }
+
+  &:hover {
+    // cursor: pointer;
+    // background-color: $grey2;
+
+    .tag__icon {
+      //fill: $dark-grey;
+    }
+  }
+}

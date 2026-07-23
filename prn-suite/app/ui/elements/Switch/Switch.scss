@@ -1,0 +1,62 @@
+@import '../../globals/vars';
+
+.switch {
+  display: flex;
+  width: 52px;
+  min-width: 52px;
+  height: 30px;
+  background-color: $grey1;
+  border-radius: 15px;
+  padding: 4px;
+  transition: background-color 0.9s ease;
+  position: relative;
+
+  &__circle {
+    flex: 0 0 22px;
+    width: 22px;
+    height: 22px;
+    background-color: $white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    margin-left: 0;
+    opacity: 1;
+    //transition: margin-left 0.3s ease, opacity 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  &__loader {
+    position: absolute;
+    top: 0;
+    left: 11px;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    visibility: hidden;
+
+    circle {
+      fill: $white;
+    }
+  }
+
+  &--active {
+    background-color: $green;
+
+    .switch__circle {
+      margin-left: 22px;
+    }
+  }
+
+  &--loading {
+    .switch__loader{
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .switch__circle {
+      background-color: transparent;
+      box-shadow: none;
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}

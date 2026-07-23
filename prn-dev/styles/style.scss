@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+// Миксины, переменные, хелперы и т.д.
+@import "globals/animations";
+@import "globals/mixins";
+@import "globals/vars";
+
+// Импорт основных стилей
+@import "globals/base";
+@import "globals/fonts";
+@import "globals/reset";
+
+@import "react-perfect-scrollbar/dist/css/styles.css";

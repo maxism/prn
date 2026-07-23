@@ -1,0 +1,82 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $blue;
+  border-radius: 18px;
+  border: none;
+  padding: 4px;
+
+  @include FontTextS();
+  font-weight: 500;
+  color: $white;
+  text-decoration: none;
+  white-space: nowrap;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  // 3 колонки
+  max-width: 160px;
+
+  @media screen and (max-width: $max-width-tablet) {
+    // 2 колонки из 8
+    span {
+      display: none;
+    }
+  }
+
+  & > span {
+    margin: 4px 4px 4px 12px;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .image {
+    flex: 0 0 28px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .loader {
+    flex: 0 0 30px;
+    width: 30px;
+    height: 10.5px;
+
+    left: calc(50% - 15px);
+    top: calc(50% - 5.25px);
+  }
+
+  &:hover:not(.loading) {
+    background-color: darken($blue, 10%)
+  }
+}
+
+.image {
+  display: flex;
+  fill: $white;
+}
+
+.loader {
+  position: absolute;
+  display: flex;
+  opacity: 1 !important;
+  fill: $white;
+}
+
+.loading {
+  .image {
+    opacity: 0;
+  }
+
+  & > span {
+    opacity: 0;
+  }
+}

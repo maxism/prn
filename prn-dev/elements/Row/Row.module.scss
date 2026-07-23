@@ -1,0 +1,50 @@
+@import '../../styles/globals/vars';
+
+.rowElement {
+  display: grid;
+  place-items: center;
+  gap: var(--grid-offset);
+  grid-template-columns: repeat(12, 1fr);
+
+}
+
+.paddingXXL {
+  padding-top: var(--module-xxl);
+}
+
+.paddingXL {
+  padding-top: var(--module-xl);
+}
+
+.paddingL {
+  padding-top: var(--module-l);
+}
+
+.paddingM {
+  padding-top: var(--module-m);
+}
+
+.paddingS {
+  padding-top: var(--module-s);
+}
+
+.paddingXS {
+  padding-top: var(--module-xs);
+}
+
+.paddingXXS {
+  padding-top: var(--module-xxs);
+}
+
+.paddingZ {
+  padding-top: 0;
+}
+
+.left {
+  place-items: start;
+}
+
+.right {
+  place-items: end;
+}
+

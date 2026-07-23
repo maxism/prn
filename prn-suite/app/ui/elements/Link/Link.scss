@@ -1,0 +1,22 @@
+@import '../../globals/vars';
+
+.link {
+  cursor: pointer;
+  color: $blue;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $blue;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+  }
+
+  &--active {
+    color: $blue;
+  }
+
+  &--in-form {
+    padding-left: 15px;
+  }
+}

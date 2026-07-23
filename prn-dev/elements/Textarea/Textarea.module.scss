@@ -1,0 +1,61 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  position: relative;
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
+
+  background-color: $bg-light;
+  border-radius: 16px;
+
+  padding: 15px;
+  overflow: hidden;
+
+  transition: box-shadow 0.3s ease;
+
+  &:hover:not(.disabled) {
+    box-shadow: 0 0 0 2px $bg-tag;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  cursor: text;
+}
+
+.text {
+  @include FontTextM();
+  //font-weight: 500;
+
+  background-color: $bg-light;
+  border: none;
+  outline: none;
+
+  padding: 0;
+  width: 100%;
+  resize: none;
+
+  color: $dark;
+
+  &::placeholder {
+    font-weight: 500;
+    color: $light;
+    opacity: 1;
+  }
+}
+
+.focus {
+  box-shadow: 0 0 0 2px $green !important;
+}
+
+.white {
+  background-color: $white;
+
+  .text {
+    background-color: $white;
+  }
+}
+

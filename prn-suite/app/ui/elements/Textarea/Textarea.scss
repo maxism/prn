@@ -1,0 +1,71 @@
+@import '../../globals/vars';
+
+.textarea {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+
+  background-color: $light;
+  border-radius: 10px;
+
+  padding: 15px;
+  overflow: hidden;
+
+  transition: box-shadow 0.3s ease;
+
+  &:hover:not(.input-text--disabled) {
+    box-shadow: 0 0 0 2px $grey1;
+
+    & .textarea__button {
+      fill: $grey;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    cursor: text;
+  }
+
+  &__text {
+    background-color: $light;
+    border: none;
+    outline: none;
+
+    padding: 0;
+    width: 100%;
+    resize: none;
+
+    font-size: 16px;
+    line-height: 20px;
+    color: $black;
+
+    &::placeholder {
+      color: $grey;
+    }
+  }
+
+  &--focus {
+    box-shadow: 0 0 0 2px $green !important;
+
+    & .textarea__button {
+      fill: $grey;
+    }
+  }
+
+  &__button {
+    flex: 0 0 20px;
+    align-self: flex-end;
+    width: 20px;
+    height: 20px;
+    fill: $grey1;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: fill 0.3s ease;
+
+    &:hover {
+      fill: $blue !important;
+    }
+  }
+}

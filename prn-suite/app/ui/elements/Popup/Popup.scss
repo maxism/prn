@@ -1,0 +1,73 @@
+@import '../../globals/vars';
+
+.popup {
+  display: flex;
+  flex: 1 1 auto;
+  position: relative;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 5px);
+    opacity: 0;
+    visibility: hidden;
+    min-width: 100%;
+    transition: opacity 0.3s ease;
+
+    border-radius: 10px;
+    box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.2);
+    background-color: $white;
+
+    font-size: 15px;
+    line-height: 20px;
+    color: $black;
+
+    padding: 10px;
+    z-index: 999;
+
+    height: 0;
+    overflow: hidden;
+
+    &--up {
+      top: auto;
+      bottom: calc(100% + 5px);
+    }
+
+    &--auto {
+      min-width: 100%;
+    }
+
+    &--superSmall {
+      min-width: 160px;
+    }
+
+    &--small {
+      width: 255px;
+    }
+
+    &--middle {
+      width: 350px;
+    }
+
+    &--big {
+      width: 1110px;
+    }
+
+    &--scrolling {
+      //
+    }
+
+    &--open {
+      opacity: 1;
+      visibility: visible;
+      z-index: 1000;
+      height: auto;
+    }
+
+    &--right {
+      left: 0;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  display: flex;
+  align-items: center;
+  flex: 1 1 100%;
+
+  background-color: $bg-light;
+  border-radius: var(--block-m-radious);
+  padding: var(--block-m-padding);
+
+  .question {
+    display: flex;
+    flex: 1 1 100%;
+  }
+
+  .buttons {
+    display: flex;
+    flex: 0 0 auto;
+  }
+
+  .icon {
+    flex: 1 1 36px;
+    width: 36px;
+    height: 36px;
+    fill: $green;
+  }
+}

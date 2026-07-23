@@ -1,0 +1,45 @@
+@import '../../globals/vars.scss';
+
+.page-menu {
+  display: flex;
+  flex: 1 1 100%;
+
+  &__item {
+    position: relative;
+    font-size: 26px;
+    line-height: 34px;
+    font-weight: bold;
+    color: $blue;
+
+    border: none;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 3px;
+      left: 50%;
+      bottom: -10px;
+      border-radius: 1.5px;
+      background-color: $blue;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    &:not(:first-child) {
+      margin-left: 50px;
+    }
+
+    &:hover, &--active {
+      &::before {
+        width: 100%;
+        left: 0;
+        opacity: 1;
+      }
+    }
+  }
+}

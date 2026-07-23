@@ -1,0 +1,102 @@
+@import '../../styles/globals/vars';
+
+.element {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  justify-content: center;
+
+  backdrop-filter: blur(10px) saturate(250%);
+  background-color: rgba($black, 0.8);
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 2200;
+  overflow-y: auto;
+
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  & > * {
+    margin: var(--module-xxl) auto;
+  }
+
+  @media screen and (max-width: $max-width-small-fixed) {
+    backdrop-filter: none;
+    background-color: $bg-light;
+  }
+
+  .modal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    flex: 0 0 calc(66.66666667% - var(--grid-offset));
+    width: calc(66.66666667% - var(--grid-offset));
+
+    background-color: $bg-light;
+    border-radius: 32px;
+    padding: 60px;
+    margin: calc(var(--grid-offset) / 2) 0;
+
+    @media screen and (max-width: $max-width-laptop) {
+      flex: 0 0 calc(100% - var(--grid-offset));
+      width: calc(100% - var(--grid-offset));
+    }
+
+    @media screen and (max-width: $max-width-tablet) {
+      padding: 52px;
+    }
+
+    @media screen and (max-width: $max-width-mobile-fixed) {
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+
+    .close {
+      position: absolute;
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: var(--module-s);
+
+      top: 24px;
+      right: 24px;
+
+      & > svg {
+        width: var(--icon-l);
+        height: var(--icon-l);
+        fill: $dark;
+
+        transition: fill 0.3s ease;
+
+        &:hover {
+          fill: darken($dark, 10%);
+          cursor: pointer;
+        }
+      }
+
+      @media screen and (max-width: $max-width-mobile-fixed) {
+        top: 8px;
+        right: 8px;
+      }
+    }
+  }
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  &.hideClose {
+    .close {
+      display: none;
+    }
+  }
+}
+
+
+

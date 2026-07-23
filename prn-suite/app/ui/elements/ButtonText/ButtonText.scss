@@ -1,0 +1,238 @@
+@import '../../globals/vars.scss';
+@import '../../globals/mixins.scss';
+
+.button-text {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: normal;
+
+  & > *:not(:first-child) {
+    margin-left: 5px;
+  }
+
+  &__icon {
+    display: flex;
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    fill: $blue;
+    transition: fill 0.3s ease;
+  }
+
+  &__children {
+    display: flex;
+
+    & > *:not(:first-child) {
+      margin-left: 5px;
+    }
+  }
+
+  &--small {
+    border-radius: 5px;
+    padding: 7px;
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  &--middle {
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  &--big {
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &--awesome {
+    font-size: 20px;
+    line-height: 26px;
+    padding: 32px;
+    border-radius: 10px;
+    width: 100%;
+
+    .icon {
+      flex: 0 0 30px;
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
+    }
+  }
+
+  &--unsubscribe {
+    &.button-text--awesome {
+      padding: 44px;
+    }
+  }
+
+  &--grey {
+    color: $blue;
+    background-color: $light;
+
+    &.button-text--active {
+      background-color: $light-blue;
+
+      &:hover {
+        background-color: darken($light-blue, 1.5%) !important;
+      }
+    }
+
+    &:hover:not(.button-text--disabled) {
+      background-color: $light-grey;
+    }
+
+    &.button-text--disabled {
+      color: $grey2;
+
+      .icon {
+        fill: $grey2;
+      }
+    }
+  }
+
+  &--new {
+    opacity: 100% !important;
+
+    .button-text__icon {
+      fill: #D9D9D9 !important;
+    }
+
+    &:hover:not(.button-text--disabled) {
+      background-color: $light-grey;
+
+      .button-text__icon {
+        fill: #311E9D !important;
+      }
+    }
+
+    &.button-text--active svg {
+      fill: #311E9D !important;
+    }
+  }
+
+  &--blue {
+    color: $white;
+    background-color: $blue;
+
+    .icon {
+      fill: white;
+    }
+
+    &:hover:not(.button-text--disabled) {
+      background-color: darken($blue, 8%);
+    }
+
+    &.button-text--disabled {
+      color: rgba(255, 255, 255, 0.2);
+
+      .icon {
+        fill: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+
+  &--red {
+    color: $white;
+    background-color: $red;
+
+    .icon {
+      fill: white;
+    }
+
+    &:hover:not(.button-text--disabled) {
+      background-color: darken($red, 8%);
+    }
+
+    &.button-text--disabled {
+      color: rgba(255, 255, 255, 0.2);
+
+      .icon {
+        fill: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+
+  &--transparent {
+    color: $blue;
+    background-color: transparent;
+
+    .icon {
+      fill: $blue;
+    }
+
+    &:hover:not(.button-text--disabled) {
+      background-color: $light;
+    }
+
+    &.button-text--disabled {
+      color: $grey1;
+      .icon {
+        fill: $grey1;
+      }
+    }
+  }
+
+  &--disabled {
+    cursor: auto;
+  }
+
+  &--round {
+    //border-radius: 50%;
+    padding: 5px;
+    background-color: transparent;
+    //box-shadow: inset 0 0 0 1px rgba($white, 0.3);
+    opacity: 30%;
+
+    .button-text__icon {
+      flex: 0 0 24px;
+      width: 24px;
+      height: 24px;
+      fill: $white;
+    }
+
+    &:hover {
+      //box-shadow: inset 0 0 0 1px rgba($white, 1);
+      background-color: transparent !important;
+      opacity: 100%;
+      .button-text__icon {
+        fill: $white;
+      }
+    }
+  }
+
+  &--loading {
+    pointer-events: none;
+    user-select: none;
+
+    &.button-text {
+      color: transparent;
+      transition: none;
+    }
+
+    .icon {
+      fill: transparent;
+      transition: none;
+    }
+
+    &::before {
+      @include pseudo();
+      top: 50%;
+      left: 50%;
+      margin: -15px 0 0 -15px;
+      width: 30px;
+      height: 30px;
+      background: url('./img/loading_dots_square.svg') no-repeat;
+    }
+  }
+}

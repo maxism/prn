@@ -1,0 +1,35 @@
+@import '../../globals/mixins';
+@import '../../globals/vars';
+@import '../../globals/icons';
+
+.header {
+  position: sticky;
+  display: flex;
+  align-items: center;
+
+  background-color: $white;
+
+  //backdrop-filter: blur(10px) saturate(250%);
+  //background-color: rgba($white, 0.8);
+
+  border-bottom: 1px solid rgba($black, 0.1);
+
+  height: 60px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex: 1 1 100%;
+    min-width: $content_width;
+    max-width: $content_width;
+    width: $content_width;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,50 @@
+@import '../../../globals/vars.scss';
+
+.dropdown-small-trigger {
+  width: 100%;
+  padding: 5px 10px;
+  background: $light;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $light-grey;
+    .dropdown-small-trigger__icon{
+      fill: $green;
+    }
+  }
+
+  &__main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__text {
+    max-width: calc(100% - 20px);
+    margin-right: 10px;
+  }
+
+  &__label {
+    font-size: 11px;
+    line-height: 14px;
+    color: $grey;
+  }
+
+  &__name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  &__icon {
+    width: 10px;
+    height: 10px;
+    margin-left: auto;
+    fill: $blue;
+  }
+}

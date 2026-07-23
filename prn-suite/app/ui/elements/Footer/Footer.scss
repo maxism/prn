@@ -1,0 +1,71 @@
+@import '../../globals/vars.scss';
+
+.footer {
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid $light-grey;
+  background-color: $white;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+
+  font-size: 12px;
+  line-height: 16px;
+  color: $grey;
+  white-space: nowrap;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    flex: 1 1 100%;
+    height: 30px;
+    width: $content_width;
+    max-width: $content_width;
+    padding: 0 15px;
+
+    & > *:not(:first-child) {
+      margin-left: 30px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex: 1 1 100%;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+
+    & > *:not(:first-child) {
+      margin-left: 10px;
+    }
+  }
+
+  &__text {
+
+  }
+
+  &__icon {
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+    fill: $grey2;
+    transition: fill 0.3s ease;
+
+    &:hover {
+      fill: $blue;
+      cursor: pointer;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: $grey;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

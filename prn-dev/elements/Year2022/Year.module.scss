@@ -1,0 +1,52 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  display: flex;
+}
+
+.yearBadge {
+  display: flex;
+  flex: 0 0 auto;
+  justify-self: center;
+
+  padding: 8px 16px;
+  background-color: $orange;
+  border-radius: 12px;
+
+  span {
+    @include FontTextS();
+    font-weight: 500;
+    color: $white;
+  }
+}
+
+.yearLink {
+  display: flex;
+  flex: 0 0 auto;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+
+  &.yearLinkIcon {
+    margin-right: 12px;
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+  }
+
+  span {
+    @include FontTextS();
+    color: $blue;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    span {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,195 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+
+  .sizeSocial {
+    display: flex;
+    justify-content: flex-start;
+
+    flex: 0 0 75%;
+    width: 75%;
+
+    @media screen and (max-width: $max-width-tablet) {
+      flex: 1 1 100%;
+      width: 100%;
+    }
+  }
+
+  .sizeDelta {
+    display: flex;
+    justify-content: flex-start;
+
+    flex: 0 0 calc(12.5% - var(--grid-offset));
+    width: calc(12.5% - var(--grid-offset));
+  }
+
+  .sizeMonth {
+    display: flex;
+    justify-content: flex-start;
+
+    flex: 0 0 calc(12.5% - var(--grid-offset));
+    width: calc(12.5% - var(--grid-offset));
+  }
+
+  .containerHeader {
+    display: flex;
+    align-items: center;
+
+    .title {
+      @include FontTextXS();
+      color: $grey;
+
+      &:not(:first-child) {
+        margin-left: var(--grid-offset);
+      }
+    }
+
+    @media screen and (max-width: $max-width-tablet) {
+        display: none;
+    }
+  }
+
+  .socialItem {
+    margin-top: var(--module-xs);
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    cursor: default;
+
+    .progressBar {
+      display: flex;
+      align-items: center;
+
+      background-color: $bg-dark;
+      border-radius: 8px;
+
+      overflow: hidden;
+
+      transition: background-color 0.3s ease;
+
+      .progressBarValue {
+        display: flex;
+        align-items: center;
+        top: 0;
+        left: 0;
+        height: 100%;
+
+        background-color: $green;
+
+        transition: background-color 0.3s ease;
+
+        .index {
+          flex: 0 0 72px;
+          padding: var(--module-xs) var(--module-s);
+
+          @include FontTitleXS();
+          color: $black;
+        }
+
+        .value {
+          padding: var(--module-xs) 0;
+
+          @include FontTextS();
+          font-weight: 500;
+          color: $black;
+        }
+      }
+    }
+
+    .containerDelta {
+      margin-left: var(--grid-offset);
+
+      display: flex;
+      align-items: center;
+
+      color: $grey;
+
+      transition: color 0.3s ease;
+
+      .containerDeltaValue {
+        display: flex;
+        align-items: center;
+
+        .deltaIcon {
+          flex: 0 0 20px;
+          width: 20px;
+          height: 20px;
+          margin-right: var(--module-xxs);
+        }
+
+        .deltaValue {
+          display: flex;
+          @include FontTextM();
+          font-weight: 500;
+        }
+
+        .up {
+          fill: $green;
+          color: $green;
+          transition: color 0.3s ease;
+        }
+
+        .down {
+          fill: $red;
+          color: $red;
+          transition: color 0.3s ease;
+        }
+      }
+
+      .nameWeek {
+        display: none;
+
+        @include FontTextXS();
+        color: $grey;
+
+        @media screen and (max-width: $max-width-tablet) {
+          display: flex;
+        }
+      }
+
+      @media screen and (max-width: $max-width-tablet) {
+        flex-direction: column;
+
+        flex: 1 1 calc(50% - var(--grid-offset) / 2);
+        width: calc(50% - var(--grid-offset) / 2);
+
+        margin-top: var(--module-s);
+
+        &:not(:last-child) {
+          margin-left: 0;
+        }
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .progressBar {
+        background-color: darken($bg-dark, 5%);
+
+        .progressBarValue {
+          background-color: darken($green, 10%);
+        }
+      }
+
+      .containerDelta {
+        color: $black;
+
+        .up, .down {
+          color: $black;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $max-width-tablet) {
+    margin-top: var(--module-m);
+  }
+}

@@ -1,0 +1,27 @@
+@import '../../globals/vars';
+
+.confirm-dialog {
+  &__title {
+    text-align: left;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 5px;
+  }
+
+  &__description {
+    text-align: left;
+    font-size: 13px;
+    line-height: 16px;
+    color: $grey2;
+    margin-bottom: 10px;
+  }
+
+  &__hint {
+    font-size: 11px;
+    line-height: 14px;
+    color: $grey;
+    & > span {
+      color: $grey2;
+    }
+  }
+}

@@ -1,0 +1,291 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  display: flex;
+
+  .container {
+    display: flex;
+    align-items: center;
+    flex: 0 0 100%;
+
+    .image {
+      flex: 0 0 12.5%;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 100%;
+
+      margin-left: var(--module-l);
+      max-width: calc(67.5% - var(--module-l) - var(--module-l));
+
+      .title {
+        @include FontTitleS();
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 100%;
+      }
+
+      .count {
+        display: flex;
+        height: auto;
+        visibility: visible;
+
+        .counter {
+          margin-top: var(--module-xs);
+
+          @include FontTextS();
+          font-weight: 500;
+          color: $dark;
+        }
+      }
+
+      .social {
+        display: flex;
+        margin-top: var(--module-s);
+        align-self: flex-start;
+        max-width: 100%;
+        height: auto;
+        visibility: visible;
+
+        & > *:not(:first-child) {
+          margin-left: var(--module-xs);
+        }
+
+        .socialIcon {
+          flex: 0 0 20px;
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .warning {
+        display: flex;
+        align-self: flex-start;
+        padding: 6px 8px;
+
+        background-color: $orange;
+        border-radius: 12px;
+
+        margin-top: var(--module-s);
+
+        .warningText {
+          @include FontTextXS();
+          color: $white;
+        }
+      }
+
+      .message {
+        display: flex;
+        margin-top: var(--module-s);
+        align-self: flex-start;
+        align-items: center;
+        justify-content: flex-start;
+
+        .messageIcon {
+          flex: 0 0 var(--icon-l);
+          width: var(--icon-l);
+          height: var(--icon-l);
+          fill: $orange;
+        }
+
+        .messageContent {
+          margin-left: var(--module-xs);
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          .contentTitle {
+            @include FontTextS();
+            color: $dark;
+          }
+
+          .contentDescription {
+            margin-top: 2px;
+            @include FontTextXS();
+            color: $grey;
+          }
+        }
+
+        @media screen and (max-width: $max-width-mobile-fixed) {
+          .messageContent {
+            .contentTitle {
+              display: none;
+            }
+          }
+        }
+
+        @media screen and (max-width: $max-width-mobile) {
+          flex: 0 0 calc(100% - var(--grid-offset));
+          width: calc(100% - var(--grid-offset));
+          margin-top: var(--module-s)
+        }
+      }
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex: 0 0 20%;
+
+      margin-left: var(--module-l);
+      margin-right: 24px;
+
+      & > *:not(:last-child) {
+        margin-right: var(--module-m);
+      }
+
+      .divider {
+        flex: 0 0 1px;
+        width: 1px;
+        height: 64px;
+        visibility: visible;
+
+        background-color: rgba($black, 10%);
+        border-radius: 1px;
+      }
+
+      .iconInfo {
+        flex: 0 0 var(--icon-l);
+        width: var(--icon-l);
+        height: var(--icon-l);
+        fill: $orange;
+        visibility: visible;
+
+        cursor: default;
+        transition: fill 0.3s ease;
+      }
+
+      .iconSettings {
+        flex: 0 0 var(--icon-l);
+        width: var(--icon-l);
+        height: var(--icon-l);
+        fill: $light;
+
+        cursor: pointer;
+        transition: fill 0.3s ease;
+
+        &:hover {
+          fill: darken($blue, 10%) !important;
+        }
+      }
+    }
+
+    @media screen and (max-width: $max-width-tablet) {
+      .image {
+        flex: 0 0 100px;
+      }
+
+      .info {
+        margin-left: var(--module-m);
+        max-width: calc(80% - 100px - var(--module-m) - var(--module-m));
+
+        .title {
+          @include FontTitleXS();
+        }
+
+        .count {
+          height: 0;
+          visibility: hidden;
+        }
+
+        .social {
+          margin-top: var(--module-xs);
+        }
+      }
+
+      .icons {
+        margin-left: var(--module-m);
+        margin-right: 0;
+
+        & > *:not(:last-child) {
+          margin-right: var(--module-s);
+        }
+
+        .divider {
+          height: 40px;
+        }
+      }
+    }
+
+    @media screen and (max-width: $max-width-mobile-fixed) {
+      .image {
+        flex: 0 0 60px;
+      }
+
+      .info {
+        max-width: calc(85% - 60px - var(--module-m) - var(--module-m));
+
+        .social {
+          height: 0;
+          visibility: hidden;
+        }
+      }
+
+      .icons {
+        flex: 0 0 15%;
+
+        .iconInfo {
+          flex: 0 0 0;
+          width: 0;
+          visibility: hidden;
+        }
+
+        .divider {
+          width: 0;
+          visibility: hidden;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .container {
+      .icons {
+        .iconSettings {
+          fill: $blue;
+        }
+      }
+    }
+  }
+}
+
+.isNotPaid {
+  .container {
+    .image {
+      filter: grayscale(1);
+    }
+
+    .info {
+      .title {
+        color: $grey;
+      }
+
+      .count {
+        .counter {
+          color: $grey;
+        }
+      }
+
+      .social {
+        .socialIcon {
+          fill: $grey;
+        }
+      }
+    }
+
+    .icons {
+      .iconInfo {
+        fill: $light;
+      }
+
+      .iconSettings {
+        fill: $light;
+      }
+    }
+  }
+}

@@ -1,0 +1,159 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  color: $dark;
+  align-self: center;
+
+  /* 50px сверху у каждого блока, кроме первого и 30px между p */
+
+  p {
+    @include FontTextM();
+    line-height: 1.2;
+    margin: var(--module-m) auto 0 0;
+    max-width: 780px;
+  }
+
+  div {
+    max-width: 1128px;
+  }
+
+  & > h1 {
+    @include FontTitleL();
+    color: $black;
+    margin: var(--module-xl) auto 0 0;
+    max-width: 780px;
+  }
+
+  & > h2 {
+    @include FontTitleM();
+    color: $black;
+    margin: var(--module-xl) auto 0 0;
+    max-width: 780px;
+  }
+
+  & > h3 {
+    @include FontTitleS();
+    color: $black;
+    margin: var(--module-xl) auto 0 0;
+    max-width: 780px;
+  }
+
+  & > h4, & > h5, & > h6 {
+    @include FontTitleXS();
+    color: $black;
+    margin: var(--module-xl) auto 0 0;
+    max-width: 780px;
+  }
+
+  a {
+    color: $blue;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  & p + p {
+    margin: var(--module-m) auto 0 0;
+  }
+
+  & :global {
+    & .mdimg {
+      display: flex;
+      flex-direction: column;
+      margin: var(--module-xl) auto var(--module-xl) auto;
+      max-width: 100%;
+
+      .mdimg_container {
+        display: flex;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        border-radius: var(--block-m-radious);
+
+        img {
+          max-width: 100%;
+        }
+
+        &::after {
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          opacity: 0.1;
+          border-radius: var(--block-m-radious);
+          border: solid 1px $black;
+        }
+      }
+
+      & > span {
+        width: 100%;
+
+        text-align: center;
+        color: $grey;
+
+        margin: var(--module-s) auto 0 auto;
+        @include FontTextXS();
+      }
+    }
+  }
+
+  & blockquote {
+    padding: var(--block-m-padding);
+    border-radius: var(--block-m-radious);
+    background-color: $bg-light;
+    margin: var(--module-xl) auto var(--module-xl) 0;
+
+    & p {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0;
+      color: $grey;
+
+      & strong {
+        @include FontTextS();
+
+        color: $black;
+        font-weight: 500;
+        margin-top: var(--module-m);
+      }
+
+      & em {
+        @include FontTextS();
+
+        text-align: right;
+        color: $grey;
+      }
+    }
+  }
+
+  & ol, ul {
+    margin: var(--module-m) auto 0 var(--module-l);
+    & > li {
+      margin: var(--module-s) auto 0 0;
+      max-width: calc(780px - var(--module-l));
+    }
+  }
+
+  & ul {
+    list-style: disc;
+    margin-left: var(--module-l);
+    & > li {
+      display: list-item;
+      max-width: calc(780px - var(--module-l));
+
+      //&:before {
+      //  content: "\2022";
+      //  font-size: var(--module-m);
+      //  color: $blue;
+      //  font-weight: bold;
+      //  display: inline-block;
+      //  width: var(--module-m);
+      //}
+    }
+  }
+}

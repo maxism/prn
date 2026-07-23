@@ -1,0 +1,91 @@
+@import '../../../globals/vars';
+
+.about-dialog-description{
+  text-align: left;
+  color: #fff;
+
+  &__field{
+    & + *{
+      margin-top: 10px;
+    }
+    overflow: hidden;
+    text-overflow: ellipsis;
+    .link{
+      color: #fff;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+  &__info{
+    display: flex;
+    .social-info{
+      display: inline-flex;
+      align-items: center;
+    }
+    .social-info__icon{
+      width: 16px;
+      height: 16px;
+      fill: $grey;
+    }
+    .social-info__text{
+      color: $grey;
+      line-height: 16px;
+    }
+    & > * + * {
+      margin-left: 20px;
+    }
+  }
+
+  &__btn{
+    .icon{
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+    }
+  }
+
+  &__top{
+    display: flex;
+  }
+  &__retro{
+    font-size: 11px;
+    line-height: 14px;
+    color: $grey;
+  }
+
+  &__users{
+    display: flex;
+    align-items: center;
+  }
+
+  &__users-icon{
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    fill: $grey;
+  }
+
+  &__users-count{
+    font-size: 13px;
+    line-height: 16px;
+    color: $grey2;
+  }
+
+  &__name{
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 700;
+    flex-grow: 1;
+    padding-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__admin{
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+  }
+}

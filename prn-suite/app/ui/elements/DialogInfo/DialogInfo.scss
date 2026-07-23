@@ -1,0 +1,124 @@
+@import '../../globals/vars.scss';
+
+.dialog-info {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  backdrop-filter: blur(10px) saturate(180%);
+  background-color: rgba($dark-grey, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+
+  padding: 15px;
+
+  top: 15px;
+  left: 0;
+  right: 0;
+
+  z-index: 900;
+
+  &__user {
+    display: flex;
+    align-items: center;
+
+    & > *:not(:first-child) {
+      margin-left: 10px;
+    }
+
+    &-avatar {
+      flex: 0 0 40px;
+      width: 40px;
+      height: 40px;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+
+      & > *:not(:first-child) {
+        margin-top: 2px;
+      }
+    }
+
+    &-name {
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: bold;
+      color: $white;
+    }
+
+    &-social {
+      display: flex;
+      align-items: center;
+
+      font-size: 12px;
+      line-height: 16px;
+      text-decoration: none;
+      color: $grey;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &-icon {
+      flex: 0 0 16px;
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+    }
+  }
+
+  &__metrics {
+    display: flex;
+    align-items: center;
+
+    & > *:not(:first-child) {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 1px;
+        height: 40px;
+        background-color: $white;
+        opacity: 10%;
+        left: 0;
+      }
+    }
+  }
+
+  &__metric {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 100px;
+    width: 100px;
+
+    &-value {
+      font-size: 20px;
+      line-height: 26px;
+      font-weight: bold;
+      color: $white;
+
+      white-space: nowrap;
+      max-width: 100px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &-name {
+      font-size: 10px;
+      line-height: 14px;
+      color: $grey;
+
+      white-space: nowrap;
+      max-width: 100px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

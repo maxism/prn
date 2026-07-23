@@ -1,0 +1,18 @@
+@mixin AnimateSkeleton ($c1, $c2) {
+  user-select: none;
+  animation: animateSkeleton 2s 0s ease-in-out infinite;
+
+  @keyframes animateSkeleton {
+    from {
+      background-color: $c1;
+    }
+
+    50% {
+      background-color: $c2;
+    }
+
+    to {
+      background-color: $c1;
+    }
+  }
+}

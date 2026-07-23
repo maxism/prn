@@ -1,0 +1,104 @@
+@import "../../globals/vars";
+@import "../../globals/mixins";
+
+.account {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  border-radius: 10px;
+  background-color: $white;
+  padding: 10px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  &__main {
+    display: flex;
+    flex: 1 1 100% !important;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+
+  &__image {
+    flex: 0 0 50px;
+    width: 50px;
+    height: 50px;
+  }
+
+  &__name {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    max-width: 190px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__description-line {
+    display: flex;
+    flex: 1 1 100%;
+    align-items: center;
+    margin-top: 2px;
+
+    & > *:not(:first-child) {
+      margin-left: 5px;
+    }
+  }
+
+  &__description {
+    font-size: 12px;
+    line-height: 16px;
+    color: $grey;
+    max-width: 171px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__description-icon {
+    flex: 0 0 14px;
+    width: 14px;
+    height: 14px;
+    fill: $red;
+  }
+
+  &__icon {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    fill: $grey1;
+    transition: fill 0.3s ease;
+
+    &:hover {
+      fill: $green !important;
+    }
+
+    &-red {
+      &:hover {
+        fill: $red !important;
+      }
+    }
+  }
+
+  &:hover:not(.account--active) {
+    background-color: $light-grey;
+    cursor: pointer;
+
+    .account__icon {
+      fill: $blue;
+    }
+  }
+
+  &--active {
+    background-color: $light-blue;
+
+    .account__icon {
+      fill: $blue;
+    }
+
+    &:hover {
+      background-color: darken($light-blue, 1.5%);
+      cursor: pointer;
+    }
+  }
+}

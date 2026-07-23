@@ -1,0 +1,13 @@
+@import '../../globals/vars';
+
+.container{
+  display: flex;
+  /*flex: 1 1 auto;*/
+  align-items: stretch;
+  flex-wrap: wrap;
+  min-width: $content_width;
+  max-width: $content_width;
+  width: $content_width;
+  padding: 0 15px;
+  margin: 0 auto;
+}

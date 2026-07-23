@@ -1,0 +1,11 @@
+.info-group {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 calc(100% + 30px);
+  margin: -15px;
+
+  & > * {
+    flex: 0 0 calc(33.33% - 30px);
+    margin: 15px;
+  }
+}

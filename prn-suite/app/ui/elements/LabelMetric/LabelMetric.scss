@@ -1,0 +1,53 @@
+@import '../../globals/vars';
+
+.label-metric {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc(33.3% - 20px);
+  padding: 15px;
+  background-color: $light;
+  border-radius: 10px;
+  margin: 10px;
+  //height: 100px;
+  transition: background-color 0.3s ease;
+
+  &__top {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    // fill: $grey2;
+    transition: fill 0.3s ease;
+  }
+
+  &__title {
+    flex: 1 1 100%;
+    font-size: 13px;
+    line-height: 16px;
+    color: $dark-grey;
+    max-width: 299px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__badge {
+    font-size: 10px;
+    line-height: 14px;
+    color: $grey;
+  }
+
+  &__helpIcon {
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    fill: $grey2;
+    transition: fill 0.3s ease;
+  }
+}

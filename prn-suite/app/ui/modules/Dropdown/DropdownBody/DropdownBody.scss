@@ -1,0 +1,10 @@
+.dropdown-body {
+  max-height: 100%;
+  overflow-y: auto;
+  flex-grow: 1;
+  padding: 5px;
+
+  & > * + * {
+    margin-top: 5px;
+  }
+}

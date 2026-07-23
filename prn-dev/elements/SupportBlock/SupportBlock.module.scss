@@ -1,0 +1,70 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+}
+
+.itemElement {
+  display: flex;
+  align-items: center;
+  padding: var(--module-m) 0;
+  cursor: pointer;
+
+  .tag {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $bg-light;
+    border-radius: 10px;
+
+    padding: 4px 8px;
+    margin-right: var(--module-xs);
+
+    cursor: pointer;
+
+    & > span {
+      color: $grey;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+  }
+
+  & > span {
+    color: $super-dark;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  & > svg {
+    fill: $light;
+    cursor: pointer;
+    transition: fill 0.3s ease;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    & > span {
+      color: $black;
+    }
+
+    & > svg {
+      fill: $blue;
+    }
+
+    & .tag {
+      & > span {
+        color: $blue;
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba($black, 0.1);
+  }
+}

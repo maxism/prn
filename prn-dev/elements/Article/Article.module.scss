@@ -1,0 +1,66 @@
+@import '../../styles/globals/vars';
+
+.groupElement {
+  display: flex;
+  flex-wrap: wrap;
+  grid-column: span 12;
+  margin: calc(var(--grid-offset) / -2);
+  flex: 1 1 100%;
+  justify-content: center;
+
+  & .element {
+    margin: calc(var(--grid-offset) / 2)
+  }
+}
+
+.element {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+
+  color: $black;
+  background-color: $bg-light;
+
+  border-radius: var(--block-m-padding);
+  padding: var(--block-m-padding);
+
+  width: calc(50% - var(--grid-offset));
+
+  transition: box-shadow 0.3s ease;
+
+  @media screen and (max-width: $max-width-tablet) {
+    width: calc(100% - var(--grid-offset));
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 0 1px rgba($black, 0.1);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .image {
+      border-radius: 12px;
+    }
+  }
+
+  .title {
+    padding: var(--module-l) 0 var(--module-m) 0;
+    // display: inline-block;
+    // word-wrap: break-word;
+  }
+
+  .text {
+    margin-top: calc(-1 * var(--module-xs));
+  }
+
+  .tags {
+    margin-top: auto;
+  }
+}
+
+.white {
+  background-color: $white;
+}

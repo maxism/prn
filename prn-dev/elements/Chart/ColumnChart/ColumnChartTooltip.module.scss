@@ -1,0 +1,55 @@
+@import "../../../styles/globals/vars";
+
+.element {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  max-width: 350px;
+
+  backdrop-filter: blur(10px) saturate(180%);
+  background-color: rgba($black, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+
+  //background-color: $dark-grey;
+  //border-radius: 10px;
+  //box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+
+  padding: 15px 20px;
+
+  & * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .name {
+    font-size: 10px;
+    line-height: 14px;
+    color: $grey;
+
+    max-width: 320px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .value {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: bold;
+    color: $white;
+
+    max-width: 320px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .date {
+    font-size: 10px;
+    line-height: 14px;
+    color: $grey;
+    max-width: 320px;
+  }
+}

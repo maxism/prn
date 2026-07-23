@@ -1,0 +1,38 @@
+@import '../../styles/globals/vars';
+
+.element {
+  width: 100%;
+  max-width: $max-width-desktop;
+  margin: 0 auto;
+  padding: 0 40px;
+  // background-color: rgba(#660000, 0.3);
+
+  @media screen and (max-width: $max-width-big) {
+    padding: 0 40px;
+  }
+
+  @media screen and (max-width: $max-width-desktop) {
+    padding: 0 32px;
+  }
+
+  @media screen and (max-width: $max-width-laptop) {
+    padding: 0 40px;
+  }
+
+  @media screen and (max-width: $max-width-tablet) {
+    max-width: $max-width-mobile-fixed;
+  }
+
+  @media screen and (max-width: $max-width-mobile-fixed) {
+    max-width: $max-width-mobile;
+  }
+
+  @media screen and (max-width: $max-width-mobile) {
+    padding: 0 24px;
+    max-width: $max-width-small-fixed;
+  }
+
+  @media screen and (max-width: $max-width-small) {
+    padding: 0 20px;
+  }
+}

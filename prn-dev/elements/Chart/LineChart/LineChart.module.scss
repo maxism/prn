@@ -1,0 +1,35 @@
+@import "../../../styles/globals/vars";
+@import "../../../styles/globals/fonts";
+
+.element {
+  position: relative;
+  display: flex;
+  flex: 1 1 100%;
+  overflow: hidden;
+
+  .blocked {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px) saturate(150%);
+    background-color: rgba($white, 0.8);
+
+    .blockedTitle {
+      @include FontTitleS();
+      color: $dark;
+    }
+
+    .blockedText {
+      margin-top: var(--module-m);
+      @include FontTextS();
+      color: $dark;
+
+      text-align: center;
+      max-width: 664px;
+    }
+  }
+}

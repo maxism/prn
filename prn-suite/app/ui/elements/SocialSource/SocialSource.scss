@@ -1,0 +1,47 @@
+@import '../../globals/vars';
+
+.social-source {
+  display: flex;
+  align-items: center;
+  flex: 1 1 calc(50% - 30px);
+  background-color: $light;
+  border-radius: 10px;
+  padding: 25px;
+  margin: 15px;
+  transition: background-color 0.3s ease;
+
+  & > *:not(:first-child) {
+    margin-left: 20px;
+  }
+
+  &__icon {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 358px;
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: bold;
+  }
+
+  &__description {
+    font-size: 12px;
+    line-height: 16px;
+    color: $grey;
+    margin-top: 4px;
+  }
+
+  &:hover {
+    background-color: darken($light, 3%);
+    cursor: pointer;
+  }
+}

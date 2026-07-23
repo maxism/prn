@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="130px" height="130px" viewBox="0 0 130 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 19</title>
+    <defs>
+        <path d="M18,33 C14.398,33 11.091,31.723 8.502,29.599 L29.599,8.502 C31.722,11.091 33,14.398 33,18 C33,26.271 26.271,33 18,33 M3,18 C3,9.729 9.729,3 18,3 C21.591,3 24.89,4.271 27.475,6.384 L6.384,27.475 C4.271,24.89 3,21.591 3,18 M18,0 C8.059,0 0,8.059 0,18 C0,27.941 8.059,36 18,36 C27.94,36 36,27.941 36,18 C36,8.059 27.94,0 18,0" id="path-1"></path>
+    </defs>
+    <g id="V2-/-Statistics" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-19">
+            <rect id="Rectangle" fill="#FAFAFA" x="0" y="0" width="130" height="130"></rect>
+            <g id="Group" transform="translate(45.000000, 45.000000)">
+                <g id="Colors/White" transform="translate(2.000000, 2.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Mask"></g>
+                    <g id="Group" mask="url(#mask-2)">
+                        <g transform="translate(-2.000000, -2.000000)" id="Color">
+                            <rect id="Rectangle" fill="#E6E6E6" x="0" y="0" width="40" height="40"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

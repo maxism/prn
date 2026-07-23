@@ -1,0 +1,171 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  display: inline-flex;
+  align-items: center;
+
+  min-width: 24px;
+  min-height: 24px;
+
+  .input {
+    display: none;
+  }
+
+  .text {
+    margin-top: 2px;
+    @include FontTextS();
+    font-weight: 500;
+    color: $super-dark;
+  }
+
+  .description {
+    margin-top: 2px;
+    @include FontTextXS();
+    color: $grey;
+  }
+
+  label {
+    position: relative;
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    min-height: 24px;
+    padding-left: calc(24px + var(--module-xs) + var(--module-xxs));
+
+    cursor: pointer;
+    user-select: none;
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: '';
+
+      background-color: $bg-dark;
+      border-radius: 50%;
+
+      width: 24px;
+      height: 24px;
+      top: 0;
+      left: 0;
+
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: '';
+
+      background-color: $white;
+      border-radius: 50%;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 10%);
+
+      width: 16px;
+      height: 16px;
+      top: 4px;
+      left: 4px;
+
+      opacity: 0;
+      transition: opacity 0.3s ease, box-shadow 0.3s ease;
+    }
+  }
+
+  &:hover:not(.checked):not(.disabled) {
+    label {
+      &::before {
+        box-shadow: 0 0 0 2px $green;
+      }
+    }
+  }
+}
+
+.sizeM {
+  min-width: 36px;
+  min-height: 36px;
+
+  .text {
+    @include FontTextM();
+    font-weight: 500;
+    color: $super-dark;
+  }
+
+  .description {
+    margin-top: 2px;
+    @include FontTextS();
+    color: $grey;
+  }
+
+  label {
+    min-height: 36px;
+    padding-left: calc(36px + var(--module-s));
+
+    &::before {
+      width: 36px;
+      height: 36px;
+    }
+
+    &::after {
+      width: 20px;
+      height: 20px;
+
+      top: 8px;
+      left: 8px;
+    }
+  }
+}
+
+.sizeS {
+
+}
+
+.checked {
+  label {
+    cursor: default;
+
+    &::before {
+      background-color: $green;
+    }
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.disabled {
+  .text {
+    color: $light;
+  }
+
+  label {
+    cursor: not-allowed;
+
+    &::before {
+      background-color: $bg-light;
+      box-shadow: 0 0 0 1px $bg-tag;
+    }
+  }
+}
+
+.white {
+  &:not(.checked):not(.disabled) {
+    label {
+      &::before {
+        background-color: $white;
+        box-shadow: 0 0 0 1px $bg-tag;
+      }
+    }
+  }
+
+  &.disabled {
+    label {
+      &::after {
+        background-color: $grey;
+        box-shadow: none;
+      }
+    }
+  }
+}

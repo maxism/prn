@@ -1,0 +1,161 @@
+@import '../../styles/globals/vars';
+
+.element {
+
+}
+
+.sizeXL {
+  width: 80px;
+  height: 80px;
+
+  @media screen and (max-width: $max-width-tablet) {
+    width: 60px;
+    height: 60px;
+  }
+
+  @media screen and (max-width: $max-width-mobile) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.sizeL {
+  width: 32px;
+  height: 32px;
+
+  @media screen and (max-width: $max-width-tablet) {
+    width: 24px;
+    height: 24px;
+  }
+
+  @media screen and (max-width: $max-width-mobile) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.sizeM {
+  width: 24px;
+  height: 24px;
+
+  @media screen and (max-width: $max-width-mobile) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.sizeS {
+  width: 20px;
+  height: 20px;
+
+  @media screen and (max-width: $max-width-mobile) {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.sizeXS {
+  width: 16px;
+  height: 16px;
+}
+
+.elementGroup {
+  display: flex;
+  align-items: center;
+
+  & .label {
+    width: auto;
+
+    @media screen and (max-width: $max-width-tablet) {
+      display: none;
+    }
+  }
+
+  &.full {
+    flex: 1 1 100%;
+  }
+
+  &.groupSizeXS {
+    & > .groupContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: calc(var(--module-xs) / -2);
+
+      & > * {
+        margin: calc(var(--module-xs) / 2);
+      }
+    }
+  }
+
+  &.groupSizeS {
+
+  }
+
+  &.groupSizeM {
+    & > .label {
+      margin-right: var(--module-l);
+    }
+
+    & > .groupContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: calc(var(--module-s) / -2);
+
+      & > * {
+        margin: calc(var(--module-s) / 2);
+      }
+    }
+  }
+
+  &.groupSizeL {
+    & > .label {
+      margin-right: var(--module-l);
+    }
+
+    & > .groupContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: -24px;
+
+      & > * {
+        margin: 24px;
+      }
+
+      @media screen and (max-width: $max-width-tablet) {
+        margin: -20px;
+
+        & > * {
+          margin: 20px;
+        }
+      }
+
+      @media screen and (max-width: $max-width-mobile) {
+        margin: -12px;
+
+        & > * {
+          margin: 12px;
+        }
+      }
+    }
+  }
+
+  &.groupSizeXL {
+    & > .label {
+      margin-right: var(--module-xl);
+    }
+
+    & > .groupContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: calc(var(--module-xl) / -2);
+
+      & > * {
+        margin: calc(var(--module-xl) / 2);
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@import '../../globals/vars';
+
+.toolbar2 {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+
+  &--regular {
+    & > *:not(:first-child) {
+      margin-left: 10px;
+    }
+
+    & > .toolbar2__group > *:not(:first-child) {
+      margin-left: 5px;
+    }
+  }
+
+  &--middle {
+    & > .toolbar2__group > *:not(:first-child) {
+      margin-left: 10px;
+    }
+  }
+
+  &--big {
+    & > *:not(:first-child) {
+      margin-left: 30px;
+    }
+
+    & > .toolbar2__group > *:not(:first-child) {
+      margin-left: 5px;
+    }
+  }
+
+  &--button {
+    & > *:not(:first-child) {
+      margin-left: 30px;
+    }
+
+    & > .toolbar2__group > *:not(:first-child) {
+      margin-left: 30px;
+    }
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+
+    &--right {
+      justify-content: flex-end;
+    }
+
+    &--fill {
+      flex: 1 1 auto;
+    }
+
+    &--align-bottom {
+      align-items: flex-end;
+    }
+  }
+
+  &--sticky {
+    position: sticky;
+    top: 60px;
+    z-index: 900;
+
+    background-color: $white;
+    padding: 10px 0;
+
+    border-bottom: 1px solid $light-grey;
+  }
+
+  &--center {
+    justify-content: center;
+  }
+}

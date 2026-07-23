@@ -1,0 +1,216 @@
+@import '../../globals/vars';
+
+.input-text {
+  width: 100%;
+
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 21px 15px 9px 15px;
+    cursor: pointer;
+    background-color: $light;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    transition: box-shadow 0.3s ease;
+
+    &:hover:not(.input-text--disabled) {
+      box-shadow: 0 0 0 2px $grey1;
+
+      .input-text__icon-clear {
+        fill: $grey;
+      }
+    }
+  }
+
+  &__label {
+    position: absolute;
+    font-size: 16px;
+    line-height: 20px;
+    color: $grey;
+    top: 15px;
+    transition: top 0.15s ease, font-size 0.15s ease, color 0.15s ease;
+    user-select: none;
+  }
+
+  &__text {
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 0;
+    cursor: inherit;
+    background-color: inherit;
+    outline: none;
+    transition: top 0.15s ease, font-size 0.15s ease, color 0.15s ease;
+  }
+
+  &__field-icon {
+    position: absolute;
+    top: 15px;
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+
+    fill: $grey;
+
+    transition: fill 0.3s ease;
+  }
+
+  &__icons {
+    position: absolute;
+    display: flex;
+    right: 10px;
+    top: 15px;
+
+    & > * {
+      &:first-child {
+        margin-left: 10px;
+      }
+      margin-left: 0;
+    }
+  }
+
+  &__icon {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: fill 0.3s ease;
+
+    &-clear {
+      fill: $grey1;
+
+      &:hover {
+        fill: $blue !important;
+      }
+    }
+
+    &-error {
+      fill: $red;
+    }
+  }
+
+  &--filled {
+    .input-text__text {
+      width: calc(100% - 30px);
+    }
+  }
+
+  &--focus, &--filled {
+    cursor: text;
+
+    .input-text__label {
+      font-size: 10px;
+      line-height: 14px;
+      top: 9px;
+    }
+
+    .input-text__text {
+      cursor: inherit;
+    }
+
+    .input-text__field-icon {
+      fill: $blue;
+    }
+  }
+
+  &--focus {
+    box-shadow: 0 0 0 2px $green !important;
+
+    .input-text__icon-clear {
+      fill: $grey;
+    }
+
+    .input-text__field-icon {
+      fill: $black;
+    }
+  }
+
+  &--disabled {
+    cursor: auto;
+
+    .input-text__label {
+      color: $grey2;
+    }
+
+    .input-text__text {
+      color: $grey2;
+    }
+  }
+
+  &--error {
+    box-shadow: 0 0 0 2px $red !important;
+
+    .input-text__field-icon {
+      fill: $red !important;
+    }
+  }
+
+  // Большое поле ввода
+  &--big {
+    &.input-text__container {
+      padding: 44px 20px 20px 20px;
+    }
+
+    .input-text__label {
+      font-size: 20px;
+      line-height: 26px;
+      top: 32px;
+    }
+
+    .input-text__text {
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    &.input-text--focus, &.input-text--filled {
+      .input-text__label {
+        font-size: 13px;
+        line-height: 16px;
+        top: 20px;
+      }
+    }
+
+    .input-text__icons {
+      position: absolute;
+      display: flex;
+      right: 15px;
+      top: 30px;
+    }
+
+    .input-text__icon {
+      flex: 0 0 30px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &--icon {
+    & .input-text__label {
+      left: 45px;
+    }
+
+    & .input-text__text {
+      padding-left: 30px;
+    }
+
+    &.input-text--big {
+      .input-text__field-icon {
+        top: 30px;
+        flex: 0 0 30px;
+        width: 30px;
+        height: 30px;
+      }
+
+      .input-text__label {
+        left: 65px;
+      }
+
+      .input-text__text {
+        padding-left: 45px;
+      }
+    }
+  }
+}

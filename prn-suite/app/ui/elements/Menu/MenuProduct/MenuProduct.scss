@@ -1,0 +1,25 @@
+.menu-product{
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  max-width: 100%;
+  margin-left: 10px;
+  &__text{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 21px);
+  }
+  &__logo{
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    fill: #fff;
+  }
+  &:hover{
+    color: #fff;
+  }
+}

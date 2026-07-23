@@ -1,0 +1,45 @@
+@import "../../globals/vars";
+
+.actionbar{
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  //flex-wrap: wrap;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 20px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  background-color: $dark-grey;
+  padding: 15px 20px;
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 0.3s, opacity 0.3s;
+
+  &__control{
+    margin-right: 10px;
+    height: 20px;
+  }
+
+  &__close{
+    margin-left: auto;
+    height: 20px;
+  }
+
+  &__close-icon{
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+  }
+
+  &__content {
+    display: flex;
+    & > * + * {
+      margin-left: 10px;
+    }
+  }
+
+  &--visible{
+    opacity: 1;
+    transform: none;
+  }
+}

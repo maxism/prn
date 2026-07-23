@@ -1,0 +1,62 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 100%;
+
+  .title {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+  }
+
+  .anchor {
+    position: absolute;
+    top: -110px;
+  }
+
+  .controlsContainer {
+    //
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+
+.xs {
+  @include FontTitleXS();
+}
+
+.s {
+  @include FontTitleS();
+}
+
+.m {
+  @include FontTitleM();
+}
+
+.l {
+  @include FontTitleL();
+}
+
+.xl {
+  @include FontTitleXL();
+}
+
+.heavy {
+  @include FontTitleHeavy()
+}

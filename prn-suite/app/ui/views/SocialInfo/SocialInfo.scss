@@ -1,0 +1,38 @@
+@import '../../globals/vars.scss';
+
+.social-info {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  font-size: 13px;
+  line-height: 14px;
+
+  @media screen and (min-width: $t) and (max-width: $maxt) {
+    max-width: 50%;
+  }
+
+  &__icon {
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:hover{
+      color: $red;
+    }
+  }
+}
+
+.modal__content {
+  .social-info .social-info__text {
+    font-size: 15px;
+    line-height: 20px;
+    color: $blue;
+  }
+}

@@ -1,0 +1,32 @@
+@import '../../globals/vars';
+
+.language{
+  position: relative;
+  display: inline-block;
+  &__main, &__item{
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 20px;
+    transition: all .3s;
+    display: flex;
+  }
+  &__main{
+    color: $grey;
+    justify-content: flex-end;
+    // min-height: 50px;
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      height: 50px;
+    }
+    &:hover{
+      color: $red;
+    }
+  }
+  &__ico{
+    order: 1;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $grey2;
+    border-radius: 50%;
+  }
+}

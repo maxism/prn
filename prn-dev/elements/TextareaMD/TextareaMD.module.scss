@@ -1,0 +1,59 @@
+@import '../../styles/globals/vars';
+
+.element {
+  position: relative;
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
+
+  background-color: $bg-light;
+  border-radius: 10px;
+
+  padding: 15px;
+  overflow: hidden;
+
+  transition: box-shadow 0.3s ease;
+
+  &:hover:not(.disabled) {
+    box-shadow: 0 0 0 2px $bg-tag;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  cursor: text;
+
+  & > * {
+    width: 100%;
+  }
+
+  &:global {
+    & > .full {
+      z-index: 10000;
+    }
+  }
+}
+
+.text {
+  background-color: $bg-light;
+  border: none;
+  outline: none;
+
+  padding: 0;
+  width: 100%;
+  resize: none;
+
+  font-size: 16px;
+  line-height: 20px;
+  color: $black;
+
+  &::placeholder {
+    color: $grey;
+  }
+}
+
+.focus {
+  box-shadow: 0 0 0 2px $green !important;
+}
+

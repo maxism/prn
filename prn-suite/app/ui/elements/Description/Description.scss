@@ -1,0 +1,80 @@
+@import '../../globals/vars';
+
+.description {
+  display: flex;
+
+  &__text {
+    color: $grey;
+
+    & > *:first-child {
+      margin-top: 0 !important;
+    }
+  }
+
+  &__p {
+    margin-top: 23px;
+    max-width: 635px;
+  }
+
+  &__l {
+    display: inline-block;
+  }
+
+  & strong {
+    color: $black;
+  }
+
+  & a {
+    color: $blue;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &--center {
+    justify-content: center;
+    text-align: center;
+  }
+
+  &--superSmall {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  &--small {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &--middle {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &--white {
+    & .description__text {
+      color: $white;
+    }
+  }
+
+  &--red {
+    & .description__text {
+      color: $red;
+    }
+
+    & strong {
+      color: $red;
+    }
+  }
+
+  &--big {
+    font-size: 20px;
+    line-height: 26px;
+
+    .description__p {
+      max-width: 730px;
+    }
+  }
+}

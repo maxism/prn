@@ -1,0 +1,26 @@
+.tippy-tooltip{
+  &.about-theme{
+    width: 350px;
+    background: #444 !important;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    font-size: 13px;
+    line-height: 14px;
+    border-radius: 10px;
+    text-align: left;
+    .tippy-tooltip-content{
+      & > .button{
+        font-size: 13px;
+        line-height: 14px;
+        width: 100%;
+        padding: 8px;
+      }
+    }
+  }
+}
+
+.about-dialog{
+  &__remove{
+    color: #fff;
+  }
+}

@@ -1,0 +1,89 @@
+@import '../../styles/globals/vars';
+
+.element {
+  position: fixed;
+  max-width: 820px;
+
+  padding: 0 16px;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2100;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex: 1 1 100%;
+  margin: 0 16px;
+  padding: 15px;
+  backdrop-filter: blur(10px) saturate(180%);
+  background-color: rgba($black, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+
+  @media screen and (max-width: $max-width-tablet) {
+    flex-direction: column;
+  }
+}
+
+.iconMain {
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  fill: $white;
+  margin-right: 15px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+}
+
+.title {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  color: $white;
+}
+
+.text {
+  font-size: 12px;
+  line-height: 16px;
+  color: $light;
+  margin-top: 4px;
+}
+
+.left {
+  display: flex;
+  flex: 1 1 100%;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  & > * {
+    margin-left: 15px;
+
+    @media screen and (max-width: $max-width-tablet) {
+      margin-left: 0;
+      margin-top: 15px;
+    }
+  }
+}
+
+.iconRight {
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  fill: $white;
+  transition: fill 0.3s ease;
+
+  &:hover {
+    fill: $grey;
+    cursor: pointer;
+  }
+}

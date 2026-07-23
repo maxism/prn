@@ -1,0 +1,74 @@
+@import '../../globals/vars';
+
+.settings-button {
+  display: flex;
+  align-items: center;
+  flex: 1 1 100%;
+  background-color: $light;
+  border-radius: 10px;
+  padding: 25px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+
+  & > *:not(:first-child) {
+    margin-left: 20px;
+  }
+
+  &__icon {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    fill: $grey2;
+    transition: fill 0.3s ease;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: bold;
+    color: $black;
+  }
+
+  &__description {
+    font-size: 12px;
+    line-height: 16px;
+    color: $grey;
+    margin-top: 4px;
+  }
+
+  &__notification-icon {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+
+    &__red {
+      fill: $red;
+    }
+
+    &__green {
+      fill: $green;
+    }
+  }
+
+  &:hover {
+    background-color: darken($light, 3%);
+    cursor: pointer;
+  }
+
+  &--active {
+    .settings-button__icon {
+      fill: $green;
+    }
+  }
+
+  &--double {
+    flex: 1 1 calc(50% - 30px);
+    margin: 15px;
+  }
+}

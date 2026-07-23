@@ -1,0 +1,39 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .image {
+    flex: 1 1 calc(50% + (var(--grid-offset) * 2));
+    width: calc(50% + (var(--grid-offset) * 2));
+  }
+
+  .title {
+    margin-top: var(--module-s);
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    margin-top: var(--module-xs);
+
+    .icon {
+      flex: 0 0 var(--icon-s);
+      width: var(--icon-s);
+      height: var(--icon-s);
+      fill: $grey;
+
+      margin-right: var(--module-xs);
+    }
+  }
+
+}

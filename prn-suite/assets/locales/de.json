@@ -1,0 +1,1946 @@
+{
+   "domain": "messages",
+   "locale_data": {
+      "messages": {
+         "Access denied": [
+            ""
+         ],
+         "Obviousli, you have not permission to view this page. Perhaps you have not been given access rights or went here by mistake": [
+            ""
+         ],
+         "Back to main page": [
+            ""
+         ],
+         "Pages adding": [
+            ""
+         ],
+         "You can add: %communities%": [
+            ""
+         ],
+         "Change tariff plan": [
+            ""
+         ],
+         "Edit pages": [
+            ""
+         ],
+         "Remove pages": [
+            ""
+         ],
+         "Remove": [
+            ""
+         ],
+         "There is no such pages": [
+            ""
+         ],
+         "Community data is loading": [
+            ""
+         ],
+         "Pages is already added": [
+            ""
+         ],
+         "Add all pages to analyze": [
+            ""
+         ],
+         "Addition account": [
+            ""
+         ],
+         "Add links": [
+            ""
+         ],
+         "Add from catalog": [
+            ""
+         ],
+         "Add from bookmarks": [
+            ""
+         ],
+         "Add from my pages": [
+            ""
+         ],
+         "Create report": [
+            ""
+         ],
+         "After report will be ready, you can download it from archive. Or wait on this page.": [
+            ""
+         ],
+         "Download": [
+            ""
+         ],
+         "Report is loading": [
+            ""
+         ],
+         "Report is unsaved": [
+            ""
+         ],
+         "New report": [
+            ""
+         ],
+         "Template %template_name%": [
+            ""
+         ],
+         "Create archive report PPTX": [
+            ""
+         ],
+         "Create archive report XLSX": [
+            ""
+         ],
+         "Create archive report PDF": [
+            ""
+         ],
+         "Scheduled archive reports": [
+            ""
+         ],
+         "Edit": [
+            ""
+         ],
+         "Save": [
+            ""
+         ],
+         "Template": [
+            ""
+         ],
+         "Create new template": [
+            ""
+         ],
+         "Previous period": [
+            ""
+         ],
+         "Compare": [
+            ""
+         ],
+         "Current period": [
+            ""
+         ],
+         "Filters": [
+            ""
+         ],
+         "Filters chosen": [
+            ""
+         ],
+         "No filters": [
+            ""
+         ],
+         "Add new widget": [
+            ""
+         ],
+         "Archive reports": [
+            ""
+         ],
+         "Enter archive report": [
+            ""
+         ],
+         "There is no such reports": [
+            ""
+         ],
+         "Reports not found": [
+            ""
+         ],
+         "More": [
+            ""
+         ],
+         "Reports rules": [
+            ""
+         ],
+         "Add rule": [
+            ""
+         ],
+         "Rules filter": [
+            ""
+         ],
+         "There is no such rule": [
+            ""
+         ],
+         "Rules not found": [
+            ""
+         ],
+         "Hiddens list": [
+            ""
+         ],
+         "Enter community name": [
+            ""
+         ],
+         "Recover": [
+            ""
+         ],
+         "No such hidden communities": [
+            ""
+         ],
+         "Hidden communities not found": [
+            ""
+         ],
+         "Communities list": [
+            ""
+         ],
+         "Add community": [
+            ""
+         ],
+         "You can remove": [
+            ""
+         ],
+         "community": [
+            "",
+            "communities"
+         ],
+         "Change tariff": [
+            ""
+         ],
+         "There is no such communities": [
+            ""
+         ],
+         "Communities not found": [
+            ""
+         ],
+         "No users": [
+            ""
+         ],
+         "Communities": [
+            ""
+         ],
+         "Tags": [
+            ""
+         ],
+         "Hiddens": [
+            ""
+         ],
+         "Tags list": [
+            ""
+         ],
+         "Add new tag": [
+            ""
+         ],
+         "Enter tag name": [
+            ""
+         ],
+         "There is no such tags": [
+            ""
+         ],
+         "Tags not found": [
+            ""
+         ],
+         "Fans activity": [
+            ""
+         ],
+         "Fan posts and comments": [
+            ""
+         ],
+         "Posts count": [
+            ""
+         ],
+         "Comments count": [
+            ""
+         ],
+         "Key indicators": [
+            ""
+         ],
+         "Total activities": [
+            ""
+         ],
+         "Average activities per hour": [
+            ""
+         ],
+         "Total activities change": [
+            ""
+         ],
+         "Maximum activities change": [
+            ""
+         ],
+         "Average activities change per hour": [
+            ""
+         ],
+         "Brand Response Speed": [
+            ""
+         ],
+         "Average response time": [
+            ""
+         ],
+         "Answers count": [
+            ""
+         ],
+         "Total questions": [
+            ""
+         ],
+         "Average response time change": [
+            ""
+         ],
+         "Total questions count change": [
+            ""
+         ],
+         "Summary data": [
+            ""
+         ],
+         "Comments overview on the page wall": [
+            ""
+         ],
+         "Likes": [
+            ""
+         ],
+         "Date": [
+            ""
+         ],
+         "Filter comments": [
+            ""
+         ],
+         "Question": [
+            ""
+         ],
+         "Comment": [
+            ""
+         ],
+         "Auto": [
+            ""
+         ],
+         "Day": [
+            ""
+         ],
+         "Week": [
+            ""
+         ],
+         "Month": [
+            ""
+         ],
+         "Quarter": [
+            ""
+         ],
+         "Year": [
+            ""
+         ],
+         "Page ER (fans)": [
+            ""
+         ],
+         "Page ER by admin posts": [
+            ""
+         ],
+         "Admin`s page engagement": [
+            ""
+         ],
+         "Average page engagement": [
+            ""
+         ],
+         "Maximum page engagement": [
+            ""
+         ],
+         "Minimum page engagement": [
+            ""
+         ],
+         "Average page engagement change": [
+            ""
+         ],
+         "Maximum page engagement change": [
+            ""
+         ],
+         "Minimum page engagement change": [
+            ""
+         ],
+         "Total Page ER": [
+            ""
+         ],
+         "Total page engagement": [
+            ""
+         ],
+         "Page ER by user posts": [
+            ""
+         ],
+         "Post engagement": [
+            ""
+         ],
+         "Users post engagement": [
+            ""
+         ],
+         "Minimum page engagement change change": [
+            ""
+         ],
+         "Page ER (reach)": [
+            ""
+         ],
+         "Minimum page reach engagement": [
+            ""
+         ],
+         "Minimum page reach engagement change": [
+            ""
+         ],
+         "Minimum page reach engagement change change": [
+            ""
+         ],
+         "Post ER (fans)": [
+            ""
+         ],
+         "Admin Post ER": [
+            ""
+         ],
+         "Average post engagement": [
+            ""
+         ],
+         "Maximum post engagement": [
+            ""
+         ],
+         "Minimum post engagement": [
+            ""
+         ],
+         "Average post engagement change": [
+            ""
+         ],
+         "Maximum post engagement change": [
+            ""
+         ],
+         "Minimum post engagement change": [
+            ""
+         ],
+         "Admin post enagagement": [
+            ""
+         ],
+         "Total Post ER": [
+            ""
+         ],
+         "Total post engagement": [
+            ""
+         ],
+         "User Post ER": [
+            ""
+         ],
+         "Post ER (reach)": [
+            ""
+         ],
+         "Admin Post ER (reach)": [
+            ""
+         ],
+         "Average post reach engagement": [
+            ""
+         ],
+         "Maximum post reach engagement": [
+            ""
+         ],
+         "Minimum post reach engagement": [
+            ""
+         ],
+         "Average post reach engagement change": [
+            ""
+         ],
+         "Maximum post reach engagement change": [
+            ""
+         ],
+         "Minimum post reach engagement change": [
+            ""
+         ],
+         "Posts overview on the page wall": [
+            ""
+         ],
+         "Comments": [
+            ""
+         ],
+         "Reposts": [
+            ""
+         ],
+         "Interactions": [
+            ""
+         ],
+         "ER": [
+            ""
+         ],
+         "Dislikes": [
+            ""
+         ],
+         "Total interactions": [
+            ""
+         ],
+         "Post ER": [
+            ""
+         ],
+         "All data": [
+            ""
+         ],
+         "Number of posts": [
+            ""
+         ],
+         "Admin Posts": [
+            ""
+         ],
+         "Total posts count": [
+            ""
+         ],
+         "Maximum posts count": [
+            ""
+         ],
+         "Minimum posts count": [
+            ""
+         ],
+         "Average posts count per ": [
+            ""
+         ],
+         "Total posts count change": [
+            ""
+         ],
+         "Maximum posts count change": [
+            ""
+         ],
+         "Minimum posts count change": [
+            ""
+         ],
+         "Average posts per": [
+            ""
+         ],
+         "Average posts count": [
+            ""
+         ],
+         "Total Posts": [
+            ""
+         ],
+         "Average posts count change": [
+            ""
+         ],
+         "User Posts": [
+            ""
+         ],
+         "Total interactions with admin posts": [
+            ""
+         ],
+         "Likes count": [
+            ""
+         ],
+         "Dislikes count": [
+            ""
+         ],
+         "Reposts count": [
+            ""
+         ],
+         "Total interactions count": [
+            ""
+         ],
+         "Total posts interactions count": [
+            ""
+         ],
+         "Total posts interactions count change": [
+            ""
+         ],
+         "Average posts interactions change per ": [
+            ""
+         ],
+         "Average interactions": [
+            ""
+         ],
+         "Total posts interactions change count": [
+            ""
+         ],
+         "Dislikes count change": [
+            ""
+         ],
+         "Comments count change": [
+            ""
+         ],
+         "Reposts count change": [
+            ""
+         ],
+         "Total interactions with user posts": [
+            ""
+         ],
+         "Post ER (different types of posts)": [
+            ""
+         ],
+         "Interactions count": [
+            ""
+         ],
+         "Posts type with maximum interactions": [
+            ""
+         ],
+         "List of questions and answers": [
+            ""
+         ],
+         "Response time": [
+            ""
+         ],
+         "Time without answer": [
+            ""
+         ],
+         "Filter questions/answers": [
+            ""
+         ],
+         "Answer": [
+            ""
+         ],
+         "Questions replied in relation to the unreplied ones": [
+            ""
+         ],
+         "Questions": [
+            ""
+         ],
+         "Answers": [
+            ""
+         ],
+         "Questions without answer": [
+            ""
+         ],
+         "Total answers": [
+            ""
+         ],
+         "Average questions per ": [
+            ""
+         ],
+         "Response rate": [
+            ""
+         ],
+         "Total number of questions change": [
+            ""
+         ],
+         "Total answers change": [
+            ""
+         ],
+         "Average questions count change": [
+            ""
+         ],
+         "Change part of answered questions": [
+            ""
+         ],
+         "Response Rate and Total Questions": [
+            ""
+         ],
+         "Average response rate": [
+            ""
+         ],
+         "Questions count": [
+            ""
+         ],
+         "Average questions count": [
+            ""
+         ],
+         "Average response rate change": [
+            ""
+         ],
+         "Answers count change": [
+            ""
+         ],
+         "Questions count change": [
+            ""
+         ],
+         "Basic data overview": [
+            ""
+         ],
+         "Users": [
+            ""
+         ],
+         "Total users count": [
+            ""
+         ],
+         "Growth (absolute)": [
+            ""
+         ],
+         "Relative growth": [
+            ""
+         ],
+         "Content": [
+            ""
+         ],
+         "Average post engagement rate": [
+            ""
+         ],
+         "Average page engagement rate": [
+            ""
+         ],
+         "Total likes": [
+            ""
+         ],
+         "Total dislikes": [
+            ""
+         ],
+         "Total comments": [
+            ""
+         ],
+         "Users posts": [
+            ""
+         ],
+         "Total users count change": [
+            ""
+         ],
+         "Growth (absolute) change": [
+            ""
+         ],
+         "Relative growth change": [
+            ""
+         ],
+         "Posts on page count change": [
+            ""
+         ],
+         "Response rate change": [
+            ""
+         ],
+         "Total interactions change": [
+            ""
+         ],
+         "Total likes change": [
+            ""
+         ],
+         "Total dislikes change": [
+            ""
+         ],
+         "Total comments change": [
+            ""
+         ],
+         "Reposts change": [
+            ""
+         ],
+         "Users posts change": [
+            ""
+         ],
+         "Posts on page": [
+            ""
+         ],
+         "Total Fans": [
+            ""
+         ],
+         "Total fans growth": [
+            ""
+         ],
+         "Total users count growth": [
+            ""
+         ],
+         "Maximum users growth": [
+            ""
+         ],
+         "Minimum users growth": [
+            ""
+         ],
+         "Average users count growth per ": [
+            ""
+         ],
+         "Maximum change": [
+            ""
+         ],
+         "Minimum change": [
+            ""
+         ],
+         "Average change per ": [
+            ""
+         ],
+         "Minimum users count growth": [
+            ""
+         ],
+         "Maximum users count growth": [
+            ""
+         ],
+         "Average change": [
+            ""
+         ],
+         "Total fans over time": [
+            ""
+         ],
+         "Users count dynamic": [
+            ""
+         ],
+         "Maximum users count": [
+            ""
+         ],
+         "Minimum users count": [
+            ""
+         ],
+         "Relative users count growth": [
+            ""
+         ],
+         "Users count": [
+            ""
+         ],
+         "Average users count": [
+            ""
+         ],
+         "Total fans growth rate": [
+            ""
+         ],
+         "Total growth": [
+            ""
+         ],
+         "Maximum growth": [
+            ""
+         ],
+         "Minimum growth": [
+            ""
+         ],
+         "Average growth per ": [
+            ""
+         ],
+         "Average growth": [
+            ""
+         ],
+         "Reports": [
+            ""
+         ],
+         "Reports filter": [
+            ""
+         ],
+         "No such reports": [
+            ""
+         ],
+         "Templates": [
+            ""
+         ],
+         "Create template": [
+            ""
+         ],
+         "Templates filter": [
+            ""
+         ],
+         "No templates": [
+            ""
+         ],
+         "Templates not found": [
+            ""
+         ],
+         "Help": [
+            ""
+         ],
+         "Enter question": [
+            ""
+         ],
+         "Where the saved reports are falling into?": [
+            ""
+         ],
+         "Was this article usefull?": [
+            ""
+         ],
+         "Your response will help us to improve our feedback quaility. Thank you!": [
+            ""
+         ],
+         "Yes, it helped": [
+            ""
+         ],
+         "No, i can`t understand": [
+            ""
+         ],
+         "Statistics": [
+            ""
+         ],
+         "Facebook": [
+            ""
+         ],
+         "Instagram": [
+            ""
+         ],
+         "Twitter": [
+            ""
+         ],
+         "YouTube": [
+            ""
+         ],
+         "Google+": [
+            ""
+         ],
+         "Pinterest": [
+            ""
+         ],
+         "VK": [
+            ""
+         ],
+         "Odnoklassniki": [
+            ""
+         ],
+         "Products": [
+            ""
+         ],
+         "Cube Basic Analytics": [
+            ""
+         ],
+         "Benchmarks": [
+            ""
+         ],
+         "Regional Reports": [
+            ""
+         ],
+         "Industry Social Media Reports": [
+            ""
+         ],
+         "Events": [
+            ""
+         ],
+         "Announcements": [
+            ""
+         ],
+         "Current": [
+            ""
+         ],
+         "Past Events": [
+            ""
+         ],
+         "Blog": [
+            ""
+         ],
+         "Cube News": [
+            ""
+         ],
+         "Marketing": [
+            ""
+         ],
+         "About Us": [
+            ""
+         ],
+         "Cube History": [
+            ""
+         ],
+         "Brand Values": [
+            ""
+         ],
+         "Why users choose Cube?": [
+            ""
+         ],
+         "Clients": [
+            ""
+         ],
+         "Team": [
+            ""
+         ],
+         "Contacts": [
+            ""
+         ],
+         "Terms & Conditions": [
+            ""
+         ],
+         "Menu": [
+            ""
+         ],
+         "Analytics": [
+            ""
+         ],
+         "Archive": [
+            ""
+         ],
+         "Log In": [
+            ""
+         ],
+         "8000+ marketers use Cube Analytics": [
+            ""
+         ],
+         "Cube Analytics: right analysis of the right data that helps make right communication decisions.": [
+            ""
+         ],
+         "Share": [
+            ""
+         ],
+         "Tweet": [
+            ""
+         ],
+         "Add communities": [
+            ""
+         ],
+         "Start entering community name, and then check necessary communities from your bookmarks": [
+            ""
+         ],
+         "Bookmarks filter": [
+            ""
+         ],
+         "No such bookmarks": [
+            ""
+         ],
+         "Bookmarks not found": [
+            ""
+         ],
+         "Edit color": [
+            ""
+         ],
+         "Color": [
+            ""
+         ],
+         "Additions edit": [
+            ""
+         ],
+         "Timezone": [
+            ""
+         ],
+         "Different": [
+            ""
+         ],
+         "Tags filter": [
+            ""
+         ],
+         "New tag": [
+            ""
+         ],
+         "My communities": [
+            ""
+         ],
+         "Add communities you own to the list for analysis": [
+            ""
+         ],
+         "Your communities filter": [
+            ""
+         ],
+         "There is no such additions": [
+            ""
+         ],
+         "Additions not found": [
+            ""
+         ],
+         "How to add communities here": [
+            ""
+         ],
+         "Find in catalog": [
+            ""
+         ],
+         "Start entering community name, and then check necessary communities from catalog": [
+            ""
+         ],
+         "Search in catalog": [
+            ""
+         ],
+         "Not found": [
+            ""
+         ],
+         "Enter one or more community links and edit addition list, if you need": [
+            ""
+         ],
+         "Enter links here": [
+            ""
+         ],
+         "Edit communities": [
+            ""
+         ],
+         "Filter tags": [
+            ""
+         ],
+         "No tags": [
+            ""
+         ],
+         "Menu editing": [
+            ""
+         ],
+         "New menu item": [
+            ""
+         ],
+         "Enter new menu item name": [
+            ""
+         ],
+         "Menu Editing": [
+            ""
+         ],
+         "Add menu item": [
+            ""
+         ],
+         "Menu item renaming": [
+            ""
+         ],
+         "New menu item name": [
+            ""
+         ],
+         "Enter new name": [
+            ""
+         ],
+         "Select period": [
+            ""
+         ],
+         "Save period": [
+            ""
+         ],
+         "Quick period selection": [
+            ""
+         ],
+         "For simple period choosing please use predefined filters": [
+            ""
+         ],
+         "Last 7 days": [
+            ""
+         ],
+         "Last 30 days": [
+            ""
+         ],
+         "Last week": [
+            ""
+         ],
+         "Last month": [
+            ""
+         ],
+         "Custom date selection": [
+            ""
+         ],
+         "Select begin and the end of custom period. Take attention that period duration may be limited due to your tariff plan conditions. The end of period should not be greater than current date or begin of the current period when you choosing previous.": [
+            ""
+         ],
+         "Group": [
+            ""
+         ],
+         "Select global grouping for the report.": [
+            ""
+         ],
+         "Previous 7 days": [
+            ""
+         ],
+         "Previous 30 days": [
+            ""
+         ],
+         "Previous week": [
+            ""
+         ],
+         "Previous month": [
+            ""
+         ],
+         "Email": [
+            ""
+         ],
+         "your Email": [
+            ""
+         ],
+         "Password": [
+            ""
+         ],
+         "required to log in": [
+            ""
+         ],
+         "Password recovery": [
+            ""
+         ],
+         "Sign Up": [
+            ""
+         ],
+         "Password change": [
+            ""
+         ],
+         "Send": [
+            ""
+         ],
+         "Current Password": [
+            ""
+         ],
+         "Don't use simple passwords.": [
+            ""
+         ],
+         "Try to use numbers, small and capital letters.": [
+            ""
+         ],
+         "New Password": [
+            ""
+         ],
+         "Repeat Password": [
+            ""
+         ],
+         "Password Recovery": [
+            ""
+         ],
+         "Please enter Email, that you used to registrate in Cube.": [
+            ""
+         ],
+         "We will send you a link for password recovery at this Email address": [
+            ""
+         ],
+         "I have remembered password": [
+            ""
+         ],
+         "Save filters": [
+            ""
+         ],
+         "Clear filters": [
+            ""
+         ],
+         "Types": [
+            ""
+         ],
+         "Hashtags": [
+            ""
+         ],
+         "Types filter": [
+            ""
+         ],
+         "And": [
+            ""
+         ],
+         "Or": [
+            ""
+         ],
+         "All": [
+            ""
+         ],
+         "Owners": [
+            ""
+         ],
+         "Hashtags filter": [
+            ""
+         ],
+         "Add post tag": [
+            ""
+         ],
+         "Tag type": [
+            ""
+         ],
+         "Local": [
+            ""
+         ],
+         "Shared": [
+            ""
+         ],
+         "Global": [
+            ""
+         ],
+         "Tag name": [
+            ""
+         ],
+         "Post tag name": [
+            ""
+         ],
+         "Post tags editing": [
+            ""
+         ],
+         "Post tags filter": [
+            ""
+         ],
+         "Profile edit": [
+            ""
+         ],
+         "Your Userpic": [
+            ""
+         ],
+         "Userpics uploads automatically from every connected social accounts. You can choose one of them for your profile": [
+            ""
+         ],
+         "Personal info": [
+            ""
+         ],
+         "Name": [
+            ""
+         ],
+         "Phone Number": [
+            ""
+         ],
+         "ATTENTION: after email comfirmed you will not be able to change eour email.": [
+            ""
+         ],
+         "Work info": [
+            ""
+         ],
+         "Company Name": [
+            ""
+         ],
+         "Job Title": [
+            ""
+         ],
+         "Country": [
+            ""
+         ],
+         "City": [
+            ""
+         ],
+         "Service payment": [
+            ""
+         ],
+         "Pay": [
+            ""
+         ],
+         "Tariff": [
+            ""
+         ],
+         "Monthly price": [
+            ""
+         ],
+         "Subscription period": [
+            ""
+         ],
+         "Payment method": [
+            ""
+         ],
+         "To pay an account please send all the company details at": [
+            ""
+         ],
+         "Bank card": [
+            ""
+         ],
+         "Webmoney": [
+            ""
+         ],
+         "Yandex Money": [
+            ""
+         ],
+         "Qiwi": [
+            ""
+         ],
+         "Create new report": [
+            ""
+         ],
+         "Edit report items": [
+            ""
+         ],
+         "Report saving": [
+            ""
+         ],
+         "Report name": [
+            ""
+         ],
+         "Enter report name": [
+            ""
+         ],
+         "Change password": [
+            ""
+         ],
+         "Change": [
+            ""
+         ],
+         "your Password": [
+            ""
+         ],
+         "Repeat password": [
+            ""
+         ],
+         "Settings": [
+            ""
+         ],
+         "Enter your name": [
+            ""
+         ],
+         "Interval": [
+            ""
+         ],
+         "week": [
+            ""
+         ],
+         "month": [
+            ""
+         ],
+         "quarter": [
+            ""
+         ],
+         "year": [
+            ""
+         ],
+         "auto": [
+            ""
+         ],
+         "day": [
+            "",
+            "days"
+         ],
+         "Time": [
+            ""
+         ],
+         "Format": [
+            ""
+         ],
+         "Recipients": [
+            ""
+         ],
+         "Me (%email%)": [
+            ""
+         ],
+         "Emails": [
+            ""
+         ],
+         "Edit rule": [
+            ""
+         ],
+         "safe password": [
+            ""
+         ],
+         "Password again": [
+            ""
+         ],
+         "safe password once again": [
+            ""
+         ],
+         "Sign In": [
+            ""
+         ],
+         "Tag adding": [
+            ""
+         ],
+         "Description": [
+            ""
+         ],
+         "Tag description": [
+            ""
+         ],
+         "Tag editing": [
+            ""
+         ],
+         "Invite new members": [
+            ""
+         ],
+         "Your tariff max team size is": [
+            ""
+         ],
+         "member": [
+            "",
+            "members"
+         ],
+         "To add new team member you should": [
+            ""
+         ],
+         "extend tariff plan": [
+            ""
+         ],
+         "Member Email": [
+            ""
+         ],
+         "Member status": [
+            ""
+         ],
+         "Reports only": [
+            ""
+         ],
+         "Assistant": [
+            ""
+         ],
+         "Moderator": [
+            ""
+         ],
+         "Administrator": [
+            ""
+         ],
+         "Edit member": [
+            ""
+         ],
+         "Role": [
+            ""
+         ],
+         "Share certain communities and tags": [
+            ""
+         ],
+         "After adding community, it shares to it`s owner": [
+            ""
+         ],
+         "If user hides community, it hides only for him": [
+            ""
+         ],
+         "If user removes hidden community, it can be removed from owner list of communities": [
+            ""
+         ],
+         "If user hides community, it hides for user only": [
+            ""
+         ],
+         "Share all communities, new one too": [
+            ""
+         ],
+         "After adding community, it adds to owner list of communities": [
+            ""
+         ],
+         "If user removes community, it removes from his list of communities": [
+            ""
+         ],
+         "If user removes hidden community, it removes from his list of communities and from all users lists of communities": [
+            ""
+         ],
+         "Template creation": [
+            ""
+         ],
+         "New template name": [
+            ""
+         ],
+         "Create on the basis of templates": [
+            ""
+         ],
+         "Sometimes it easier to create a new template on the basis of an already existing one. In order to do this please choose a template needed from the list below.": [
+            ""
+         ],
+         "Edit templates": [
+            ""
+         ],
+         "Add new widgets": [
+            ""
+         ],
+         "Select widget to add": [
+            ""
+         ],
+         "Page not found": [
+            ""
+         ],
+         "To main page": [
+            ""
+         ],
+         "My Profile": [
+            ""
+         ],
+         "Cube allows you to organize teamwork in system. Invite new team members, appointing each member personal access roles.": [
+            ""
+         ],
+         "Confirm email": [
+            ""
+         ],
+         "Social Accounts": [
+            ""
+         ],
+         "Connect your social media accounts.": [
+            ""
+         ],
+         "This will help to collect and analyze social media brand pages data more quickly.": [
+            ""
+         ],
+         "You may connect several accounts from one social network. Pay attention that Cube don’t use any data from your personal profile.": [
+            ""
+         ],
+         "To connect your social media profiles you must be logged in.": [
+            ""
+         ],
+         "Connection error": [
+            ""
+         ],
+         "My Tariff": [
+            ""
+         ],
+         "Log Out": [
+            ""
+         ],
+         "Extend": [
+            ""
+         ],
+         "Cube allows you to organize teamwork in the system. Invite new team members, appointing each member personal access roles.": [
+            ""
+         ],
+         "Current tariff": [
+            ""
+         ],
+         "Days of usage left": [
+            ""
+         ],
+         "Available pages": [
+            ""
+         ],
+         "Data range available": [
+            ""
+         ],
+         "Changes available": [
+            ""
+         ],
+         "Choose another tariff": [
+            ""
+         ],
+         "Cube suggest you a flexible tariff system - as for personal needs, and also for a big ad agencies, working with a large amount of communities and brands. Moreover you can always order individual tariff.": [
+            ""
+         ],
+         "Up to %communities% community": [
+            "",
+            "Up to %communities% communities"
+         ],
+         "Retrospective for %month%": [
+            "",
+            "Retrospective for %month%"
+         ],
+         "You can change": [
+            ""
+         ],
+         "page": [
+            "",
+            "pages"
+         ],
+         "No changes": [
+            ""
+         ],
+         "Data export in PPT, XLS, PDF": [
+            ""
+         ],
+         "Video tutorial": [
+            ""
+         ],
+         "Help: FB group": [
+            ""
+         ],
+         "Personal manager": [
+            ""
+         ],
+         "from 40000 ₽": [
+            ""
+         ],
+         "Up to 300 communities": [
+            ""
+         ],
+         "Retrospective up to 4 years": [
+            ""
+         ],
+         "Unlimited changes": [
+            ""
+         ],
+         "Call": [
+            ""
+         ],
+         "Payments history": [
+            ""
+         ],
+         "Add team member": [
+            ""
+         ],
+         "up to 10 min": [
+            ""
+         ],
+         "10 - 30 min": [
+            ""
+         ],
+         "30 - 60 min": [
+            ""
+         ],
+         "60 - 90 min": [
+            ""
+         ],
+         "60 min - 2 hours": [
+            ""
+         ],
+         "2 - 4 hours": [
+            ""
+         ],
+         "4 - 6 hours": [
+            ""
+         ],
+         "6 - 12 hours": [
+            ""
+         ],
+         "12 - 24 hours": [
+            ""
+         ],
+         "24 - 48 hours": [
+            ""
+         ],
+         "48 - 72 hours": [
+            ""
+         ],
+         "> 72 hours": [
+            ""
+         ],
+         "d": [
+            ""
+         ],
+         "h": [
+            ""
+         ],
+         "min": [
+            ""
+         ],
+         "No result": [
+            ""
+         ],
+         "Sorry, but there aren`t charts for this criteria": [
+            ""
+         ],
+         "Image": [
+            ""
+         ],
+         "Pallette": [
+            ""
+         ],
+         "Enter phone number": [
+            ""
+         ],
+         "Enter email": [
+            ""
+         ],
+         "Enter company": [
+            ""
+         ],
+         "Enter job title": [
+            ""
+         ],
+         "Enter country": [
+            ""
+         ],
+         "Enter city": [
+            ""
+         ],
+         "Enter your password": [
+            ""
+         ],
+         "Enter password": [
+            ""
+         ],
+         "Enter password once again": [
+            ""
+         ],
+         "Enter tag description": [
+            ""
+         ],
+         "Retrospective for %month% month": [
+            "",
+            "Retrospective for %month% months"
+         ],
+         "You can add: %{communities}": [
+            ""
+         ],
+         "Template %{template_name}": [
+            ""
+         ],
+         "Me (%{email})": [
+            ""
+         ],
+         "Up to %{communities} community": [
+            "",
+            "Up to %{communities} communities"
+         ],
+         "Retrospective for %{month} month": [
+            "",
+            "Retrospective for %{month} months"
+         ],
+         "ATTENTION: after email comfirmed you will not be able to change your email by yourself.": [
+            ""
+         ],
+         "Palette": [
+            ""
+         ],
+         "User posts": [
+            ""
+         ],
+         "User posts change": [
+            ""
+         ],
+         "Total posts": [
+            ""
+         ],
+         "Hidden communities": [
+            ""
+         ],
+         "Average reply time": [
+            ""
+         ],
+         "Average reply time change": [
+            ""
+         ],
+         "Admin posts": [
+            ""
+         ],
+         "Maximum interactions": [
+            ""
+         ],
+         "Minimum interactions": [
+            ""
+         ],
+         "Average interactions per ": [
+            ""
+         ],
+         "Maximum interactions change": [
+            ""
+         ],
+         "Minimum interactions change": [
+            ""
+         ],
+         "Average interactions change per ": [
+            ""
+         ],
+         "Answered questions": [
+            ""
+         ],
+         "Average number of questions change": [
+            ""
+         ],
+         "Average number of questions": [
+            ""
+         ],
+         "Total number of questions": [
+            ""
+         ],
+         "Max activity": [
+            ""
+         ],
+         "Answered questions count change": [
+            ""
+         ],
+         "Enter post text": [
+            ""
+         ],
+         "Growth": [
+            ""
+         ],
+         "Growth change": [
+            ""
+         ],
+         "Absolute growth": [
+            ""
+         ],
+         "Average posts count change per ": [
+            ""
+         ],
+         "Most engaging type of post": [
+            ""
+         ],
+         "Average interactions change": [
+            ""
+         ],
+         "Posts": [
+            ""
+         ],
+         "Posts change": [
+            ""
+         ],
+         "Replies change": [
+            ""
+         ],
+         "Report is ready": [
+            ""
+         ],
+         "You can download it.": [
+            ""
+         ],
+         "Total fans at the beginning of the period": [
+            ""
+         ],
+         "Total fans at the end of the period": [
+            ""
+         ],
+         "Total reposts": [
+            ""
+         ],
+         "Total votes": [
+            ""
+         ],
+         "Total admin posts": [
+            ""
+         ],
+         "Average admin posts per day": [
+            ""
+         ],
+         "Total likes on admin posts": [
+            ""
+         ],
+         "Total dislikes on admin posts": [
+            ""
+         ],
+         "Total reposts of admin posts": [
+            ""
+         ],
+         "Total votes on admin posts": [
+            ""
+         ],
+         "Admin posts ER (fans)": [
+            ""
+         ],
+         "Page ER on Admin Posts (fans)": [
+            ""
+         ],
+         "Total users posts": [
+            ""
+         ],
+         "Average user posts per day": [
+            ""
+         ],
+         "Total likes on user posts": [
+            ""
+         ],
+         "Total comments on user posts": [
+            ""
+         ],
+         "Total resposts of user posts": [
+            ""
+         ],
+         "User posts ER (fans)": [
+            ""
+         ],
+         "Page ER on User Posts (fans)": [
+            ""
+         ],
+         "Total fan questions": [
+            ""
+         ],
+         "Fan questions replied": [
+            ""
+         ],
+         "AMIQ": [
+            ""
+         ],
+         "Widgets: %{widgets}": [
+            ""
+         ],
+         "No widgets": [
+            ""
+         ],
+         "There is no such questions": [
+            ""
+         ],
+         "Questions not found": [
+            ""
+         ],
+         "Back": [
+            ""
+         ],
+         "Community administrator": [
+            ""
+         ],
+         "for": [
+            ""
+         ],
+         "Connected on": [
+            ""
+         ],
+         "Analytic": [
+            ""
+         ],
+         "Unlimited": [
+            ""
+         ],
+         "Contact us": [
+            ""
+         ],
+         "No payments history": [
+            ""
+         ],
+         "Users type": [
+            ""
+         ],
+         "tags and": [
+            ""
+         ],
+         "hashtags": [
+            ""
+         ],
+         "Grade": [
+            ""
+         ],
+         "Cube — Social Media Brand Pages Statistics And Analytics Service": [
+            ""
+         ],
+         "Try Cube Analytics": [
+            ""
+         ],
+         "Here you can get statistics and rating of social media brands. It means, to get bigger post reach communities administrators should use votes tools, call-to-action with comment leaving slogan and some other mechanics, that motivates users to communicate inside community.": [
+            ""
+         ],
+         "There are hundreds famous brands among our clients. They are all very cool and using Cube for a very long time. Here, for example, some of them:": [
+            ""
+         ],
+         "You are`nt in this this list yet? Maybe, you know people, who definitely need our service? Tell about us to all your collegues, share in social networks, tweet, repost! ": [
+            ""
+         ],
+         "Rule name": [
+            ""
+         ],
+         "Enter rule name": [
+            ""
+         ],
+         "PowerPoint": [
+            ""
+         ],
+         "Excel": [
+            ""
+         ],
+         "Adobe Acrobat": [
+            ""
+         ],
+         "Email confirmation letter was send to your email": [
+            ""
+         ],
+         "Email was confirmed": [
+            ""
+         ],
+         "Email was not confirmed": [
+            ""
+         ],
+         "Cube help brands to build effective communication with social networks audience gives you full data about users interactions with community content: from summ of reactions to brand pesponse speed.": [
+            ""
+         ],
+         "Our clients are cool": [
+            ""
+         ],
+         "Average questions per": [
+            ""
+         ],
+         "Average interactions per": [
+            ""
+         ],
+         "Average change per": [
+            ""
+         ],
+         "tag": [
+            "",
+            "tags"
+         ],
+         "hashtag": [
+            "",
+            "hashtags"
+         ],
+         "Average posts count change per": [
+            ""
+         ],
+         "Average interactions change per": [
+            ""
+         ],
+         "and": [
+            ""
+         ],
+         "": {
+            "domain": "messages",
+            "plural_forms": "nplurals=2; plural=n != 1;",
+            "lang": ""
+         }
+      }
+   }
+}

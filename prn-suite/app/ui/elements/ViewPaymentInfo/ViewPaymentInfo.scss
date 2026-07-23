@@ -1,0 +1,42 @@
+@import '../../globals/vars';
+
+.view-payment-info {
+  display: flex;
+  padding-right: 30px;
+
+  & > *:not(:first-child) {
+    margin-left: 30px;
+  }
+
+  &__text {
+    flex: 1 1 100%;
+    font-size: 16px;
+    line-height: 20px;
+    color: $grey;
+
+    & a {
+      font-size: 16px;
+      line-height: 20px;
+      color: $blue;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+
+    & > *:not(:first-child) {
+      margin-left: 10px;
+    }
+  }
+
+  &__icon {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+  }
+}

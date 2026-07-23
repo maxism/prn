@@ -1,0 +1,19 @@
+@import '../../styles/globals/vars';
+
+.element {
+  display: inline-flex;
+  width: 290px;
+
+  .dayPickerSelected {
+    color: $red;
+  }
+
+  .dayPickerToday {
+    color: $green;
+  }
+
+  .opened {
+
+  }
+}
+

@@ -1,0 +1,187 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  // Для замены цвета нужно переопределить переменные
+  --primary-color: #{$blue};
+  --primary-darken-color: #{darken($bg-light, 10%)};
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  cursor: pointer;
+
+  @include FontTextM();
+  font-weight: 500;
+
+  text-decoration: none !important;
+  white-space: nowrap;
+  background-color: $bg-light;
+  color: $dark;
+
+  padding: 16px 24px;
+  border-radius: 28px;
+
+  transition: color 0.3s ease, background-color 0.3s ease;
+
+  @media screen and (max-width: $max-width-tablet) {
+    @include FontTextS();
+    font-weight: 500;
+
+    padding: 8px 16px;
+    border-radius: 18px;
+  }
+
+  .icon {
+    flex: 1 1 32px;
+    width: 32px;
+    height: 32px;
+    fill: $light;
+
+    transition: fill 0.3s ease;
+
+    @media screen and (max-width: $max-width-tablet) {
+      flex: 1 1 24px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .onlyIcon {
+    margin: -4px -12px;
+
+    @media screen and (max-width: $max-width-tablet) {
+      margin: -2px -10px;
+    }
+  }
+
+  &:hover:not(.disabled):not(.active) {
+    color: $blue;
+
+    .icon {
+      fill: $blue;
+    }
+  }
+}
+
+.active {
+  color: $white;
+  background-color: $blue !important;
+}
+
+.disabled {
+  cursor: auto;
+  opacity: 0.4;
+}
+
+.white {
+  .element {
+    background-color: $white;
+  }
+
+  &.groupElement {
+    .container {
+      background-color: $white;
+    }
+  }
+}
+
+.groupElement {
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  max-width: 100%;
+
+  border-radius: 28px;
+  overflow: hidden;
+
+  @media screen and (max-width: $max-width-tablet) {
+    border-radius: 18px;
+  }
+
+  @media screen and (max-width: $max-width-small-fixed) {
+    max-width: none;
+    margin: auto -24px;
+    border-radius: 0 !important;
+
+    .container {
+      border-radius: 0 !important;
+    }
+  }
+
+  .container {
+    box-sizing: border-box;
+    display: inline-flex;
+    // min-width: 100%;
+    overflow-x: scroll;
+    padding: 0;
+    margin: 0 auto;
+    background-color: $bg-light;
+
+    border-radius: 28px;
+
+    @media screen and (max-width: $max-width-tablet) {
+      border-radius: 18px;
+    }
+  }
+
+  &.icons {
+    .container {
+      border-radius: 32px;
+      padding: 4px;
+
+      @media screen and (max-width: $max-width-tablet) {
+        border-radius: 22px;
+      }
+    }
+
+    .active {
+      background-color: $white !important;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  &.full {
+    flex: 1 1 100%;
+  }
+}
+
+.sizeS {
+  .element {
+    @include FontTextS();
+    font-weight: 500;
+
+    padding: 8px 16px;
+    border-radius: 18px;
+
+    .icon {
+      flex: 1 1 24px;
+      width: 24px;
+      height: 24px;
+    }
+
+    .onlyIcon {
+      margin: -2px -10px;
+    }
+  }
+
+  .groupElement {
+    border-radius: 18px;
+
+    &.icons {
+      .container {
+        border-radius: 22px;
+      }
+    }
+
+    .container {
+      border-radius: 18px;
+    }
+  }
+}

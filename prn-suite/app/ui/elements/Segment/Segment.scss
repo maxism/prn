@@ -1,0 +1,19 @@
+@import '../../globals/vars.scss';
+
+.segment {
+  width: 100%;
+  // flex: 1 1 auto;
+
+  &--center {
+    & > * {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &--full {
+    flex: 1 1 100%;
+    width: 100%;
+    height: 100%;
+  }
+}

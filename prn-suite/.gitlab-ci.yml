@@ -1,0 +1,33 @@
+image: docker:dind
+
+stages:
+  - build
+  - deploy
+
+suite_build:
+  stage: build
+  before_script:
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
+  script:
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME_$CI_PIPELINE_ID .
+    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME_$CI_PIPELINE_ID
+  only:
+    - prn-suite
+  tags:
+    - cluster
+    - kubernetes
+
+suite_deploy:
+  image: reg.jagajam.com/ops/images:kube
+  variables:
+    DOMAIN: prns.c-cube.ru
+    NODE_ENV: production
+  stage: deploy
+  script:
+    - envsubst < ui.yml | kubectl --kubeconfig=$KUBE_CONFIG apply -f -
+    - kubectl --kubeconfig=$KUBE_CONFIG patch ing ui-${CI_COMMIT_REF_SLUG} --type merge --patch "$(cat auth-patch.yml)"
+  only:
+    - prn-suite
+  tags:
+    - cluster
+    - kubernetes

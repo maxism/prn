@@ -1,0 +1,215 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  position: fixed !important;
+  display: flex;
+
+  overflow: visible !important;
+
+  height: 60px;
+  // padding: 12px 0px 4px 0px;
+
+  backdrop-filter: blur(10px) saturate(250%);
+  background-color: rgba($white, 0.8);
+
+  border-bottom: 1px solid rgba($black, 0.1);
+
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+
+  @media screen and (max-width: $max-width-mobile-fixed) {
+    height: 52px;
+  }
+}
+
+.headerPadding {
+  height: 60px;
+
+  @media screen and (max-width: $max-width-mobile-fixed) {
+    height: 52px;
+  }
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    display: flex;
+    flex: 0 0 calc(25% - (var(--grid-offset) / 2));
+    justify-content: flex-start;
+
+    @media screen and (max-width: $max-width-tablet) {
+      flex: 0 0 36px;
+    }
+
+    @media screen and (max-width: $max-width-mobile-fixed) {
+      flex: 0 0 28px;
+    }
+
+    .logoSign {
+      width: 36px;
+      height: 36px;
+      fill: $blue;
+
+      @media screen and (max-width: $max-width-mobile-fixed) {
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    .logoText {
+      width: 60px;
+      height: 36px;
+      margin-left: 8px;
+      fill: $blue;
+
+      @media screen and (max-width: $max-width-tablet) {
+        display: none;
+      }
+    }
+
+    .logoInfluence {
+      width: 125.1px;
+      height: 36px;
+      margin-left: 8px;
+      fill: $black;
+
+      @media screen and (max-width: $max-width-tablet) {
+        display: none;
+      }
+    }
+
+    .logoRating {
+      width: 89.1px;
+      height: 36px;
+      margin-left: 8px;
+      fill: $black;
+
+      @media screen and (max-width: $max-width-tablet) {
+        display: none;
+      }
+    }
+  }
+
+  .mobileMenu {
+    display: none;
+    flex: 1 1 100%;
+    align-items: center;
+    margin: 8px;
+
+    @include FontTextS();
+    color: $black;
+
+    @media screen and (max-width: $max-width-mobile-fixed) {
+      display: flex;
+    }
+  }
+
+  .burger {
+    position: relative;
+    padding: 8px 0;
+
+    @include FontTextS();
+    color: $black;
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: color 0.3s ease;
+
+    &:not(:first-child) {
+      margin-left: 28px;
+
+      @media screen and (max-width: $max-width-tablet) {
+        margin-left: 16px;
+      }
+    }
+
+    &.menuActive, &:hover {
+      color: $blue;
+      //&:after {
+      //  content: '';
+      //  position: absolute;
+      //  bottom: 0;
+      //  left: 0;
+      //  right: 0;
+      //  height: 3px;
+      //  border-radius: 1.5px;
+      //  background-color: $blue;
+      //}
+    }
+  }
+
+  .menu {
+    display: flex;
+    flex: 0 0 calc(50% - var(--grid-offset));
+    justify-content: center;
+
+    @media screen and (max-width: $max-width-tablet) {
+      flex: 1 1 100%;
+      justify-content: left;
+      margin: 16px;
+    }
+
+    @media screen and (max-width: $max-width-mobile-fixed) {
+      margin: 8px;
+      display: none;
+    }
+
+    & > a, .menuItem {
+      position: relative;
+
+      @include FontTextS();
+      color: $black;
+      text-decoration: none;
+      padding: 15px 0;
+
+      transition: color 0.3s ease;
+
+      &:not(:first-child) {
+        margin-left: 24px;
+
+        @media screen and (max-width: $max-width-tablet) {
+          margin-left: 16px;
+        }
+      }
+
+      &:hover {
+        color: $blue;
+      }
+
+      &.menuActive {
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 3px;
+          border-radius: 1.5px;
+          background-color: #0083ff;
+        }
+      }
+    }
+  }
+
+  .account {
+    display: flex;
+    flex: 0 0 calc(25% - (var(--grid-offset)/2));
+    justify-content: flex-end;
+
+    @media screen and (max-width: $max-width-mobile-fixed) {
+      flex: 0 0 calc(50% - (var(--grid-offset)/2));
+    }
+
+    .products {
+      margin-right: var(--module-xs);
+    }
+  }
+}

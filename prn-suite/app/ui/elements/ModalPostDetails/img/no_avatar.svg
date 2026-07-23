@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 19 Copy</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.850980 0 0 0 0 0.850980 0 0 0 0 0.850980 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="V2-/-Statistics" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-19-Copy">
+            <rect id="Rectangle" fill="#FAFAFA" x="0" y="0" width="40" height="40"></rect>
+            <g id="Icons/Items/None" transform="translate(8.000000, 8.000000)" filter="url(#filter-1)">
+                <g>
+                    <path d="M12,21 C9.8388,21 7.8546,20.2338 6.3012,18.9594 L18.9594,6.3012 C20.2332,7.8546 21,9.8388 21,12 C21,16.9626 16.9626,21 12,21 M3,12 C3,7.0374 7.0374,3 12,3 C14.1546,3 16.134,3.7626 17.685,5.0304 L5.0304,17.685 C3.7626,16.134 3,14.1546 3,12 M12,1.2 C6.0354,1.2 1.2,6.0354 1.2,12 C1.2,17.9646 6.0354,22.8 12,22.8 C17.964,22.8 22.8,17.9646 22.8,12 C22.8,6.0354 17.964,1.2 12,1.2" id="Mask" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

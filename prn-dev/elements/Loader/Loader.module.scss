@@ -1,0 +1,17 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  svg {
+    flex: 0 0 var(--module-xxl);
+    width: var(--module-xxl);
+    height: var(--module-xxl);
+    circle {
+      fill: $orange;
+    }
+  }
+}

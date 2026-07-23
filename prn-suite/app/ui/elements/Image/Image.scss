@@ -1,0 +1,51 @@
+.image {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+
+  &.image::after {
+    border-radius: 5px;
+  }
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  &--round {
+    border-radius: 50%;
+    img {
+      border-radius: 50%;
+    }
+
+    &.image::after {
+      border-radius: 50%;
+    }
+  }
+
+  &--bigRadius {
+    border-radius: 10px;
+
+    img{
+      border-radius: 10px;
+    }
+
+    &.image::after {
+      border-radius: 10px;
+    }
+  }
+
+  &--border {
+    &.image::after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      content: '';
+      border: solid 1px #000000;
+    }
+  }
+}

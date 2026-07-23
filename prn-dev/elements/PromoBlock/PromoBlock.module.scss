@@ -1,0 +1,12 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  & > *:not(:first-child) {
+    margin-left: var(--module-s);
+  }
+}

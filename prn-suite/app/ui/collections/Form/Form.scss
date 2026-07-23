@@ -1,0 +1,14 @@
+@import '../../globals/vars';
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 100%;
+
+  & > &-row {
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+@import '../../styles/globals/vars';
+
+.element {
+  display: inline-block;
+  color: var(--textColor);
+}
+
+.gradient {
+  background: linear-gradient(to right, var(--textColor) 1%, var(--textGradientColor) 102%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// Основные цвета
+.colorWhite {
+  --textColor: #{$white};
+}
+
+.colorBlack {
+  --textColor: #{$black};
+}
+
+.colorLight {
+  --textColor: #{$light};
+}
+
+.colorGrey {
+  --textColor: #{$grey};
+}
+
+.colorDark {
+  --textColor: #{$dark};
+}
+
+.colorSuperDark {
+  --textColor: #{$super-dark};
+}
+
+.colorBlue {
+  --textColor: #{$blue};
+}
+
+.colorRed {
+  --textColor: #{$red};
+}
+
+.colorGreen {
+  --textColor: #{$green};
+}
+
+.colorOrange {
+  --textColor: #{$orange};
+}
+
+.colorDeep {
+  --textColor: #{$deep};
+}
+
+.colorHigh {
+  --textColor: #{$high};
+}
+
+// Градиенты
+.gradientColorWhite {
+  --textGradientColor: #{$white};
+}
+
+.gradientColorBlack {
+  --textGradientColor: #{$black};
+}
+
+.gradientColorLight {
+  --textGradientColor: #{$light};
+}
+
+.gradientColorGrey {
+  --textGradientColor: #{$grey};
+}
+
+.gradientColorDark {
+  --textGradientColor: #{$dark};
+}
+
+.gradientColorSuperDark {
+  --textGradientColor: #{$super-dark};
+}
+
+.gradientColorBlue {
+  --textGradientColor: #{$blue};
+}
+
+.gradientColorRed {
+  --textGradientColor: #{$red};
+}
+
+.gradientColorGreen {
+  --textGradientColor: #{$green};
+}
+
+.gradientColorOrange {
+  --textGradientColor: #{$orange};
+}
+
+.gradientColorDeep {
+  --textGradientColor: #{$deep};
+}
+
+.gradientColorHigh {
+  --textGradientColor: #{$high};
+}
+
+.maxLines {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: var(--maxLines);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

@@ -1,0 +1,130 @@
+@import '../../styles/globals/vars';
+
+.element {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+
+  &.background {
+    .circle1 {
+      position: absolute;
+      left: calc(0% - 100px);
+      top: calc(10vh);
+      border-radius: 50%;
+      width: 700px;
+      height: 700px;
+      filter: blur(100px);
+      z-index: -2000;
+      background-image: linear-gradient(45deg, #311E9D 7%, #F2F2F2 38%, #AA60F6 68%, #10F9F4 93%);
+
+      animation: animateCircle1 15s 0s infinite;
+
+      @media screen and (max-width: $max-width-tablet) {
+        width: 350px;
+        height: 350px;
+      }
+    }
+
+    .circle2 {
+      position: absolute;
+      left: calc(70% - 100px);
+      top: 15vh;
+      border-radius: 50%;
+      width: 500px;
+      height: 500px;
+      filter: blur(100px);
+      z-index: -2000;
+      background-color: #10F9F4;
+
+      animation: animateCircle2 20s 0s ease infinite;
+
+      @media screen and (max-width: $max-width-tablet) {
+        width: 350px;
+        height: 350px;
+      }
+    }
+
+    .bgBlur {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1000;
+      filter: saturate(100%);
+      background-color: rgba(#FFF, 0.65);
+    }
+  }
+
+  &.backgroundTop {
+    .circle1 {
+      top: calc(-30vh);
+    }
+    .circle2 {
+      top: calc(-25vh);
+    }
+  }
+
+  &.backgroundAnalytics {
+    .circle1, .circle2 {
+      background-image: linear-gradient(45deg, #311E9D 0%, #AA60F6 100%);
+    }
+
+    .circle2 {
+      background-color: transparent;
+    }
+  }
+
+  &.backgroundInfluence {
+    .circle1, .circle2 {
+      background-image: linear-gradient(45deg, #311E9D 0%, #10F9F4 100%);
+    }
+
+    .circle2 {
+      background-color: transparent;
+    }
+  }
+
+  &.backgroundGrey {
+    background-color: $bg-light;
+
+    .circle1, .circle2 {
+      display: none;
+    }
+  }
+
+  &.full {
+    height: calc(100vh - 60px - 85px);
+  }
+
+  &.top {
+    align-items: flex-start
+  }
+
+  &.dark {
+    background-color: $white;
+  }
+}
+
+@keyframes animateCircle1 {
+  from {
+    transform: rotate(0deg) translate3d(10%, 0, 0) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translate3d(10%, 0, 0) rotate(-360deg);
+  }
+}
+
+@keyframes animateCircle2 {
+  from {
+    transform: rotate(0deg) translate3d(-10%, 0, 0) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translate3d(-10%, 0, 0) rotate(-360deg);
+  }
+}

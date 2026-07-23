@@ -1,0 +1,41 @@
+@import '../../globals/mixins';
+@import '../../globals/vars';
+
+.mark-button{
+  display: inline-flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+  height: 20px;
+  width: 20px;
+
+  &--active {
+    &::before{
+      @include pseudo();
+      width: calc(100% + 8px);
+      height: calc(100% + 8px);
+      border-radius: 50%;
+      left: -4px;
+      top: -4px;
+      right: -4px;
+      bottom: -4px;
+      border: 2px solid #444da0;
+    }
+  }
+
+  &:hover {
+    &::before{
+      @include pseudo();
+      width: calc(100% + 8px);
+      height: calc(100% + 8px);
+      border-radius: 50%;
+      left: -4px;
+      top: -4px;
+      right: -4px;
+      bottom: -4px;
+      border: 2px solid $green;
+    }
+  }
+}

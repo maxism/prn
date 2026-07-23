@@ -1,0 +1,21 @@
+@import '../../globals/vars';
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  width: 100%;
+  max-width: 730px;
+
+  & > * {
+    max-width: 350px;
+  }
+
+  &--padding-big > *:not(:first-child) {
+    margin-left: 30px;
+  }
+
+  &--padding-small > *:not(:first-child) {
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,60 @@
+@import '../../globals/vars';
+
+.description-link {
+  display: flex;
+  align-items: center;
+  width: calc(33.3% - 30px);
+  height: 116px;
+  background-color: $light;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: calc(100% - 70px);
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: bold;
+    color: $black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__description {
+    font-size: 12px;
+    line-height: 16px;
+    color: $grey;
+    margin-top: 2px;
+    height: 48px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__icon {
+    flex: 0 0 50px;
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    fill: $grey1;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    background-color: $light-grey;
+
+    & > .description-link__icon {
+      fill: $blue;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import '../../globals/vars';
+
+.badge-count {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $blue;
+  border-radius: 7px;
+
+  min-width: 20px;
+  padding: 2px 5px;
+
+  &__value {
+    font-size: 10px;
+    line-height: 14px;
+    //font-weight: bold;
+    color: $white;
+    margin-top: 1px;
+  }
+
+  &--disabled {
+    background-color: $light-grey;
+
+    & .badge-count__value {
+      color: $grey2;
+    }
+  }
+}

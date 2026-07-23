@@ -1,0 +1,11 @@
+@import '../../styles/globals/vars';
+
+.element {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+}
+
+.grey {
+  background-color: $bg-light;
+}

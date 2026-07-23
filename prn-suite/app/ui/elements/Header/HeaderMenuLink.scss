@@ -1,0 +1,35 @@
+@import '../../globals/vars';
+
+.header-menu-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 30px;
+  font-size: 16px;
+  line-height: 20px;
+  color: $white;
+  text-decoration: none;
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    border-radius: 1.5px;
+    background-color: $white;
+    opacity: 0;
+    transition: width 0.3s ease, left 0.3s ease, opacity 0.3s ease;
+  }
+
+  &:hover, &--active {
+    &:after {
+      width: 100%;
+      left: 0;
+      opacity: 1;
+    }
+  }
+}

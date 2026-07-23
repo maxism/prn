@@ -1,0 +1,322 @@
+@import '../../globals/vars';
+
+.date-range-picker {
+  display: inline-flex;
+  width: 290px;
+
+  &__body {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    border-radius: 10px;
+    background-color: $light;
+    padding: 9px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      //background-color: darken($light, 3%);
+      box-shadow: 0 0 0 2px $grey1;
+    }
+  }
+
+  &__icon {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    fill: $blue;
+  }
+
+  &__main {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    margin: 0 10px;
+    text-align: left;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: -2px;
+  }
+
+  &__description {
+    font-size: 10px;
+    line-height: 14px;
+    color: $grey;
+  }
+
+  &__down {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+
+    fill: $blue;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+  }
+
+  &__demo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 620px;
+    height: 290px;
+    padding: 20px;
+
+    & > *:not(:first-child) {
+      margin-top: 10px;
+    }
+
+    &-icon {
+      flex: 0 0 50px;
+      width: 50px;
+      height: 50px;
+      fill: $grey2;
+      margin-bottom: 10px;
+    }
+
+    &-title {
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: bold;
+      color: $dark-grey;
+      max-width: 445px;
+    }
+
+    &-description {
+      font-size: 12px;
+      line-height: 16px;
+      color: $grey;
+      max-width: 445px;
+      margin-bottom: 10px;
+    }
+  }
+
+  & .popup__list {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+
+  &__left {
+    flex: 1 1 auto;
+    max-width: 637px;
+  }
+
+  &__right {
+    flex: 1 1 auto;
+    border-left: 1px solid rgba($black, 0.1);
+    padding: 10px;
+  }
+
+  &__button {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 255px;
+    border: none;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 9px 10px;
+    background-color: $white;
+    text-align: left;
+    font-size: 15px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &-contaner {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    & span {
+      font-size: 11px;
+      line-height: 14px;
+      color: $grey;
+    }
+
+    &--active {
+      background-color: $light-blue;
+
+      &:hover {
+        background-color: darken($light-blue, 1.5%);
+        //box-shadow: inset 0 0 0 1px darken($light-blue, 5%);
+      }
+    }
+
+    &--disabled {
+      color: $grey;
+      cursor: auto;
+
+      & span {
+        color: $grey2;
+      }
+    }
+
+    &:hover:not(&--active):not(&--disabled) {
+      background-color: $light-grey;
+    }
+  }
+
+  .DayPicker {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 20px;
+    padding: 10px;
+
+    & *:focus {
+      outline: none;
+    }
+
+    &-wrapper {
+      position: relative;
+      flex-direction: row;
+    }
+
+    &-NavBar {
+
+    }
+
+    &-NavButton {
+      display: block;
+      position: absolute;
+      margin: 10px;
+      cursor: pointer;
+
+      &--prev {
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        background-color: $light;
+        background-image: url(./img/left.svg);
+        background-size: 20px 20px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: $light-grey;
+        }
+      }
+
+      &--next {
+        width: 30px;
+        height: 30px;
+        right: 0;
+        border-radius: 5px;
+        background-color: $light;
+        background-image: url(./img/right.svg);
+        background-size: 20px 20px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: $light-grey;
+        }
+      }
+    }
+
+    &-Months {
+      display: flex;
+      justify-content: center;
+    }
+
+    &-Month {
+      display: table;
+      padding: 10px;
+    }
+
+    &-Caption {
+      display: table-caption;
+      text-align: center;
+      font-weight: bold;
+      padding: 15px;
+    }
+
+    &-Weekdays {
+      display: table-header-group;
+    }
+
+    &-WeekdaysRow {
+      display: table-row;
+    }
+
+    &-Weekday {
+      display: table-cell;
+      text-align: center;
+
+      & abbr[title] {
+        border-bottom: none;
+        text-decoration: none;
+      }
+    }
+
+    &-Body {
+      display: table-row-group;
+    }
+
+    &-Week {
+      display: table-row;
+    }
+
+    &-Day {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      cursor: pointer;
+      min-width: 40px;
+      padding: 9px 0;
+      border-top: 1px solid transparent;
+      border-bottom: 1px solid white;
+      user-select: none;
+
+      &--today {
+        font-weight: bold;
+        color: $green;
+      }
+
+      &--outside {
+        color: $grey1;
+        cursor: auto;
+      }
+
+      &--disabled {
+        color: $grey;
+        cursor: auto;
+      }
+
+      &:hover:not(.DayPicker-Day--outside):not(.DayPicker-Day--disabled) {
+        border: 1px solid $green;
+        border-radius: 5px;
+      }
+
+      &--selected:not(.DayPicker-Day--outside) {
+        background-color: $light-blue;
+      }
+
+      &--start:not(.DayPicker-Day--outside), &--end:not(.DayPicker-Day--outside) {
+        border-radius: 5px;
+        background-color: $blue;
+        color: $white;
+      }
+    }
+  }
+
+  &--opened {
+    & .date-range-picker__body {
+      box-shadow: 0 0 0 2px $green !important;
+    }
+
+    & .date-range-picker__down {
+      transform: rotate(180deg);
+    }
+  }
+}
+

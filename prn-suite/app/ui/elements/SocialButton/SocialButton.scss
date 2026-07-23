@@ -1,0 +1,36 @@
+@import '../../globals/vars.scss';
+
+.s-button {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+  border: none;
+
+  padding: 5px;
+  cursor: pointer;
+
+  &__icon {
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+
+    fill: #D9D9D9;
+
+    transition: fill 0.3s ease, opacity 0.3s ease;
+  }
+
+  &--active {
+    .s-button__icon {
+      fill: #311E9D;
+    }
+  }
+
+  &:hover {
+    .s-button__icon {
+      fill: #311E9D;
+    }
+  }
+}

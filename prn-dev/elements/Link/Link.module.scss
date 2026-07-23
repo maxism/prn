@@ -1,0 +1,58 @@
+@import '../../styles/globals/vars';
+
+.element {
+  color: $blue;
+  text-decoration: none;
+  display: inline-flex;
+  /*position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0 15px;
+  font-size: 16px;
+  line-height: 20px;
+  color: $white;
+  text-decoration: none;*/
+
+  /*&:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    border-radius: 1.5px;
+    background-color: $white;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }*/
+
+  //svg {
+  //  width: 16px;
+  //  height: 16px;
+  //}
+
+  &:hover, .active {
+    cursor: pointer;
+    text-decoration: underline;
+    /*&:after {
+      width: 100%;
+      left: 0;
+      opacity: 1;
+    }*/
+  }
+}
+
+.active {
+  //
+}
+
+.noColor {
+  color: inherit;
+  text-decoration: underline;
+
+  &:hover, .active {
+    text-decoration: none;
+  }
+}

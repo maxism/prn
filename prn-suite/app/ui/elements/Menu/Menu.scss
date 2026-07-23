@@ -1,0 +1,23 @@
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 5;
+  padding: 10px 0;
+  height: 60px;
+
+  .container-flex {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .container-flex {
+      & > .dropdown__wrap {
+        height: 30px;
+      }
+
+      flex-wrap: nowrap;
+    }
+  }
+}

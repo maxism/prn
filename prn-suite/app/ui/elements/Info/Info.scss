@@ -1,0 +1,114 @@
+@import '../../globals/vars';
+
+.info {
+  display: flex;
+  flex-direction: column;
+  height: 118px;
+  flex: 0 0 calc(33.33% - 30px);
+  margin: 15px;
+  padding: 20px;
+  background-color: $light;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+
+  &__top {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 100%;
+  }
+
+  &__label {
+    font-size: 16px;
+    line-height: 20px;
+    color: $grey;
+    max-width: 280px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__help {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    fill: $grey2;
+    margin-left: 10px;
+    transition: fill 0.3s ease;
+
+    &:hover {
+      fill: $green !important;
+    }
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: bold;
+    color: $blue;
+    max-width: 273px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__rouble {
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+    fill: $blue;
+    margin-left: 5px;
+  }
+
+  &__attention {
+    flex: 0 0 40px;
+    justify-self: flex-end;
+    width: 40px;
+    height: 40px;
+    fill: $red;
+    margin-left: 10px;
+  }
+
+  &--red {
+    .info__text {
+      color: $red;
+    }
+    .info__rouble {
+      fill: $red;
+    }
+  }
+
+  &--green {
+    .info__text {
+      color: $green;
+    }
+    .info__rouble {
+      fill: $green;
+    }
+  }
+
+  &--wide {
+    flex: 0 0 calc(66.6% - 30px) !important;
+
+    .info__text{
+      max-width: 690px;
+    }
+  }
+
+  &:hover {
+    //background-color: $light-grey;
+    // cursor: pointer;
+    .info__help {
+      fill: $blue;
+    }
+  }
+}

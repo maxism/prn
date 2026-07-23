@@ -1,0 +1,223 @@
+@import '../../globals/vars.scss';
+
+.payment-info {
+  display: flex;
+  flex-direction: column;
+  background-color: $light;
+  border-radius: 10px;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+
+  &__header {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+  }
+
+  &__label {
+    font-size: 12px;
+    line-height: 16px;
+    color: $grey;
+  }
+
+  &__text {
+    font-size: 26px;
+    line-height: 34px;
+    font-weight: bold;
+    color: $blue;
+  }
+
+  &__center {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 195px;
+    width: 195px;
+    margin-left: 20px;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+  }
+
+  &__rouble {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    fill: $blue;
+    margin-left: 5px;
+  }
+
+  &__right {
+    display: flex;
+    margin-left: 20px;
+  }
+
+  &__icon {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    fill: $grey2;
+    transition: fill 0.3s ease;
+
+    &:hover {
+      fill: $green !important;
+    }
+  }
+
+  &__content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  &__row {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 1 1 100%;
+    margin-right: 40px;
+    padding-top: 10px;
+
+    &:not(:last-child) {
+      padding-bottom: 10px;
+
+      :after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: $light-grey;
+        border-radius: 0.5px;
+        content: '';
+        transition: background-color 0.3s ease;
+      }
+    }
+
+    & > *:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+
+  &__content-label {
+    flex: 0 0 195px;
+    width: 195px;
+    font-size: 12px;
+    line-height: 16px;
+    color: $grey;
+  }
+
+  &__content-label-full {
+    flex: 1 1 100%;
+    min-width: 195px;
+    max-width: 475px;
+    font-size: 12px;
+    line-height: 16px;
+    color: $grey;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 100px;
+  }
+
+  &__content-text {
+    flex: 0 0 195px;
+    width: 195px;
+    font-size: 16px;
+    line-height: 20px;
+    color: $black;
+  }
+
+  &__content-text-full {
+    flex: 1 1 100%;
+    min-width: 195px;
+    max-width: 475px;
+    font-size: 16px;
+    line-height: 20px;
+    color: $black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 100px;
+  }
+
+  &__content-price {
+    display: flex;
+    align-items: center;
+    flex: 0 0 195px;
+    width: 195px;
+  }
+
+  &__content-text-big {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    color: $black;
+  }
+
+  &__content-rouble {
+    flex: 0 0 13px;
+    width: 13px;
+    height: 13px;
+    fill: $black;
+    margin-left: 3px;
+    margin-bottom: 2px;
+  }
+
+  &__status {
+    display: inline-flex;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px $grey;
+    border-radius: 5px;
+    padding: 4px 5px 2px 5px;
+
+    font-size: 10px;
+    line-height: 14px;
+    color: $grey;
+    white-space: nowrap;
+
+    margin-left: 10px;
+
+    &-paid {
+      box-shadow: inset 0 0 0 1px $green;
+      color: $green;
+    }
+    &-pending {
+      box-shadow: inset 0 0 0 1px $grey;
+      color: $grey;
+    }
+    &-canceled {
+      box-shadow: inset 0 0 0 1px $red;
+      color: $red;
+    }
+    &-refunded {
+      box-shadow: inset 0 0 0 1px $blue;
+      color: $blue;
+    }
+  }
+
+  &:hover {
+    background-color: $light-grey;
+
+    .payment-info__icon {
+      fill: $blue;
+    }
+
+    .payment-info__row {
+      :after {
+        background-color: $grey1;
+      }
+    }
+  }
+}

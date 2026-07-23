@@ -1,0 +1,31 @@
+@import '../../globals/vars';
+
+.header-logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 0 0 285px;
+
+  & > a {
+    display: flex;
+    align-content: center;
+  }
+
+  & > *:not(:first-child):not(.header-logo__select-icon) {
+    margin-left: 8px;
+  }
+
+  &__logo {
+    flex: 0 0 31px;
+    width: 31px;
+    height: 36px;
+    fill: $blue;
+  }
+
+  &__name {
+    flex: 0 0 51px;
+    width: 51px;
+    height: 27px;
+    fill: $blue;
+  }
+}

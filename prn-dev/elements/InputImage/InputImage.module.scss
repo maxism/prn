@@ -1,0 +1,25 @@
+@import '../../styles/globals/vars';
+
+.element {
+  width: 100%;
+  background-color: $bg-light;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 0 0 2px $bg-tag;
+  }
+
+  & input {
+    display: none;
+  }
+}
+
+.label {
+  cursor: pointer;
+}
+
+.image {
+  width: 100px !important;
+  height: 100px !important;
+}

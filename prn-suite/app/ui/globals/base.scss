@@ -1,0 +1,27 @@
+@import './vars';
+@import './mixins';
+
+html, body {
+  -webkit-tap-highlight-color: transparent;
+}
+html{
+  min-width: $content_width;
+}
+body{
+  font-family: $main;
+  background: #fff;
+  color: $black;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+  overflow-y: scroll;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.intercom-lightweight-app-launcher {
+  bottom: 45px !important;
+  right: 15px !important;
+}

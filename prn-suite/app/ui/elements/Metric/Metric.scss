@@ -1,0 +1,187 @@
+@import '../../globals/vars';
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc(25% - 30px);
+  padding: 15px;
+  background-color: $light;
+  border-radius: 10px;
+  margin: 15px;
+  //height: 100px;
+  transition: background-color 0.3s ease;
+
+  &__top {
+    display: flex;
+  }
+
+  &__title {
+    flex: 1 1 100%;
+    font-size: 12px;
+    line-height: 16px;
+    color: $grey;
+    max-width: 199px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__icon {
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    fill: $grey2;
+    transition: fill 0.3s ease;
+
+    &:hover {
+      fill: $green !important;
+      cursor: pointer !important;
+    }
+  }
+
+  &__value {
+    font-size: 26px;
+    line-height: 34px;
+    font-weight: bold;
+    color: $blue;
+    max-width: 225px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__delta {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    & > *:not(:first-child) {
+      margin-left: 5px;
+    }
+  }
+
+  &__delta-value {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: bold;
+    color: $green;
+    max-width: 225px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__delta-icon-down {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    fill: $red;
+    margin-top: 1px;
+  }
+
+  &__delta-icon-up {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    fill: $green;
+    margin-top: 1px;
+  }
+
+  &--big {
+    flex: 0 0 calc(33.3% - 30px);
+    padding: 20px;
+    height: 160px;
+    text-align: center;
+
+    & .metric__icon {
+      flex: 0 0 20px;
+      width: 20px;
+      height: 20px;
+      margin-left: 10px;
+    }
+
+    & .metric__title {
+      flex: 1 1 100%;
+      font-size: 16px;
+      line-height: 20px;
+      margin-left: 30px;
+      max-width: 250px;
+
+      //&:hover {
+      //  cursor: pointer;
+      //}
+    }
+
+    & .metric__delta {
+      display: flex;
+      justify-content: center;
+
+      & > *:not(:first-child) {
+        margin-left: 10px;
+      }
+    }
+
+    & .metric__value {
+      font-size: 40px;
+      line-height: 48px;
+      margin-top: 16px;
+      max-width: 310px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    & .metric__delta-value {
+      font-size: 26px;
+      line-height: 34px;
+      margin-top: 2px;
+      max-width: 310px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    & .metric__delta-icon-down {
+      flex: 0 0 24px;
+      width: 24px;
+      height: 24px;
+      fill: $red;
+      margin-top: 1px;
+    }
+
+    & .metric__delta-icon-up {
+      flex: 0 0 24px;
+      width: 24px;
+      height: 24px;
+      fill: $green;
+      margin-top: 1px;
+    }
+  }
+
+  &--active {
+    background-color: $light-blue !important;
+    cursor: default !important;
+  }
+
+  &--red-delta-value {
+    & .metric__delta-value {
+      color: $red;
+    }
+  }
+
+  &--grey-delta-value {
+    & .metric__delta-value {
+      color: $grey2;
+    }
+  }
+
+  &:hover {
+    background-color: $light-grey;
+    cursor: pointer;
+
+    & .metric__icon {
+      fill: $blue;
+    }
+  }
+}

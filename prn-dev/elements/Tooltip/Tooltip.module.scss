@@ -1,0 +1,76 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 350px;
+  padding: 16px;
+
+  font-size: 12px;
+  line-height: 12px;
+  color: $light;
+  //backdrop-filter: blur(20px) saturate(180%);
+  background-color: $super-dark;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+
+  & > *:not(:first-child) {
+    margin-top: var(--module-xs);
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+
+    .title {
+      @include FontTextS();
+      font-weight: 500;
+      color: $white;
+      margin-right: 10px;
+    }
+
+    .icon {
+      flex: 0 0 20px;
+      width: 20px;
+      height: 20px;
+      fill: $white;
+    }
+  }
+
+  .text {
+    @include FontTextXS();
+    line-height: 16px;
+    color: $grey;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+
+    .descriptionItem {
+      font-size: 10px;
+      line-height: 14px;
+      color: $grey;
+    }
+  }
+
+  .button {
+    display: flex;
+    padding-top: var(--module-xs);
+  }
+
+  .red {
+    background-color: $red;
+    color: $white;
+  }
+
+  .disabled {
+    display: none;
+  }
+}
+
+.wrapper {
+  display: flex;
+}

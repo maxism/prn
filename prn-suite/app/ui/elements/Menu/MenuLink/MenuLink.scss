@@ -1,0 +1,74 @@
+@import '../../../globals/vars';
+@import '../../../globals/mixins';
+
+.menu-link {
+  font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+  transition: color .3s ease;
+  position: relative;
+  align-items: center;
+  min-height: 35px;
+  min-width: 30px;
+  display: inline-flex;
+
+  //IE HACK
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    height: 40px;
+  }
+
+  &:hover {
+    color: #fff;
+
+    &::before {
+      transform: none;
+      opacity: 1;
+    }
+  }
+
+  &.menu-link--disabled {
+    color: $grey2;
+    &:hover {
+      &::before {
+        opacity: 0;
+      }
+    }
+
+    &.active::before {
+      opacity: 0;
+    }
+  }
+
+  &::before {
+    @include pseudo();
+    width: 100%;
+    left: 0;
+    bottom: -7px;
+    height: 3px;
+    background-color: #fff;
+    transform: translateY(100%);
+    transition: all .3s ease-in;
+    border-radius: 1.5px;
+    opacity: 0;
+  }
+
+  &.active::before {
+    transform: none;
+    opacity: 1;
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  &__text {
+    .image + & {
+      margin-left: 5px;
+    }
+
+    & + .count-label {
+      margin-left: 5px;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import '../../globals/vars';
+
+.community-score {
+  display: flex;
+  align-items: center;
+  flex: 1 1 calc(50% - 30px);
+  background-color: $light;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px;
+
+  &__pie {
+    flex: 0 0 160px;
+    width: 160px;
+    height: 160px;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: bold;
+  }
+
+  &__text {
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 20px;
+    color: $grey;
+    white-space: pre-line;
+    max-height: 100px;
+    overflow: hidden;
+    margin-top: 10px;
+
+    & > strong {
+      font-weight: normal;
+      color: $black
+    }
+  }
+}

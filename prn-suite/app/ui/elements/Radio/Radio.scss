@@ -1,0 +1,152 @@
+@import '../../globals/vars';
+
+.radio {
+  display: inline-flex;
+  align-items: center;
+
+  min-width: 20px;
+  min-height: 20px;
+  margin: 5px 15px;
+
+  &__input {
+    display: none;
+
+    &:checked + label {
+      cursor: default;
+
+      &::before {
+        background-color: $green;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &:disabled + label {
+      cursor: default;
+
+      &::after {
+        background: url(./img/cross.svg) no-repeat 50% 50%;
+        border-radius: 0;
+        box-shadow: none;
+
+        width: 16px;
+        height: 16px;
+        top: 2px;
+        left: 2px;
+
+        opacity: 1;
+        transition: opacity 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      & .radio__text {
+        color: $grey2;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 20px;
+    color: $black;
+    white-space: nowrap;
+  }
+
+  label {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 20px;
+    padding-left: 30px;
+
+    cursor: pointer;
+    user-select: none;
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: '';
+
+      background-color: $light-grey;
+      border-radius: 50%;
+
+      width: 20px;
+      height: 20px;
+      top: 0;
+      left: 0;
+
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: '';
+
+      background-color: $white;
+      border-radius: 50%;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+
+      width: 12px;
+      height: 12px;
+      top: 4px;
+      left: 4px;
+
+      opacity: 0;
+      transition: opacity 0.3s ease, box-shadow 0.3s ease;
+    }
+  }
+
+  &:hover {
+    .radio__input:not(:checked):not(:disabled) + label {
+      &::before {
+        box-shadow: 0 0 0 2px $green;
+      }
+    }
+  }
+
+  &--big {
+    min-width: 30px;
+    min-height: 30px;
+    margin: 10px 15px;
+
+    & .radio__text {
+      font-size: 20px;
+      line-height: 26px;
+      margin-top: 2px;
+    }
+
+    label {
+      min-height: 30px;
+      padding-left: 45px;
+
+      &::before {
+        width: 30px;
+        height: 30px;
+      }
+
+      &::after {
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+
+        width: 18px;
+        height: 18px;
+        top: 6px;
+        left: 6px;
+      }
+    }
+
+    & .radio__input {
+      &:disabled + label {
+        &::after {
+          width: 22px;
+          height: 22px;
+
+          top: 4px;
+          left: 4px;
+        }
+      }
+    }
+  }
+}

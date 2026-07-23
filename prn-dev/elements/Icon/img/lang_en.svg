@@ -1,0 +1,14 @@
+<svg viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <circle id="path-1" cx="20" cy="20" r="20"></circle>
+    </defs>
+    <g id="Icons/Other/Lang_En" stroke="none" stroke-width="1" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Oval" fill="#D8D8D8" xlink:href="#path-1"></use>
+        <path d="M0,0 L17,0 L17,17 L0,17 L0,0 Z M23,0 L40,0 L40,17 L23,17 L23,0 Z M23,23 L40,23 L40,40 L23,40 L23,23 Z M0,23 L17,23 L17,40 L0,40 L0,23 Z" id="Shape" fill="#0083FF" mask="url(#mask-2)"></path>
+        <path d="M40,0 L40,6.98706055 L31.9870605,15 L40,15 L40,17 L23,17 L23,0 L25,0 L25,15 L40,0 Z M8.01293945,15 L0,6.98706055 L0,0 L15,15 L15,0 L17,0 L17,17 L0,17 L0,15 L8.01293945,15 Z M31.9870605,25 L40,33.0129395 L40,40 L25,25 L25,40 L23,40 L23,23 L40,23 L40,25 L31.9870605,25 Z M0,40 L0,33.0129395 L8.01293945,25 L0,25 L0,23 L17,23 L17,40 L15,40 L15,25 L0,40 Z" id="Shape" fill="#FFFFFF" mask="url(#mask-2)"></path>
+        <path d="M23,0 L23,17 L40,17 L40,23 L23,23 L23,40 L17,40 L17,23 L0,23 L0,17 L17,17 L17,0 L23,0 Z M12.9638672,25 L-1,38.9638672 L-1,35.9299316 L9.92993164,25 L12.9638672,25 Z M30.0339355,25 L40.9638672,35.9299316 L40.9638672,38.9638672 L27,25 L30.0339355,25 Z M-1,1.03613281 L12.9638672,15 L9.92993164,15 L-1,4.07006836 L-1,1.03613281 Z M40.9638672,1.03613281 L40.9638672,4.07006836 L30.0339355,15 L27,15 L40.9638672,1.03613281 Z" id="Shape" fill="#FF2C2C" mask="url(#mask-2)"></path>
+    </g>
+</svg>

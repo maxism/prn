@@ -1,0 +1,76 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  display: flex;
+  flex-direction: column;
+
+  padding: 16px;
+
+  background-color: $bg-tag;
+  border-radius: 16px;
+
+  .text {
+    margin-bottom: var(--module-m);
+    @include FontTextS();
+    color: $red;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+
+    margin: calc(var(--grid-offset) / -2);
+
+    .section {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 calc(50% - (var(--grid-offset)));
+      margin: calc(var(--grid-offset) / 2);
+
+      & > *:not(:first-child) {
+        margin-top: 16px;
+      }
+
+      .social {
+        display: flex;
+        flex: 0 0 100%;
+        align-items: center;
+        justify-content: flex-start;
+
+        .icon {
+          flex: 0 0 24px;
+          width: 24px;
+          height: 24px;
+        }
+
+        .description {
+          flex: 0 0 auto;
+          margin-left: 8px;
+
+          @include FontTextS();
+          color: $dark;
+
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          max-width: 100%;
+        }
+      }
+    }
+
+    @media screen and (max-width: $max-width-mobile-fixed) {
+      flex-wrap: wrap;
+
+      & > *:not(:first-child) {
+        margin-top: 8px;
+      }
+
+      .section {
+        flex: 0 0 100%;
+      }
+    }
+  }
+
+}

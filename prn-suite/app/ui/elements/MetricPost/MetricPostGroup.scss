@@ -1,0 +1,17 @@
+@import '../../globals/vars.scss';
+
+.metric-post-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -5px -5px;
+
+  &--post {
+    flex: 0 0 420px;
+    max-width: 420px;
+  }
+
+  &--postDetails {
+    flex: 0 0 140px;
+    max-width: 140px;
+  }
+}

@@ -1,0 +1,247 @@
+@import '../../globals/vars';
+
+.community {
+  display: flex;
+  flex: 1 1 100%;
+  width: 100%;
+  padding: 20px;
+  background-color: $light;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  &__image {
+    display: flex;
+    position: relative;
+    flex: 0 0 50px;
+    width: 50px;
+    height: 50px;
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+      fill: $white;
+    }
+  }
+
+  &__main {
+    flex: 1 1 100%;
+    flex-direction: column;
+    margin-left: 15px;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+  }
+
+  &__badge-blue {
+    display: inline-flex;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px $blue;
+    border-radius: 5px;
+    padding: 3px 5px;
+    margin-left: 10px;
+
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: bold;
+    color: $blue;
+    white-space: nowrap;
+  }
+
+  &__badge-red {
+    display: inline-flex;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px $red;
+    border-radius: 5px;
+    padding: 3px 5px;
+    margin-left: 10px;
+
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: bold;
+    color: $red;
+    white-space: nowrap;
+  }
+
+  &__badge-green {
+    display: inline-flex;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px $green;
+    border-radius: 5px;
+    padding: 4px 5px 2px 5px;
+    margin-left: 10px;
+
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: bold;
+    color: $green;
+    white-space: nowrap;
+  }
+
+  &__name {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: bold;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    //max-width: 520px;
+    max-width: 400px;
+  }
+
+  &__description {
+    margin-top: 5px;
+    display: flex;
+  }
+
+  &__usersCount-icon {
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+    margin-left: 30px;
+    fill: $grey2;
+  }
+
+  &__usersCount {
+    margin-left: 5px;
+    font-size: 12px;
+    line-height: 16px;
+    color: $grey;
+  }
+
+  &__right {
+    position: relative;
+    display: flex;
+    margin-left: 15px;
+    align-items: center;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+  }
+
+  &__control-divider {
+    width: 1px;
+    height: 20px;
+    opacity: 0.1;
+    border-radius: 0.5px;
+    background-color: $black;
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+
+  &__control-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+
+    &--active {
+      fill: $green;
+    }
+    &--disabled {
+      fill: $grey2;
+    }
+    &--error {
+      fill: $red;
+    }
+  }
+
+  &__control-button {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    fill: $grey2;
+    transition: fill 0.3s ease;
+
+    &:hover {
+      fill: $green !important;
+    }
+
+    &--attention {
+      &:hover {
+        fill: $red !important;
+      }
+    }
+  }
+
+  &__note-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__note-icon {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+  }
+
+  &__note-text {
+    font-family: inherit;
+    display: flex;
+    color: $grey;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: right;
+    align-items: center;
+  }
+
+  &__loading {
+    width: 40px;
+    height: 14px;
+
+    circle {
+      fill: $green;
+    }
+  }
+
+  &--small {
+    padding: 15px;
+
+    & .community__image {
+      flex: 0 0 40px;
+      width: 40px;
+      height: 40px;
+    }
+
+    & .community__main {
+      margin-left: 10px;
+    }
+
+    & .community__name {
+      font-size: 16px;
+      line-height: 20px;
+      max-width: 390px;
+    }
+
+    & .community__description {
+      margin-top: 2px;
+    }
+  }
+
+  &--active {
+    background-color: $light-blue;
+
+    .community__control-button {
+      fill: $blue;
+    }
+
+    &:hover {
+      box-shadow: inset 0 0 0 1px darken($light-blue, 3%);
+      cursor: pointer;
+    }
+  }
+
+  &:hover:not(&--disabled):not(&--active) {
+    background-color: $light-grey;
+    cursor: pointer;
+
+    .community__control-button {
+      fill: $blue;
+    }
+  }
+}
+

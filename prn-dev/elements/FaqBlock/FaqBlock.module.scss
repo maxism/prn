@@ -1,0 +1,70 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  width: calc(75% - var(--grid-offset));
+  margin: 0 auto var(--module-l) auto;
+
+  @media screen and (max-width: $max-width-tablet) {
+    width: calc(100% - var(--grid-offset) / 2);
+  }
+
+  .title {
+    margin-top: var(--module-l);
+    margin-bottom: var(--module-xl);
+  }
+}
+
+.itemElement {
+  display: flex;
+  flex-direction: column;
+  padding: var(--module-l) 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba($black, 0.1);
+  }
+}
+
+.itemQuestion {
+  display: flex;
+  align-items: center;
+
+  & > span {
+    color: $black;
+    cursor: pointer;
+  }
+
+  & > svg {
+    fill: $blue;
+    cursor: pointer;
+
+    margin-left: var(--module-m);
+
+    transition: 0.3s transform;
+
+    &.opened {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.itemAnswer {
+  margin: 0;
+  width: calc(83.3333333% - var(--grid-offset));
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s all;
+
+  &.open {
+    margin-top: var(--module-m);
+    height: auto;
+    overflow: auto;
+  }
+
+  @media screen and (max-width: $max-width-tablet) {
+    width: calc(87.5% - var(--grid-offset) / 2);
+  }
+}

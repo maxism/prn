@@ -1,0 +1,104 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+}
+
+.itemElement {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: var(--module-m) 0;
+  margin: calc(var(--grid-offset) / -2);
+
+  @include FontTextS();
+  color: $super-dark;
+
+  &:not(:last-child):after {
+    position: absolute;
+    content: '';
+    bottom: calc(var(--module-m) / 2 );
+    height: 1px;
+    left: 0;
+    right: 0;
+    background-color: rgba($black, 0.1);
+  }
+
+  .date {
+    order: 1;
+    flex: 0 0 calc(16.66666% - var(--grid-offset));
+    margin: calc(var(--grid-offset) / 2);
+    color: $grey;
+  }
+
+  .text {
+    order: 2;
+    flex: 0 0 calc(30.00002% - var(--grid-offset));
+    margin: calc(var(--grid-offset) / 2);
+    font-weight: 500;
+  }
+
+  .number {
+    order: 3;
+    flex: 0 0 calc(36.66666% - var(--grid-offset));
+    margin: calc(var(--grid-offset) / 2);
+    font-weight: 500;
+    text-align: end;
+  }
+
+  .container {
+    order: 4;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 0 0 calc(16.66666% - var(--grid-offset));
+    margin: calc(var(--grid-offset) / 2);
+
+    .cost {
+      font-weight: 500;
+      align-self: flex-start;
+    }
+
+    .rouble {
+      flex: 0 0 12px;
+      width: 12px;
+      height: 12px;
+      fill: $super-dark;
+      margin-left: 4px;
+    }
+  }
+
+  @media screen and (max-width: $max-width-mobile-fixed) {
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    .date {
+      order: 1;
+      @include FontTextXS();
+      flex: 0 0 calc(50% - var(--grid-offset));
+    }
+
+    .text {
+      order: 3;
+      flex: 0 0 calc(75% - var(--grid-offset));
+    }
+
+    .number {
+      order: 2;
+      @include FontTextXS();
+      flex: 0 0 calc(50% - var(--grid-offset));
+    }
+
+    .container {
+      order: 4;
+      flex: 0 0 calc(25% - var(--grid-offset));
+    }
+  }
+
+  //&:not(:last-child) {
+  //  border-bottom: 1px solid rgba($black, 0.1);
+  //}
+}

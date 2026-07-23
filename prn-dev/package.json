@@ -1,0 +1,111 @@
+{
+  "name": "site",
+  "version": "2.0.1121",
+  "description": "",
+  "scripts": {
+    "dev": "next dev",
+    "debug": "cross-env NODE_OPTIONS='--inspect' next dev",
+    "build": "next build",
+    "postbuild": "node sitemap.js",
+    "start": "next start",
+    "u": "ncu -u && npm update",
+    "lint": "next lint"
+  },
+  "jest": {
+    "setupFiles": [
+      "./jest.setup.js"
+    ],
+    "moduleDirectories": [
+      "./node_modules"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(js|ts)$": "babel-jest"
+    },
+    "testRegex": "/__tests__/.*\\.test.(ts|js)$",
+    "coverageReporters": [],
+    "coverageThreshold": {
+      "global": {
+        "branches": 60,
+        "functions": 60,
+        "lines": 60,
+        "statements": 60
+      }
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "dependencies": {
+    "@tippyjs/react": "^4.2.6",
+    "autosize": "^5.0.1",
+    "axios": "^0.27.2",
+    "browser-downloads": "^0.2.0",
+    "classnames": "^2.3.1",
+    "cookie-cutter": "^0.2.0",
+    "cookies": "^0.8.0",
+    "date-fns": "^2.29.1",
+    "downloadjs": "^1.4.7",
+    "fast-sort": "^3.2.0",
+    "file-saver": "^2.0.5",
+    "highcharts": "^10.1.0",
+    "highcharts-react-official": "^3.1.0",
+    "html-to-image": "^1.11.3",
+    "js-cookie": "^3.0.1",
+    "line-height": "^0.3.1",
+    "lodash": "^4.17.21",
+    "mobile-detect": "^1.4.5",
+    "mobx": "^6.6.0",
+    "mobx-react": "^7.5.0",
+    "mobx-react-router": "^4.1.0",
+    "moment": "^2.29.3",
+    "next": "^12.1.6",
+    "next-cookies": "^2.0.3",
+    "next-images": "^1.8.4",
+    "numeral": "^2.0.6",
+    "qs": "^6.10.5",
+    "raw-loader": "^4.0.2",
+    "react": "^17.0.2",
+    "react-day-picker": "^8.0.7",
+    "react-dom": "^17.0.2",
+    "react-google-recaptcha": "^3.1.0",
+    "react-in-viewport": "^1.0.0-alpha.28",
+    "react-inlinesvg": "^3.0.0",
+    "react-markdown": "^8.0.3",
+    "react-markdown-editor-lite": "^1.3.2",
+    "react-perfect-scrollbar": "^1.5.8",
+    "react-qr-code": "^2.0.11",
+    "react-range": "^1.8.13",
+    "react-resize-detector": "^7.1.2",
+    "react-stack-grid": "^0.7.1",
+    "react-yandex-metrika": "^2.6.0",
+    "remark-unwrap-images": "^3.0.1",
+    "sass": "^1.53.0",
+    "sharp": "^0.30.7",
+    "simple-linear-interpolation": "^1.0.6",
+    "sitemap": "^7.1.1",
+    "swiper": "^8.2.4",
+    "translit": "^0.1.0",
+    "yandex-map-react": "^1.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/plugin-proposal-class-properties": "^7.17.12",
+    "@babel/plugin-proposal-decorators": "^7.18.2",
+    "@types/js-cookie": "^3.0.2",
+    "@types/node": "^18.0.0",
+    "@types/react": "^17.0.2",
+    "@types/react-stack-grid": "^0.7.3",
+    "autoprefixer": "^10.4.7",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.18.0",
+    "eslint-config-next": "12.1.6",
+    "resize-observer-polyfill": "^1.5.1",
+    "typescript": "^4.7.4"
+  }
+}

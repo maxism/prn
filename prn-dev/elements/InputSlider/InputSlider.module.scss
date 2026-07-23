@@ -1,0 +1,112 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  font-weight: normal;
+  min-width: 250px;
+
+  --trackBackground: #D9D9D9;
+  --trackColor: #0083FF;
+
+  .main {
+    display: flex;
+
+    .label {
+      @include FontTextS();
+      font-weight: bold;
+      text-align: left;
+      color: $black;
+
+      transition: color 0.3s ease;
+    }
+
+    .value {
+      flex: 1 1 100%;
+
+      @include FontTextS();
+      font-weight: 300;
+      text-align: right;
+      color: $grey;
+
+      transition: color 0.3s ease;
+    }
+  }
+
+  .container {
+    padding: 0 12px;
+    margin-top: 12px;
+
+    .range {
+      display: flex;
+      height: 24px;
+      width: 100%;
+
+      .track {
+        height: 4px;
+        width: calc(100% + 24px);
+        border-radius: 2px;
+        align-self: center;
+        margin: 0 -12px;
+      }
+
+      .thumb {
+        display: flex;
+        flex: 0 0 24px;
+        justify-content: center;
+        align-items: center;
+
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+        border: 4px solid $blue;
+
+        box-shadow: 0 2px 4px 0 rgba($black, 10%);
+
+        transition: border 0.3s ease, background-color 0.3s ease;
+
+        &.leftThumb, &.rightThumb {
+          background-color: $white;
+        }
+
+        &:hover {
+          &.leftThumb, &.rightThumb {
+            border: 4px solid $orange;
+            cursor: pointer !important;
+          }
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  &.disabled {
+    --trackBackground: #E6E6E6;
+    --trackColor: #D9D9D9;
+
+    .main {
+      .label, .value {
+        color: $light;
+      }
+    }
+
+    .container {
+      .range {
+        .thumb {
+          border: 4px solid $light;
+          cursor: not-allowed !important;
+
+          &:hover {
+            border: 4px solid $light;
+            cursor: not-allowed !important;
+          }
+        }
+      }
+    }
+  }
+}

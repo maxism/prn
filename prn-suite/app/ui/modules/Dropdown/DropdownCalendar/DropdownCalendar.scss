@@ -1,0 +1,10 @@
+@import '../../../globals/vars';
+
+.dropdown-calendar{
+  .calendar{
+    margin: 0 auto;
+    .DayPicker{
+      border: none;
+    }
+  }
+}

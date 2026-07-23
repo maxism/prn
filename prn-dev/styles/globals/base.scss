@@ -1,0 +1,192 @@
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+
+html, body {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+html {
+  > div {
+    width: 100%;
+  }
+
+  // Размеры модулей
+  --module-xxs: 4px;
+  --module-xs: 8px;
+  --module-s: 16px;
+  --module-m: 24px;
+  --module-l: 32px;
+  --module-xl: 60px;
+  --module-xxl: 100px;
+
+  --grid-offset: 32px;
+
+  --block-l-radious: 45px;
+  --block-l-padding: 60px;
+
+  --block-m-radious: 36px;
+  --block-m-padding: 48px;
+
+  --block-s-radious: 36px;
+  --block-s-padding: 32px;
+
+  // Размеры иконок
+  --icon-s: 20px;
+  --icon-m: 24px;
+  --icon-l: 32px;
+
+  @media screen and (max-width: $max-width-laptop) {
+    --module-xxs: 4px;
+    --module-xs: 8px;
+    --module-s: 16px;
+    --module-m: 24px;
+    --module-l: 32px;
+    --module-xl: 48px;
+    --module-xxl: 80px;
+
+    --grid-offset: 16px;
+
+    --block-l-radious: 36px;
+    --block-l-padding: 48px;
+
+    --block-m-radious: 30px;
+    --block-m-padding: 40px;
+
+    --block-s-radious: 30px;
+    --block-s-padding: 24px;
+
+    --icon-s: 20px;
+    --icon-m: 24px;
+    --icon-l: 32px;
+  }
+
+  @media screen and (max-width: $max-width-tablet) {
+    --module-xxs: 4px;
+    --module-xs: 8px;
+    --module-s: 16px;
+    --module-m: 16px;
+    --module-l: 24px;
+    --module-xl: 40px;
+    --module-xxl: 60px;
+
+    --grid-offset: 16px;
+
+    --block-l-radious: 30px;
+    --block-l-padding: 40px;
+
+    --block-m-radious: 24px;
+    --block-m-padding: 32px;
+
+    --block-s-radious: 24px;
+    --block-s-padding: 24px;
+
+    --icon-s: 20px;
+    --icon-m: 24px;
+    --icon-l: 24px;
+  }
+
+  @media screen and (max-width: $max-width-mobile-fixed) {
+    --module-xxs: 4px;
+    --module-xs: 4px;
+    --module-s: 8px;
+    --module-m: 16px;
+    --module-l: 24px;
+    --module-xl: 24px;
+    --module-xxl: 40px;
+
+    --grid-offset: 8px;
+
+    --block-l-radious: 18px;
+    --block-l-padding: 24px;
+
+    --block-m-radious: 18px;
+    --block-m-padding: 24px;
+
+    --block-s-radious: 18px;
+    --block-s-padding: 16px;
+
+    --icon-s: 12px;
+    --icon-m: 20px;
+    --icon-l: 20px;
+  }
+
+  @media screen and (max-width: $max-width-small) {
+    --module-xxs: 4px;
+    --module-xs: 4px;
+    --module-s: 8px;
+    --module-m: 16px;
+    --module-l: 24px;
+    --module-xl: 16px;
+    --module-xxl: 40px;
+
+    --grid-offset: 8px;
+
+    --block-m-radious: 12px;
+    --block-m-padding: 16px;
+
+    --block-s-radious: 12px;
+    --block-s-padding: 16px;
+
+    --icon-s: 12px;
+    --icon-m: 20px;
+    --icon-l: 20px;
+  }
+  //
+}
+
+body {
+  background: #fff;
+  color: $black;
+
+  @include FontTextM();
+
+  overflow-y: scroll;
+
+  #__next {
+    & > * {
+      margin: 0;
+    }
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.global-loader {
+  position: fixed;
+  content: '';
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 4px;
+  background-color: $deep;
+  z-index: 10000;
+  width: 0;
+  opacity: 0;
+
+  transition: opacity 1s ease-out;
+}
+
+.global-loading {
+  .global-loader {
+    width: 95%;
+    opacity: 1;
+
+    transition: opacity 0.1s ease-out, width 5s ease-out;
+  }
+}
+
+.off-html-to-image {
+  //
+}
+

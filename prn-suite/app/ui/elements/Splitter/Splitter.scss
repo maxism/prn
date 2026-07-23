@@ -1,0 +1,53 @@
+@import '../../globals/vars.scss';
+
+.splitter {
+  display: flex;
+  flex: 1 1 100%;
+  width: 100%;
+  height: 10px;
+  align-items: center;
+  justify-content: center;
+
+  &__line {
+    flex: 1 1 100%;
+    width: 100%;
+    height: 1px;
+    background-color: $black;
+    border-radius: 1px;
+    opacity: 10%;
+  }
+
+  &--header {
+    flex: 0 0 11px;
+    width: 11px;
+    height: 34px;
+
+    & .splitter__line {
+      flex: 0 0 1px;
+      width: 1px;
+      height: 24px;
+      border-radius: 0.5px;
+      background-color: $black;
+      opacity: 10%;
+    }
+  }
+
+  &--vertical {
+    flex: 0 0 10px;
+    width: 10px;
+    height: 100%;
+
+    & .splitter__line {
+      flex: 0 0 1px;
+      width: 1px;
+      height: 100%;
+    }
+  }
+
+  &--white {
+    & .splitter__line {
+      background-color: $white;
+      opacity: 30%;
+    }
+  }
+}

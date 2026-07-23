@@ -1,0 +1,14 @@
+@import '../../../globals/vars';
+
+.actionbar__group{
+
+  &-content {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    @media screen and (min-width: $t){
+        flex-direction: row;
+    }
+  }
+}

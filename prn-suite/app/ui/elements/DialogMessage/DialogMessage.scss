@@ -1,0 +1,267 @@
+@import '../../globals/vars';
+
+.message {
+  display: flex;
+  margin: 2.5px 0;
+
+  & > *:not(:first-child) {
+    margin-left: 5px;
+  }
+
+  &__bubble {
+    display: flex;
+    flex: 1 1 100%;
+    flex-direction: column;
+
+    background-color: $light;
+    border-radius: 10px;
+
+    font-size: 16px;
+    line-height: 20px;
+    color: $black;
+
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+
+    & > *:not(:first-child) {
+      margin-top: 10px;
+    }
+
+    &:hover {
+      background-color: $light-grey;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex: 1 1 100%;
+
+    & > *:not(:first-child) {
+      margin-left: 10px;
+    }
+  }
+
+  &__image {
+    flex: 0 0 auto;
+    width: 200px;
+    height: 200px;
+  }
+
+  &__container {
+    display: flex;
+    flex: 1 1 100%;
+    flex-direction: column;
+
+    & > *:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  &__text {
+    font-family: inherit;
+    white-space: pre-line;
+  }
+
+  &__url {
+    font-size: 10px;
+    line-height: 14px;
+    color: $blue;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  &__quote {
+    display: flex;
+    flex: 1 1 100%;
+
+    & > *:not(:first-child) {
+      margin-left: 10px;
+    }
+
+    &-marker {
+      flex: 0 0 3px;
+      width: 3px;
+
+      background-color: $green;
+      border-radius: 3px;
+    }
+
+    &-text {
+      font-family: inherit;
+      color: $grey;
+      white-space: pre-line;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    font-size: 10px;
+    line-height: 14px;
+    color: $grey2;
+
+    padding: 5px 0;
+  }
+
+  &__time {
+    white-space: nowrap;
+  }
+
+  &__status {
+    display: flex;
+    align-items: center;
+
+    &-icon--reply {
+      flex: 1 1 16px;
+      width: 16px;
+      height: 16px;
+      fill: $blue;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &-icon--repeat {
+      flex: 1 1 14px;
+      width: 14px;
+      height: 14px;
+      fill: $red;
+    }
+
+    &-icon--process {
+      flex: 1 1 14px;
+      width: 14px;
+      height: 14px;
+      fill: $blue;
+    }
+
+    &-icon--publish {
+      flex: 1 1 16px;
+      width: 16px;
+      height: 16px;
+      fill: $grey2;
+    }
+
+    &-icon--done {
+      flex: 1 1 16px;
+      width: 16px;
+      height: 16px;
+      fill: $green;
+    }
+  }
+
+  &__error {
+    display: flex;
+    flex-wrap: nowrap;
+
+    &-url {
+      display: flex;
+      align-items: center;
+
+      text-decoration: none;
+      color: $red;
+
+      & > *:not(:first-child) {
+        margin-left: 3px;
+      }
+
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+
+  // Строка с датой
+  &--date {
+    & > .message__bubble {
+      background-color: $white;
+
+      font-size: 12px;
+      line-height: 16px;
+      color: $grey;
+      text-align: center;
+
+      padding: 7.5px 15px;
+    }
+  }
+
+  // Сообщение об открытии тикета
+  &--open {
+    & > .message__bubble {
+      background-color: $light-grey;
+
+      font-size: 12px;
+      line-height: 16px;
+      color: $grey;
+      text-align: center;
+
+      padding: 5px 15px;
+    }
+  }
+
+  // Сообщение о закрытии тикета
+  &--close {
+    & > .message__bubble {
+      background-color: #EFFFD9;
+
+      font-size: 12px;
+      line-height: 16px;
+      color: $grey;
+      text-align: center;
+
+      padding: 5px 15px;
+    }
+  }
+
+  // Стиль для поста под которым оставлен комментарий
+  &--post {
+    & > .message__bubble {
+      background-color: #EFFFD9;
+
+      padding: 15px;
+    }
+  }
+
+  // Входящее сообщение или комментарий
+  &--message {
+    & > .message__bubble {
+      flex: 0 1 auto;
+      flex-direction: column;
+      max-width: 500px;
+    }
+
+    &:hover {
+      & .message__status-icon--reply {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+  }
+
+  // Исходящее сообщение (наш ответ)
+  &--reply {
+    flex-direction: row-reverse;
+
+    & > *:not(:first-child) {
+      margin-left: 0;
+      margin-right: 5px;
+    }
+
+    & > .message__bubble {
+      flex: 0 1 auto;
+      max-width: 500px;
+      background-color: $light-blue;
+    }
+
+    & > .message__info {
+      align-items: flex-end;
+    }
+  }
+}

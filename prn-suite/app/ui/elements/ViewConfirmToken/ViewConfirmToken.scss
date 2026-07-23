@@ -1,0 +1,41 @@
+@import '../../globals/vars';
+
+.view-add-token {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+  width: 100%;
+
+  &__image {
+
+    &-one {
+      flex: 0 0 780px;
+      width: 780px;
+      height: 188px;
+    }
+
+    &-two {
+      flex: 0 0 537px;
+      width: 537px;
+      height: 402px;
+    }
+  }
+
+  &__link {
+    flex: 0 0 auto;
+    font-size: 26px;
+    line-height: 34px;
+    color: $blue;
+    text-decoration: none;
+
+    max-width: 780px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}

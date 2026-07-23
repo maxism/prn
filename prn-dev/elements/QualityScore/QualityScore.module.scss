@@ -1,0 +1,97 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  display: flex;
+  margin: 0 -1px;
+  padding: 4px 0;
+  height: 100%;
+
+  .section {
+    flex: 0 0 4px;
+    margin: 0 1px;
+
+    width: 4px;
+    height: 100%;
+    background-color: $bg-tag;
+    border-radius: 2px;
+  }
+}
+
+.scoreD {
+  &.element {
+    .section:nth-child(1) {
+      background-color: $red;
+    }
+  }
+}
+
+.scoreC {
+  &.element {
+    .section:nth-child(1) {
+      background-color: $orange;
+    }
+    .section:nth-child(2) {
+      background-color: $orange;
+    }
+  }
+}
+
+.scoreB {
+  &.element {
+    .section:nth-child(1) {
+      background-color: #E8E121;
+    }
+    .section:nth-child(2) {
+      background-color: #E8E121;
+    }
+    .section:nth-child(3) {
+      background-color: #E8E121;
+    }
+  }
+}
+
+.scoreA {
+  &.element {
+    .section:nth-child(1) {
+      background-color: $green;
+    }
+    .section:nth-child(2) {
+      background-color: $green;
+    }
+    .section:nth-child(3) {
+      background-color: $green;
+    }
+    .section:nth-child(4) {
+      background-color: $green;
+    }
+  }
+}
+
+.big {
+  padding: 8px 0;
+  margin: 0 -2px;
+
+  .section {
+    flex: 0 0 8px;
+    margin: 0 2px;
+    width: 8px;
+    border-radius: 4px;
+  }
+
+  @media screen and (max-width: $max-width-tablet) {
+    padding: 6px 0;
+  }
+
+  @media screen and (max-width: $max-width-mobile) {
+    padding: 4px 0;
+    margin: 0 -1px;
+
+    .section {
+      flex: 0 0 4px;
+      margin: 0 1px;
+      width: 4px;
+      border-radius: 2px;
+    }
+  }
+}

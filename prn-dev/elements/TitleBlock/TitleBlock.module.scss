@@ -1,0 +1,28 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  flex: 1 1 100%;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+  }
+
+  .controls {
+    display: flex;
+    justify-self: flex-end;
+  }
+
+  @media screen and (max-width: $max-width-tablet) {
+    flex-wrap: wrap;
+
+    .controls {
+      margin-top: var(--module-m);
+    }
+  }
+}

@@ -1,0 +1,96 @@
+@import '../../globals/vars';
+
+.project-info {
+  display: flex;
+  align-items: center;
+  flex: 1 1 100%;
+
+  &__image {
+    flex: 0 0 120px;
+    width: 120px;
+    height: 120px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    //flex: 1 1 100%;
+    margin-left: 30px;
+
+    & > *:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  &__title {
+    font-size: 26px;
+    line-height: 34px;
+    font-weight: bold;
+  }
+
+  &__icon {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    fill: $grey2;
+  }
+
+  &__line {
+    display: flex;
+    align-items: center;
+
+    font-size: 16px;
+    line-height: 20px;
+    color: $grey;
+    text-decoration: none;
+
+    & > *:not(:first-child) {
+      margin-left: 5px;
+    }
+  }
+
+  &__link {
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+
+      & .project-info__icon {
+        fill: $green;
+      }
+    }
+  }
+
+  &__social-icons {
+    display: flex;
+    align-items: center;
+
+    & > *:not(:first-child) {
+      margin-left: 10px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    text-decoration: none;
+
+    & .project-info__icon {
+      fill: none;
+    }
+  }
+
+  &__url {
+    margin-left: 5px;
+    font-size: 16px;
+    color: $blue;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

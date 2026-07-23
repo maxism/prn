@@ -1,0 +1,156 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  display: inline-flex;
+  flex: 1;
+  font-weight: normal;
+  min-width: 250px;
+
+  width: 100%;
+
+  & > * {
+    width: 100% !important;
+  }
+}
+
+.elementTrigger {
+  min-width: auto;
+
+  .mainTrigger {
+    span {
+      @media screen and (max-width: $max-width-small-fixed) {
+        max-width: 240px;
+      }
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  flex: 1 1 100%;
+  width: 100%;
+
+  border: none;
+  background-color: $bg-light;
+  border-radius: 16px;
+
+  padding: 10px 16px 10px 12px;
+
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 0 0 2px $light;
+  }
+
+  &:active {
+    color: $black;
+  }
+
+  .icon {
+    margin-right: var(--module-xxs);
+
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+    fill: $blue;
+  }
+
+  .content {
+    position: relative;
+    display: flex;
+    padding: 0 4px;
+
+    flex-direction: column;
+    flex: 1 1 100%;
+    width: calc(100% - 28px);
+    text-align: left;
+
+    .label {
+      position: absolute;
+      top: 0;
+
+      @include FontTextXS();
+      color: $grey;
+
+      transition: color 0.15s ease, top 0.15s ease, font-weight 0.15s ease, font-size 0.15s ease;
+
+      &.placeholder {
+        @include FontTextM();
+        font-weight: 500;
+        color: $grey;
+        top: 6px;
+
+        transition: color 0.15s ease, top 0.15s ease, font-weight 0.15s ease, font-size 0.15s ease;
+      }
+    }
+
+    .text {
+      height: var(--icon-m);
+      margin-top: 12px;
+
+      @include FontTextM();
+      font-weight: 500;
+      color: $super-dark;
+
+      max-width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .iconArrow {
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+    fill: $blue;
+
+    transform: rotate(0deg);
+
+    transition: transform 0.3s ease;
+  }
+}
+
+.opened {
+  & .main {
+    box-shadow: 0 0 0 2px $green !important;
+  }
+
+  & .iconArrow {
+    transform: rotate(180deg);
+  }
+}
+
+.filter {
+  margin-bottom: 8px;
+  //border: 1px solid $grey;
+}
+
+.noResults {
+  padding: 16px 0;
+  @include FontTextM();
+  font-weight: 500;
+  color: $light;
+  align-self: center;
+}
+
+.white {
+  .main {
+   background-color: $white;
+  }
+}
+
+.coloredIcon {
+  .main {
+    .icon {
+      fill: var(--iconColor);
+    }
+  }
+}

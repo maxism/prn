@@ -1,0 +1,108 @@
+@import '../../styles/globals/vars';
+@import '../../styles/globals/fonts';
+
+.element {
+  display: flex;
+  flex-direction: column;
+
+  background-color: transparent;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+
+    & > :not(:last-child) {
+      border-bottom: 1px solid rgba($black, 10%);
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+
+      padding: 12px 0;
+      width: 100%;
+
+      @media screen and (max-width: $max-width-mobile) {
+        align-items: flex-start;
+      }
+
+      .title {
+        flex: 1 1 calc(62.5% - var(--grid-offset));
+
+        @include FontTextM();
+        color: $super-dark;
+      }
+
+      .value {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex: 1 1 calc(37.5% - var(--grid-offset));
+        margin-left: var(--grid-offset);
+
+        .valueText {
+          @include FontTitleS();
+          color: $black;
+        }
+
+        .valueIcon {
+          margin-left: 4px;
+          margin-top: -1px;
+          flex: 0 0 23px;
+          width: 23px;
+          height: 23px;
+          fill: $black;
+
+          @media screen and (max-width: $max-width-tablet) {
+            flex: 0 0 23px;
+            width: 23px;
+            height: 23px;
+          }
+
+          @media screen and (max-width: $max-width-mobile-fixed) {
+            margin-top: -2px;
+            flex: 0 0 16px;
+            width: 16px;
+            height: 16px;
+          }
+        }
+
+        .textGrey {
+          color: $grey;
+        }
+
+        .iconGrey {
+          fill: $grey;
+        }
+      }
+
+      .description {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+
+        .descriptionItem {
+          display: flex;
+          flex: 1 1 100%;
+          padding: 12px 0;
+
+          @include FontTextS();
+          color: $grey;
+
+          @media screen and (max-width: $max-width-laptop) {
+            max-width: 548px;
+          }
+
+          @media screen and (max-width: $max-width-tablet) {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

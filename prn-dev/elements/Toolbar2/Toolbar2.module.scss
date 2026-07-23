@@ -1,0 +1,38 @@
+.element {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.regular {
+  & > *:not(:first-child) {
+    margin-left: 10px;
+  }
+
+  & > .groupElement > *:not(:first-child) {
+    margin-left: 5px;
+  }
+}
+
+.big {
+  & > *:not(:first-child) {
+    margin-left: 30px;
+  }
+
+  & > .groupElement > *:not(:first-child) {
+    margin-left: 30px;
+  }
+}
+
+.groupElement {
+  display: flex;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.fill {
+  flex: 1 1 auto;
+}

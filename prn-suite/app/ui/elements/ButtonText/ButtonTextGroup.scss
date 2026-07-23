@@ -1,0 +1,19 @@
+@import '../../globals/vars.scss';
+
+.button-text-group {
+  display: flex;
+
+  & > .button-text:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  & > .button-text:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  &--center {
+    justify-content: center;
+  }
+}

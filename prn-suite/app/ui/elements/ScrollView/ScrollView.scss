@@ -1,0 +1,47 @@
+.scroll-view {
+  display: flex;
+  flex: 1 1 auto;
+  position: relative;
+
+  &__content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    &--full-width {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__padding {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
+}
+.scrollarea .scrollbar-container.vertical {
+  width: 5px;
+  border-radius: 4px;
+  &:hover {
+    width: 10px;
+    border-radius: 8px;
+  }
+  & .scrollbar {
+    width: inherit;
+    border-radius: inherit;
+    margin-left: 0;
+  }
+}
+.scrollarea .scrollbar-container.horizontal {
+  height: 5px;
+  border-radius: 4px;
+  &:hover {
+    height: 10px;
+    border-radius: 8px;
+  }
+  & .scrollbar {
+    height: inherit;
+    border-radius: inherit;
+    margin-top: 0;
+  }
+}

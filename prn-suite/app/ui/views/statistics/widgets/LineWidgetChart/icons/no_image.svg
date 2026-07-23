@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 21</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.266667 0 0 0 0 0.266667 0 0 0 0 0.266667 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="V2-/-Statistics" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-21">
+            <rect id="Rectangle-Copy-4" fill="#222222" x="0" y="0" width="80" height="80"></rect>
+            <g id="Icons/Items/None" transform="translate(25.000000, 25.000000)" filter="url(#filter-1)">
+                <g>
+                    <path d="M15,26.25 C12.2985,26.25 9.81825,25.29225 7.8765,23.69925 L23.69925,7.8765 C25.2915,9.81825 26.25,12.2985 26.25,15 C26.25,21.20325 21.20325,26.25 15,26.25 M3.75,15 C3.75,8.79675 8.79675,3.75 15,3.75 C17.69325,3.75 20.1675,4.70325 22.10625,6.288 L6.288,22.10625 C4.70325,20.1675 3.75,17.69325 3.75,15 M15,1.5 C7.54425,1.5 1.5,7.54425 1.5,15 C1.5,22.45575 7.54425,28.5 15,28.5 C22.455,28.5 28.5,22.45575 28.5,15 C28.5,7.54425 22.455,1.5 15,1.5" id="Mask" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

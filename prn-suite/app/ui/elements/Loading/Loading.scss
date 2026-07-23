@@ -1,0 +1,32 @@
+@import '../../globals/vars';
+
+// ROTATING ICON
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $light;
+  border-radius: 10px;
+  flex: 1 1 100%;
+  padding: 10px;
+
+  &__icon {
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+
+    circle {
+      fill: $grey2;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: bold;
+    color: $grey2;
+    margin-left: 15px;
+    cursor: default;
+  }
+}
